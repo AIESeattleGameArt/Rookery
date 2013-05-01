@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: c5677b0ffd2d7a048b6c990dc1221fda
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: arm_L
+    100002: arm_L 1
+    100004: Baby_dragon
+    100006: //RootNode
+    100008: BabyBody
+    100010: BabyEyes
+    100012: BabyFacialHorns
+    100014: BabyHorns
+    100016: BabyLegs
+    100018: BabyWings
+    100020: calf_L
+    100022: calf_L 1
+    100024: finger_L
+    100026: finger_L 1
+    100028: foot_L
+    100030: foot_L 1
+    100032: forearm_L
+    100034: forearm_L 1
+    100036: hand_L
+    100038: hand_L 1
+    100040: head
+    100042: head_tip
+    100044: Hips
+    100046: leg_L
+    100048: leg_L1
+    100050: mouth
+    100052: mouth_tip
+    100054: nose
+    100056: nose_tip
+    100058: Shoulder_L
+    100060: Shoulder_L1
+    100062: shoulders
+    100064: tail_base
+    100066: tail_end
+    100068: tail_mid
+    100070: tail_tip
+    100072: toe_L
+    100074: toe_L 1
+    400000: arm_L
+    400002: arm_L 1
+    400004: Baby_dragon
+    400006: //RootNode
+    400008: BabyBody
+    400010: BabyEyes
+    400012: BabyFacialHorns
+    400014: BabyHorns
+    400016: BabyLegs
+    400018: BabyWings
+    400020: calf_L
+    400022: calf_L 1
+    400024: finger_L
+    400026: finger_L 1
+    400028: foot_L
+    400030: foot_L 1
+    400032: forearm_L
+    400034: forearm_L 1
+    400036: hand_L
+    400038: hand_L 1
+    400040: head
+    400042: head_tip
+    400044: Hips
+    400046: leg_L
+    400048: leg_L1
+    400050: mouth
+    400052: mouth_tip
+    400054: nose
+    400056: nose_tip
+    400058: Shoulder_L
+    400060: Shoulder_L1
+    400062: shoulders
+    400064: tail_base
+    400066: tail_end
+    400068: tail_mid
+    400070: tail_tip
+    400072: toe_L
+    400074: toe_L 1
+    4300000: BabyBody
+    4300002: BabyLegs
+    4300004: BabyHorns
+    4300006: BabyWings
+    4300008: BabyFacialHorns
+    4300010: BabyEyes
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: BabyBody
+    13700002: BabyEyes
+    13700004: BabyFacialHorns
+    13700006: BabyHorns
+    13700008: BabyLegs
+    13700010: BabyWings
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

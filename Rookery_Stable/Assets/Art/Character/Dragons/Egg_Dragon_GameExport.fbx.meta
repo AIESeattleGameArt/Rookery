@@ -1,0 +1,85 @@
+fileFormatVersion: 2
+guid: 30fad3e00a8cacf49ac801382330dfea
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Dragon_egg
+    100002: //RootNode
+    100004: Egg_dragon_jnt
+    100006: eggChickEgg
+    100008: eggChickFace
+    100010: eggChickShell
+    100012: head_jnt
+    100014: headTip_jnt
+    100016: mouth_jnt
+    100018: mouthTip_jnt
+    100020: neck_jnt
+    400000: Dragon_egg
+    400002: //RootNode
+    400004: Egg_dragon_jnt
+    400006: eggChickEgg
+    400008: eggChickFace
+    400010: eggChickShell
+    400012: head_jnt
+    400014: headTip_jnt
+    400016: mouth_jnt
+    400018: mouthTip_jnt
+    400020: neck_jnt
+    4300000: eggChickShell
+    4300002: eggChickFace
+    4300004: eggChickEgg
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: eggChickEgg
+    13700002: eggChickFace
+    13700004: eggChickShell
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 1
+  userData: 

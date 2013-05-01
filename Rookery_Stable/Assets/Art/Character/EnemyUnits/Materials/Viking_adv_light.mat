@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Viking_adv_light
+  m_Shader: {fileID: 4800000, guid: dcd182b24cc564531b92e14c472cdca4, type: 3}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 7a6bf4efd6cd447ee9ab5e933dc78e82, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: MatCap
+        second:
+          m_Texture: {fileID: 2800000, guid: f4ef78469cc4243e198dde61798bc0ff, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: Ao_Tex
+        second:
+          m_Texture: {fileID: 2800000, guid: 65ddf372d2e5c4e38aa04b3ca5be8da4, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: Amount
+        second: 1.94029856
+      data:
+        first:
+          name: MatCapBlend
+        second: 1
+      data:
+        first:
+          name: Amount_AO
+        second: 1.23880589
+      data:
+        first:
+          name: Amount_Rim
+        second: 1.89552236
+    m_Colors: {}

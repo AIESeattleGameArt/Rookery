@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 7ba7bf61aaccaca48bfdac2e85d2baf4
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - optionsTexture: {fileID: 2800000, guid: 0d4a47a284e2f0c4c9fbf28109817a7b, type: 3}
+  - menuTexture: {instanceID: 0}
+  - playTexture: {fileID: 2800000, guid: a10fd3bedafe9fc4c96c43a39078824e, type: 3}
+  - pauseTexture: {fileID: 2800000, guid: d60f7578fddd6ce4b9d07d3f005c7171, type: 3}
+  - fastForwardActiveTexture: {fileID: 2800000, guid: b38d79f48c9393240bea41ee30a2a74d,
+      type: 3}
+  - fastForwardInactiveTexture: {fileID: 2800000, guid: 32e88a42f0c658f4181c1ed594f0e514,
+      type: 3}
+  - upgradeTexture: {fileID: 2800000, guid: 8e6e589e65c490243a03cd4fd963d955, type: 3}
+  - sellTexture: {fileID: 2800000, guid: 0c17511c4c0ae474e85616d172bf9131, type: 3}
+  - fireBallTexture: {fileID: 2800000, guid: f56679e161ce81148bd65ce26cf0b198, type: 3}
+  - eggTexture: {fileID: 2800000, guid: 79b77746f037d1d4189ca80a47ffe596, type: 3}
+  - fireTexture: {fileID: 2800000, guid: 0fd78e6c6231b9f46a0e828615ee7383, type: 3}
+  - iceTexture: {fileID: 2800000, guid: 4493b4b456e5be94587bd86ce9c1ded3, type: 3}
+  - shockTexture: {fileID: 2800000, guid: 06e46c2f783d137449969485924203c1, type: 3}
+  - egg: {instanceID: 0}
+  - fireball: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
