@@ -1,30 +1,30 @@
 fileFormatVersion: 2
-guid: b4f163cec2e1fda4e9084ad00a8ff1e2
+guid: 346bbcefbe38f044ebec35ba1aec3cb6
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: GroundPlane
-    100002: polySurface1
-    100004: polySurface5
-    100006: pPlane3
-    100008: transform1
-    100010: transform3
-    100012: WinterTerrain
-    100014: //RootNode
-    400000: GroundPlane
-    400002: polySurface1
-    400004: polySurface5
-    400006: pPlane3
-    400008: transform1
-    400010: transform3
-    400012: WinterTerrain
-    400014: //RootNode
-    2300000: GroundPlane
-    2300002: polySurface5
-    3300000: GroundPlane
-    3300002: polySurface5
-    4300000: GroundPlane
-    4300002: polySurface5
+    100000: pPlane2
+    100002: pPlane3
+    100004: pPlane4
+    100006: pPlane5
+    100008: //RootNode
+    400000: pPlane2
+    400002: pPlane3
+    400004: pPlane4
+    400006: pPlane5
+    400008: //RootNode
+    2300000: pPlane2
+    2300002: pPlane3
+    2300004: pPlane4
+    2300006: pPlane5
+    3300000: pPlane2
+    3300002: pPlane3
+    3300004: pPlane4
+    3300006: pPlane5
+    4300000: pPlane2
+    4300002: pPlane3
+    4300004: pPlane4
+    4300006: pPlane5
     9500000: //RootNode
   materials:
     importMaterials: 0
@@ -74,5 +74,5 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   additionalBone: 1
-  animationType: 2
+  animationType: 0
   userData: 
