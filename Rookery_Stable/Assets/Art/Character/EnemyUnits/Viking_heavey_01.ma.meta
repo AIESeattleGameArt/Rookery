@@ -129,7 +129,7 @@ ModelImporter:
     11100000: //RootNode
     13700000: Heavy_viking_unwrapped_01:Group2
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 1
     materialSearch: 1
   animations:

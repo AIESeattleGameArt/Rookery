@@ -211,7 +211,7 @@ ModelImporter:
     13700024: polySurface34
     13700026: polySurface35
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 1
     materialSearch: 1
   animations:

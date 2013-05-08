@@ -3,7 +3,7 @@ guid: 7ba7bf61aaccaca48bfdac2e85d2baf4
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - optionsTexture: {fileID: 2800000, guid: 0d4a47a284e2f0c4c9fbf28109817a7b, type: 3}
+  - optionsTexture: {fileID: 2800000, guid: 8fe080c3b3629564484fbfdcf0e739d0, type: 3}
   - menuTexture: {instanceID: 0}
   - playTexture: {fileID: 2800000, guid: a10fd3bedafe9fc4c96c43a39078824e, type: 3}
   - pauseTexture: {fileID: 2800000, guid: d60f7578fddd6ce4b9d07d3f005c7171, type: 3}
@@ -18,8 +18,11 @@ MonoImporter:
   - fireTexture: {fileID: 2800000, guid: 0fd78e6c6231b9f46a0e828615ee7383, type: 3}
   - iceTexture: {fileID: 2800000, guid: 4493b4b456e5be94587bd86ce9c1ded3, type: 3}
   - shockTexture: {fileID: 2800000, guid: 06e46c2f783d137449969485924203c1, type: 3}
-  - egg: {instanceID: 0}
-  - fireball: {instanceID: 0}
+  - egg: {fileID: 100000, guid: de4b38364c10850499b95165a9d2a9ad, type: 2}
+  - eggOutline: {fileID: 100000, guid: f2f9cd05b9f0dd047aad3df4f0c1c4a6, type: 2}
+  - fireball: {fileID: 100000, guid: 990367531d5fec94aa8a07b01a688f74, type: 2}
+  - fireballTargetCursor: {fileID: 100010, guid: 5b4b07cd5a189724787788888480a921,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
