@@ -8,14 +8,16 @@ public class _DragonIce : _DragonBase
 
     void Start()
     {
-
+		// Pull prices and sale costs from _Overlord script
+		cost = _Overlord.ice_cost;
+		sellPrice = _Overlord.ice_sale;
     }
 
     public override void LevelUp()
     {
         //keep track of new level
         level++;
-        if (nextLevel != null)
+        if (nextLevel != null && _Overlord.gold >= cost)
         {
             _Overlord.gold -= cost;
             GameObject newDragon = Instantiate(nextLevel, transform.position, transform.rotation) as GameObject;
@@ -26,6 +28,9 @@ public class _DragonIce : _DragonBase
 
     public override void Sell()
     {
+		//give the player an extra refund if they upgraded the level
+		if (nextLevel == null)
+			_Overlord.gold += cost;
         _Overlord.gold += sellPrice;
         Destroy(gameObject);
     }
@@ -38,6 +43,7 @@ public class _DragonIce : _DragonBase
             if (c.tag == "Unit")
             {
                 //set the next time the turret can fire
+                print(nextFire);
                 if (nextFire < Time.time)
                 {
                     nextFire = Time.time + fireRate;

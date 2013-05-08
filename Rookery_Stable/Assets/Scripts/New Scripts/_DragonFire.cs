@@ -8,14 +8,16 @@ public class _DragonFire : _DragonBase
 
     void Start()
     {
-
+		// Pull prices and sale costs from _Overlord script
+		cost = _Overlord.fire_cost;
+		sellPrice = _Overlord.fire_sale;
     }
 
     public override void LevelUp()
     {
         //keep track of new level
         level++;
-        if (nextLevel != null)
+        if (nextLevel != null && _Overlord.gold >= cost)
         {
             _Overlord.gold -= cost;
             GameObject newDragon = Instantiate(nextLevel, transform.position, transform.rotation) as GameObject;
@@ -26,6 +28,9 @@ public class _DragonFire : _DragonBase
 
     public override void Sell()
     {
+		//give the player an extra refund if they upgraded the level
+		if (nextLevel == null)
+			_Overlord.gold += cost;
         _Overlord.gold += sellPrice;
         Destroy(gameObject);
     }

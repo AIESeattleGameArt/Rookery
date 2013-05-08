@@ -10,8 +10,10 @@ public class _DragonEgg : _DragonBase
     void Start()
     {
         Vector3 target = new Vector3();
-		cost = 100;
-		sellPrice = 75;
+		
+		// Pull prices and sale costs from _Overlord script
+		cost = _Overlord.egg_cost;
+		sellPrice = _Overlord.egg_sale;
     }
 
     public override void LevelUp(string type)
@@ -20,24 +22,42 @@ public class _DragonEgg : _DragonBase
         level++;
         if (type == "Fire")
         {
-            //create dragon at egg's location
-            Instantiate(fireDragon, transform.position, Quaternion.identity);
-            //get rid of the egg
-            Destroy(gameObject);
+			// Verify that the user has enough gold to upgrade
+			if (_Overlord.gold >= _Overlord.fire_cost)
+			{
+            	//create dragon at egg's location
+            	Instantiate(fireDragon, transform.position, Quaternion.identity);
+            	//get rid of the egg
+            	Destroy(gameObject);
+				//deduct the cost
+				_Overlord.gold -= _Overlord.fire_cost;
+			}
         }
         else if (type == "Ice")
         {
-            //create dragon at egg's location
-            Instantiate(iceDragon, transform.position, Quaternion.identity);
-            //get rid of the egg
-            Destroy(gameObject);
+			// Verify that the user has enough gold to upgrade
+			if (_Overlord.gold >= _Overlord.ice_cost)
+			{
+            	//create dragon at egg's location
+            	Instantiate(iceDragon, transform.position, Quaternion.identity);
+            	//get rid of the egg
+            	Destroy(gameObject);
+				//deduct the cost
+				_Overlord.gold -= _Overlord.ice_cost;
+			}
         }
         else if (type == "Lightning")
         {
-            //create dragon at egg's location
-            Instantiate(lightningDragon, transform.position, Quaternion.identity);
-            //get rid of the egg
-            Destroy(gameObject);
+			// Verify that the user has enough gold to upgrade
+			if (_Overlord.gold >= _Overlord.lightening_cost)
+			{
+            	//create dragon at egg's location
+            	Instantiate(lightningDragon, transform.position, Quaternion.identity);
+            	//get rid of the egg
+            	Destroy(gameObject);
+				//deduct the cost
+				_Overlord.gold -= _Overlord.lightening_cost;
+			}
         }
     }
 
