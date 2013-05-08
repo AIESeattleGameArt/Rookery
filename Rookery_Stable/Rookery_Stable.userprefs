@@ -1,11 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\New Scripts\_UI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\New Scripts\_CameraControls.cs">
     <Files>
-      <File FileName="Assets\Scripts\New Scripts\_Enemy.cs" Line="84" Column="6" />
-      <File FileName="Assets\Scripts\New Scripts\_DragonIce.cs" Line="40" Column="56" />
-      <File FileName="Assets\Scripts\New Scripts\_DragonLightning.cs" Line="36" Column="18" />
+      <File FileName="Assets\Scripts\New Scripts\_Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\New Scripts\_DragonIce.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\New Scripts\_DragonLightning.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\New Scripts\_UI.cs" Line="152" Column="22" />
+      <File FileName="Assets\Scripts\New Scripts\_CameraControls.cs" Line="12" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
