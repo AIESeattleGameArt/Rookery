@@ -18,6 +18,7 @@ public class _ProjectileLightning : _ProjectileBase
         other.GetComponent<_Enemy>().health -= damage;
         other.GetComponent<_Enemy>().shocked = true;
         other.GetComponent<_Enemy>().shockTimer = Time.time + shockTime;
+        other.GetComponent<_Enemy>().shock.Play();
 
         if (bounces > 0)
         {

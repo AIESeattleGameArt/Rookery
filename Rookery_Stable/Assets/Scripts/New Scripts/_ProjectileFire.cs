@@ -11,6 +11,7 @@ public class _ProjectileFire : _ProjectileBase
     public override void Hit(GameObject other)
     {
         other.GetComponent<_Enemy>().health -= damage;
+        other.GetComponent<_Enemy>().fire.Play();
         Destroy(gameObject);
     }
 }

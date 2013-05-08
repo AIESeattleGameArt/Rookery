@@ -26,6 +26,7 @@ public class _Enemy : MonoBehaviour {
     public bool slowed, shocked;
     public float modifyMoveSpeed, slowTimer, shockTimer;
     public int distanceTravelled;
+    public ParticleSystem fire, ice, shock;
 
     public GameObject ragdoll;
     
@@ -58,12 +59,14 @@ public class _Enemy : MonoBehaviour {
         {
             moveSpeed += modifyMoveSpeed;
             slowed = false;
+            ice.Stop();
         }
 
         //allows enemy to be shocked again
         if (shocked && shockTimer < Time.time)
         {
             shocked = false;
+            shock.Stop();
         }
 
         if (targetTile.endOfLine)

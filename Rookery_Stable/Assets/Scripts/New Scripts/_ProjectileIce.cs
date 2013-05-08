@@ -19,6 +19,7 @@ public class _ProjectileIce : _ProjectileBase
             other.GetComponent<_Enemy>().modifyMoveSpeed = slow;
             other.GetComponent<_Enemy>().moveSpeed -= slow;
             other.GetComponent<_Enemy>().slowTimer = Time.time + slowTime;
+            other.GetComponent<_Enemy>().ice.Play();
         }
         Destroy(gameObject);
     }
