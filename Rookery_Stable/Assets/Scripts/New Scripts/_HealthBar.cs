@@ -30,11 +30,15 @@ public class _HealthBar : MonoBehaviour
 
     void OnGUI()
     {
+        //temp healthbar
+        GUI.Button(healthbarPosition, "");
+        /*
         //shows the health bar
         GUI.Label(healthbarPosition, healthBarTexture, style);
         //shows the left cap
         GUI.Label(leftCapPosition, leftCapTexture, style);
         //shows the right cap
         GUI.Label(rightCapPosition, rightCapTexture, style);
+         * */
     }
 }
