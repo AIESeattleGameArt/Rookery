@@ -2,6 +2,10 @@ fileFormatVersion: 2
 guid: 79c5ce9ed8ecd5841af23e63cafacebc
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - healthBarTexture: {fileID: 2800000, guid: 1dfbb4a8661d9164ca377d04fe2e47de, type: 3}
+  - leftCapTexture: {fileID: 2800000, guid: a1f0dd9e794fbd548983131005e316ad, type: 3}
+  - rightCapTexture: {fileID: 2800000, guid: cf605ebcbe4bcef4980dfea93c73229b, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
+  userData: 

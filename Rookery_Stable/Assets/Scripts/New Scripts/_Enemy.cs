@@ -129,7 +129,7 @@ public class _Enemy : MonoBehaviour {
     {
         //updates the health bar
         Transform bar = transform.FindChild("HealthBar");
-        bar.GetComponent<HealthBar>().hp = health;
+        bar.GetComponent<_HealthBar>().hp = health;
 
         //if enemy health is out
         if (health <= 0)
