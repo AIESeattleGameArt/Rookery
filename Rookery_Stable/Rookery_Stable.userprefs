@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\New Scripts\_CameraControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\New Scripts\_UI.cs">
     <Files>
+      <File FileName="Assets\Scripts\New Scripts\_UI.cs" Line="281" Column="1" />
       <File FileName="Assets\Scripts\New Scripts\_Enemy.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\New Scripts\_DragonIce.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\New Scripts\_DragonLightning.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\New Scripts\_UI.cs" Line="152" Column="22" />
       <File FileName="Assets\Scripts\New Scripts\_CameraControls.cs" Line="12" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
