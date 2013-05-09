@@ -12,19 +12,10 @@ public class _Spawner : MonoBehaviour {
     public double timeBetweenSpawns;
     public bool canSpawnNextWave;
     public GameObject[] enemyTypes = new GameObject[6];
-    
-    /*
-    public GameObject enemyType;
-    public GameObject enemyType2;
-    public GameObject enemyType3;
-    public GameObject enemyType4;
-    public GameObject enemyType5;
-    public GameObject enemyType6;
-    */
 
-    static public int maxEnemies;
+    static public int maxEnemies, survivalMax;
     //public float spawnRate;
-   // private float nextSpawn = 0.0f;
+    //private float nextSpawn = 0.0f;
     public int totalSpawned = 0;
     //public int enemyScaler = 25;
     //public int enemyScaler2 = 50;
@@ -32,9 +23,25 @@ public class _Spawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        survivalMax = 6;
         maxEnemies = 6;
         canSpawnNextWave = true;
 	}
+
+    void SurvivalSpawning()
+    {
+        if (totalSpawned < survivalMax && timer < Time.time)
+        {
+            timer = Time.time + timeBetweenSpawns;
+            timeBetweenSpawns = Random.Range(0.5f, 2.5f);
+            totalSpawned++;
+            int selector = Random.Range(1, 6);
+            GameObject spawn = Instantiate(enemyTypes[selector], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation) as GameObject;
+            spawn.transform.position = transform.position;
+            spawn.GetComponent<_Enemy>().targetTile = this.firstTileOnMap;
+            spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
+        }
+    }
 
     void CommenceSpawning()
     {
@@ -122,6 +129,7 @@ public class _Spawner : MonoBehaviour {
         //{
         //    numEnemies++;
         //}
+        SurvivalSpawning();
         if (!canSpawnNextWave)
         {
             //currently spawning a wave, cannot send another wave yet
