@@ -49,7 +49,6 @@
      <Compile Include="Assets\Scripts\Attacks\AttackBlue.cs" />
      <Compile Include="Assets\Scripts\Attacks\AttackRed.cs" />
      <Compile Include="Assets\Scripts\Attacks\AttackWhite.cs" />
-     <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_BurnMark.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_CameraControls.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_DragonBase.cs" />
@@ -60,6 +59,7 @@
      <Compile Include="Assets\Scripts\New Scripts\_Enemy.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_Fireball.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_GameSaveLoad.cs" />
+     <Compile Include="Assets\Scripts\New Scripts\_HealthBar.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_Menu.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_MenuButton.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_MenuOptionsMenu.cs" />
