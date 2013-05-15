@@ -251,10 +251,13 @@ public class _UI : MonoBehaviour
                     if (_Overlord.gold >= _DragonEgg.cost)
                     {
                         //subtract the egg cost from gold
-                        _Overlord.gold -= _DragonEgg.cost;
+						if (_DragonEgg.cost != _Overlord.egg_cost)
+							_Overlord.gold -= _Overlord.egg_cost;
+						else
+                        	_Overlord.gold -= _DragonEgg.cost;
                         //set the tile to be unable to be placed on again
                         EggPlacementTileSelector.GetComponent<_Tile>().canPlace = false;
-                  //      hit.transform.GetComponent<_Tile>().canPlace = false;
+                  		//hit.transform.GetComponent<_Tile>().canPlace = false;
                         //creates an empty game object for the egg to be stored in
                         GameObject newTurret;
                         //fills the game object with the egg and creates an instance in game
