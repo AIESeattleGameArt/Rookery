@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\Attacks\AttackWhite.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_BurnMark.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_CameraControls.cs" />
+     <Compile Include="Assets\Scripts\New Scripts\_DragonAnimation.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_DragonBase.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_DragonEgg.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_DragonFire.cs" />

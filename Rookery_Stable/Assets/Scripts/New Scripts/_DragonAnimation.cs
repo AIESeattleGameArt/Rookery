@@ -16,9 +16,9 @@ public class _DragonAnimation : MonoBehaviour
     {
         currentAnimation = changeTo;
 
-        if (changeTo == animationState.idle && animation.IsPlaying("attack"))
+        if (changeTo == animationState.alert && animation.IsPlaying("attack"))
         {
-            currentAnimation = animationState.idle;
+            currentAnimation = animationState.attack;
         }
     }
 	
