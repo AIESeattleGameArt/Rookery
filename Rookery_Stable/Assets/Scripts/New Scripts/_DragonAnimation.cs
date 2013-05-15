@@ -4,13 +4,23 @@ using System.Collections;
 public class _DragonAnimation : MonoBehaviour 
 {
     public enum animationState { idle, alert, attack };
-    public animationState currentAnimation;
+    private animationState currentAnimation;
 
 	// Use this for initialization
 	void Start () 
     {
         animation.Play("awake");
 	}
+
+    public void ChangeState (animationState changeTo)
+    {
+        currentAnimation = changeTo;
+
+        if (changeTo == animationState.idle && animation.IsPlaying("attack"))
+        {
+            currentAnimation = animationState.idle;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () 
