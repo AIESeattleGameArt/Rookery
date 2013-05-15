@@ -75,6 +75,7 @@ public class _DragonEgg : _DragonBase
         {
             if (c.tag == "Unit")
             {
+                gameObject.GetComponentInChildren<_DragonAnimation>().currentAnimation = _DragonAnimation.animationState.alert;
                 switch (selcted)
                 {
                     case targetType.first:
@@ -132,6 +133,7 @@ public class _DragonEgg : _DragonBase
 
         if (canFire && nextFire < Time.time)
         {
+            gameObject.GetComponentInChildren<_DragonAnimation>().currentAnimation = _DragonAnimation.animationState.attack;
             nextFire = Time.time + fireRate;
             //create a projectile
             GameObject round = Instantiate(projectile, firingPos.transform.position, transform.rotation) as GameObject;
