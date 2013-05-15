@@ -13,6 +13,10 @@ ModelImporter:
     100014: transform4
     100016: transform5
     100018: //RootNode
+    100020: LavaPlane_01
+    100022: LavaPlane_02
+    100024: LavaPlane_03
+    100026: VolcanoBaseMesh
     400000: polySurface3
     400002: pPlane2
     400004: pPlane3
@@ -23,9 +27,25 @@ ModelImporter:
     400014: transform4
     400016: transform5
     400018: //RootNode
+    400020: LavaPlane_01
+    400022: LavaPlane_02
+    400024: LavaPlane_03
+    400026: VolcanoBaseMesh
     2300000: polySurface3
+    2300002: LavaPlane_01
+    2300004: LavaPlane_02
+    2300006: LavaPlane_03
+    2300008: VolcanoBaseMesh
     3300000: polySurface3
+    3300002: LavaPlane_01
+    3300004: LavaPlane_02
+    3300006: LavaPlane_03
+    3300008: VolcanoBaseMesh
     4300000: polySurface3
+    4300002: VolcanoBaseMesh
+    4300004: LavaPlane_01
+    4300006: LavaPlane_02
+    4300008: LavaPlane_03
     9500000: //RootNode
   materials:
     importMaterials: 1
