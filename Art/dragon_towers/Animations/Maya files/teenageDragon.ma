@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: teenageDragon.ma
-//Last modified: Wed, May 15, 2013 11:12:22 AM
+//Last modified: Wed, May 15, 2013 11:40:53 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "youngAdult_DragonRN" "C:/Users/Student/Documents/GitHub/Rookery/Art/dragon_towers/Animations/Source/youngAdult_Dragon.ma";
 file -r -ns ":" -dr 1 -rfn "youngAdult_DragonRN" "C:/Users/Student/Documents/GitHub/Rookery/Art/dragon_towers/Animations/Source/youngAdult_Dragon.ma";
@@ -15,12 +15,12 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 5.0708204786207709 2.0014034790395443 0.73071639355737572 ;
-	setAttr ".r" -type "double3" -21.338352729601613 81.800000000000168 -2.2299505428754883e-014 ;
+	setAttr ".t" -type "double3" -5.782909243022095 3.5884348944268196 1.0672794627206703 ;
+	setAttr ".r" -type "double3" -27.938352729565793 279.39999999998395 -9.7368312968015152e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 5.5002529632849342;
+	setAttr ".coi" 6.2589728671653848;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -67,19 +67,928 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 6 ".lnk";
-	setAttr -s 6 ".slnk";
+	setAttr -s 4 ".lnk";
+	setAttr -s 4 ".slnk";
 createNode displayLayerManager -n "layerManager";
+	setAttr -s 2 ".dli[1]"  1;
+	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
 	setAttr ".g" yes;
 createNode reference -n "youngAdult_DragonRN";
+	setAttr -s 129 ".phl";
+	setAttr ".phl[1]" 0;
+	setAttr ".phl[2]" 0;
+	setAttr ".phl[3]" 0;
+	setAttr ".phl[4]" 0;
+	setAttr ".phl[5]" 0;
+	setAttr ".phl[6]" 0;
+	setAttr ".phl[7]" 0;
+	setAttr ".phl[8]" 0;
+	setAttr ".phl[9]" 0;
+	setAttr ".phl[10]" 0;
+	setAttr ".phl[11]" 0;
+	setAttr ".phl[12]" 0;
+	setAttr ".phl[13]" 0;
+	setAttr ".phl[14]" 0;
+	setAttr ".phl[15]" 0;
+	setAttr ".phl[16]" 0;
+	setAttr ".phl[17]" 0;
+	setAttr ".phl[18]" 0;
+	setAttr ".phl[19]" 0;
+	setAttr ".phl[20]" 0;
+	setAttr ".phl[21]" 0;
+	setAttr ".phl[22]" 0;
+	setAttr ".phl[23]" 0;
+	setAttr ".phl[24]" 0;
+	setAttr ".phl[25]" 0;
+	setAttr ".phl[26]" 0;
+	setAttr ".phl[27]" 0;
+	setAttr ".phl[28]" 0;
+	setAttr ".phl[29]" 0;
+	setAttr ".phl[30]" 0;
+	setAttr ".phl[31]" 0;
+	setAttr ".phl[32]" 0;
+	setAttr ".phl[33]" 0;
+	setAttr ".phl[34]" 0;
+	setAttr ".phl[35]" 0;
+	setAttr ".phl[36]" 0;
+	setAttr ".phl[37]" 0;
+	setAttr ".phl[38]" 0;
+	setAttr ".phl[39]" 0;
+	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
+	setAttr ".phl[42]" 0;
+	setAttr ".phl[43]" 0;
+	setAttr ".phl[44]" 0;
+	setAttr ".phl[45]" 0;
+	setAttr ".phl[46]" 0;
+	setAttr ".phl[47]" 0;
+	setAttr ".phl[48]" 0;
+	setAttr ".phl[49]" 0;
+	setAttr ".phl[50]" 0;
+	setAttr ".phl[51]" 0;
+	setAttr ".phl[52]" 0;
+	setAttr ".phl[53]" 0;
+	setAttr ".phl[54]" 0;
+	setAttr ".phl[55]" 0;
+	setAttr ".phl[56]" 0;
+	setAttr ".phl[57]" 0;
+	setAttr ".phl[58]" 0;
+	setAttr ".phl[59]" 0;
+	setAttr ".phl[60]" 0;
+	setAttr ".phl[61]" 0;
+	setAttr ".phl[62]" 0;
+	setAttr ".phl[63]" 0;
+	setAttr ".phl[64]" 0;
+	setAttr ".phl[65]" 0;
+	setAttr ".phl[66]" 0;
+	setAttr ".phl[67]" 0;
+	setAttr ".phl[68]" 0;
+	setAttr ".phl[69]" 0;
+	setAttr ".phl[70]" 0;
+	setAttr ".phl[71]" 0;
+	setAttr ".phl[72]" 0;
+	setAttr ".phl[73]" 0;
+	setAttr ".phl[74]" 0;
+	setAttr ".phl[75]" 0;
+	setAttr ".phl[76]" 0;
+	setAttr ".phl[77]" 0;
+	setAttr ".phl[78]" 0;
+	setAttr ".phl[79]" 0;
+	setAttr ".phl[80]" 0;
+	setAttr ".phl[81]" 0;
+	setAttr ".phl[82]" 0;
+	setAttr ".phl[83]" 0;
+	setAttr ".phl[84]" 0;
+	setAttr ".phl[85]" 0;
+	setAttr ".phl[86]" 0;
+	setAttr ".phl[87]" 0;
+	setAttr ".phl[88]" 0;
+	setAttr ".phl[89]" 0;
+	setAttr ".phl[90]" 0;
+	setAttr ".phl[91]" 0;
+	setAttr ".phl[92]" 0;
+	setAttr ".phl[93]" 0;
+	setAttr ".phl[94]" 0;
+	setAttr ".phl[95]" 0;
+	setAttr ".phl[96]" 0;
+	setAttr ".phl[97]" 0;
+	setAttr ".phl[98]" 0;
+	setAttr ".phl[99]" 0;
+	setAttr ".phl[100]" 0;
+	setAttr ".phl[101]" 0;
+	setAttr ".phl[102]" 0;
+	setAttr ".phl[103]" 0;
+	setAttr ".phl[104]" 0;
+	setAttr ".phl[105]" 0;
+	setAttr ".phl[106]" 0;
+	setAttr ".phl[107]" 0;
+	setAttr ".phl[108]" 0;
+	setAttr ".phl[109]" 0;
+	setAttr ".phl[110]" 0;
+	setAttr ".phl[111]" 0;
+	setAttr ".phl[112]" 0;
+	setAttr ".phl[113]" 0;
+	setAttr ".phl[114]" 0;
+	setAttr ".phl[115]" 0;
+	setAttr ".phl[116]" 0;
+	setAttr ".phl[117]" 0;
+	setAttr ".phl[118]" 0;
+	setAttr ".phl[119]" 0;
+	setAttr ".phl[120]" 0;
+	setAttr ".phl[121]" 0;
+	setAttr ".phl[122]" 0;
+	setAttr ".phl[123]" 0;
+	setAttr ".phl[124]" 0;
+	setAttr ".phl[125]" 0;
+	setAttr ".phl[126]" 0;
+	setAttr ".phl[127]" 0;
+	setAttr ".phl[128]" 0;
+	setAttr ".phl[129]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"youngAdult_DragonRN"
-		"youngAdult_DragonRN" 0;
+		"youngAdult_DragonRN" 0
+		"youngAdult_DragonRN" 134
+		2 "|Main_controler|body_controler|tail_controler" "Taillevel" " -av -k 1 -15"
+		
+		2 "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler" 
+		"rotate" " -type \"double3\" 0 0 0"
+		2 "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler" 
+		"rotateX" " -av"
+		2 "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler" 
+		"rotateY" " -av"
+		2 "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler" 
+		"rotateZ" " -av"
+		5 4 "youngAdult_DragonRN" "|Main_controler.rotateX" "youngAdult_DragonRN.placeHolderList[1]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.rotateY" "youngAdult_DragonRN.placeHolderList[2]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.rotateZ" "youngAdult_DragonRN.placeHolderList[3]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.visibility" "youngAdult_DragonRN.placeHolderList[4]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.translateX" "youngAdult_DragonRN.placeHolderList[5]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.translateY" "youngAdult_DragonRN.placeHolderList[6]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.translateZ" "youngAdult_DragonRN.placeHolderList[7]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.scaleX" "youngAdult_DragonRN.placeHolderList[8]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.scaleY" "youngAdult_DragonRN.placeHolderList[9]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler.scaleZ" "youngAdult_DragonRN.placeHolderList[10]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[11]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[12]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[13]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.rotateX" "youngAdult_DragonRN.placeHolderList[14]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.rotateY" "youngAdult_DragonRN.placeHolderList[15]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.rotateZ" "youngAdult_DragonRN.placeHolderList[16]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.scaleX" "youngAdult_DragonRN.placeHolderList[17]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.scaleY" "youngAdult_DragonRN.placeHolderList[18]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.scaleZ" "youngAdult_DragonRN.placeHolderList[19]" 
+		""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[20]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|tail_controler.TailSwing" 
+		"youngAdult_DragonRN.placeHolderList[21]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|tail_controler.Taillevel" 
+		"youngAdult_DragonRN.placeHolderList[22]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|tail_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[23]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[24]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[25]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[26]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[27]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[28]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[29]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[30]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[31]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[32]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[33]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[34]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[35]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[36]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[37]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[38]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[39]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[40]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[41]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[42]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[43]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[44]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[45]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[46]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[47]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[48]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[49]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[50]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[51]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[52]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[53]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[54]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[55]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[56]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[57]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[58]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[59]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[60]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[61]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[62]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|head_controler|nose_controler|mouth_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[63]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[64]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[65]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[66]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[67]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[68]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[69]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[70]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[71]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[72]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[73]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[74]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[75]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[76]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[77]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[78]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[79]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[80]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[81]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[82]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_R_controler|wing_R_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[83]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[84]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[85]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[86]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[87]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[88]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[89]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[90]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[91]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[92]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[93]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[94]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[95]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[96]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[97]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[98]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[99]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[100]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[101]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[102]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|body_controler|shoulders_controler|shoulder_L_controler|wing_L_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[103]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[104]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[105]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[106]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[107]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[108]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[109]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[110]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[111]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[112]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_L_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[113]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.translateX" 
+		"youngAdult_DragonRN.placeHolderList[114]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.translateY" 
+		"youngAdult_DragonRN.placeHolderList[115]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.translateZ" 
+		"youngAdult_DragonRN.placeHolderList[116]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.rotateX" 
+		"youngAdult_DragonRN.placeHolderList[117]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.rotateY" 
+		"youngAdult_DragonRN.placeHolderList[118]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.rotateZ" 
+		"youngAdult_DragonRN.placeHolderList[119]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.scaleX" 
+		"youngAdult_DragonRN.placeHolderList[120]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.scaleY" 
+		"youngAdult_DragonRN.placeHolderList[121]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.scaleZ" 
+		"youngAdult_DragonRN.placeHolderList[122]" ""
+		5 4 "youngAdult_DragonRN" "|Main_controler|foot_R_controler.visibility" 
+		"youngAdult_DragonRN.placeHolderList[123]" ""
+		5 4 "youngAdult_DragonRN" "|youngAdult|youngAdultBody.drawOverride" 
+		"youngAdult_DragonRN.placeHolderList[124]" ""
+		5 4 "youngAdult_DragonRN" "|youngAdult|youngAdultHorns.drawOverride" 
+		"youngAdult_DragonRN.placeHolderList[125]" ""
+		5 4 "youngAdult_DragonRN" "|youngAdult|youngAdultArm.drawOverride" "youngAdult_DragonRN.placeHolderList[126]" 
+		""
+		5 4 "youngAdult_DragonRN" "|youngAdult|youngAdultLegs.drawOverride" 
+		"youngAdult_DragonRN.placeHolderList[127]" ""
+		5 4 "youngAdult_DragonRN" "|youngAdult|youngAdultEyes.drawOverride" 
+		"youngAdult_DragonRN.placeHolderList[128]" ""
+		5 4 "youngAdult_DragonRN" "|youngAdult|youngAdultFacialHorns.drawOverride" 
+		"youngAdult_DragonRN.placeHolderList[129]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
+createNode displayLayer -n "layer1";
+	setAttr ".dt" 2;
+	setAttr ".do" 1;
+createNode animCurveTA -n "Main_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "Main_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "Main_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "body_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "body_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "body_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulders_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulders_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulders_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "head_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "head_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "head_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "nose_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "nose_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "nose_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "mouth_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "mouth_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "mouth_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulder_L_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulder_L_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulder_L_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "wing_L_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "wing_L_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "wing_L_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulder_R_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulder_R_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "shoulder_R_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "wing_R_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "wing_R_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "wing_R_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "foot_L_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "foot_L_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "foot_L_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "foot_R_controler_rotateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "foot_R_controler_rotateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTA -n "foot_R_controler_rotateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "Main_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "Main_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "Main_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "Main_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "Main_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "Main_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "Main_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "body_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "body_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "body_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.035811923961570069 24 -0.035811923961570069;
+createNode animCurveTL -n "body_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "body_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "body_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "body_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "tail_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 1 16 1 24 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTU -n "tail_controler_TailSwing";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 0 16 0 24 0;
+createNode animCurveTU -n "tail_controler_Taillevel";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 15 16 -15 24 15;
+createNode animCurveTU -n "shoulders_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "shoulders_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "shoulders_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "shoulders_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "shoulders_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulders_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulders_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "head_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "head_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "head_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "head_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "head_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "head_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "head_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "nose_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "nose_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "nose_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "nose_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "nose_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "nose_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "nose_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "mouth_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "mouth_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "mouth_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "mouth_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "mouth_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "mouth_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "mouth_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulder_R_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "shoulder_R_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "shoulder_R_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "shoulder_R_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "shoulder_R_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulder_R_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulder_R_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "wing_R_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "wing_R_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "wing_R_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "wing_R_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "wing_R_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "wing_R_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "wing_R_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulder_L_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "shoulder_L_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "shoulder_L_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "shoulder_L_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "shoulder_L_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulder_L_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "shoulder_L_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "wing_L_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "wing_L_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "wing_L_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "wing_L_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "wing_L_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "wing_L_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "wing_L_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "foot_L_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "foot_L_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "foot_L_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "foot_L_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "foot_L_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "foot_L_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "foot_L_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "foot_R_controler_visibility";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
+createNode animCurveTL -n "foot_R_controler_translateX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "foot_R_controler_translateY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTL -n "foot_R_controler_translateZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 0 24 0;
+createNode animCurveTU -n "foot_R_controler_scaleX";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "foot_R_controler_scaleY";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
+createNode animCurveTU -n "foot_R_controler_scaleZ";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 2 ".ktv[0:1]"  1 1 24 1;
 createNode script -n "uiConfigurationScriptNode1";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n"
@@ -149,8 +1058,8 @@ createNode script -n "sceneConfigurationScriptNode1";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 16;
+	setAttr ".unw" 16;
 select -ne :renderPartition;
 	setAttr -s 4 ".st";
 select -ne :initialShadingGroup;
@@ -175,11 +1084,141 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :ikSystem;
+connectAttr "Main_controler_rotateX.o" "youngAdult_DragonRN.phl[1]";
+connectAttr "Main_controler_rotateY.o" "youngAdult_DragonRN.phl[2]";
+connectAttr "Main_controler_rotateZ.o" "youngAdult_DragonRN.phl[3]";
+connectAttr "Main_controler_visibility.o" "youngAdult_DragonRN.phl[4]";
+connectAttr "Main_controler_translateX.o" "youngAdult_DragonRN.phl[5]";
+connectAttr "Main_controler_translateY.o" "youngAdult_DragonRN.phl[6]";
+connectAttr "Main_controler_translateZ.o" "youngAdult_DragonRN.phl[7]";
+connectAttr "Main_controler_scaleX.o" "youngAdult_DragonRN.phl[8]";
+connectAttr "Main_controler_scaleY.o" "youngAdult_DragonRN.phl[9]";
+connectAttr "Main_controler_scaleZ.o" "youngAdult_DragonRN.phl[10]";
+connectAttr "body_controler_translateX.o" "youngAdult_DragonRN.phl[11]";
+connectAttr "body_controler_translateY.o" "youngAdult_DragonRN.phl[12]";
+connectAttr "body_controler_translateZ.o" "youngAdult_DragonRN.phl[13]";
+connectAttr "body_controler_rotateX.o" "youngAdult_DragonRN.phl[14]";
+connectAttr "body_controler_rotateY.o" "youngAdult_DragonRN.phl[15]";
+connectAttr "body_controler_rotateZ.o" "youngAdult_DragonRN.phl[16]";
+connectAttr "body_controler_scaleX.o" "youngAdult_DragonRN.phl[17]";
+connectAttr "body_controler_scaleY.o" "youngAdult_DragonRN.phl[18]";
+connectAttr "body_controler_scaleZ.o" "youngAdult_DragonRN.phl[19]";
+connectAttr "body_controler_visibility.o" "youngAdult_DragonRN.phl[20]";
+connectAttr "tail_controler_TailSwing.o" "youngAdult_DragonRN.phl[21]";
+connectAttr "tail_controler_Taillevel.o" "youngAdult_DragonRN.phl[22]";
+connectAttr "tail_controler_visibility.o" "youngAdult_DragonRN.phl[23]";
+connectAttr "shoulders_controler_rotateX.o" "youngAdult_DragonRN.phl[24]";
+connectAttr "shoulders_controler_rotateY.o" "youngAdult_DragonRN.phl[25]";
+connectAttr "shoulders_controler_rotateZ.o" "youngAdult_DragonRN.phl[26]";
+connectAttr "shoulders_controler_visibility.o" "youngAdult_DragonRN.phl[27]";
+connectAttr "shoulders_controler_translateX.o" "youngAdult_DragonRN.phl[28]";
+connectAttr "shoulders_controler_translateY.o" "youngAdult_DragonRN.phl[29]";
+connectAttr "shoulders_controler_translateZ.o" "youngAdult_DragonRN.phl[30]";
+connectAttr "shoulders_controler_scaleX.o" "youngAdult_DragonRN.phl[31]";
+connectAttr "shoulders_controler_scaleY.o" "youngAdult_DragonRN.phl[32]";
+connectAttr "shoulders_controler_scaleZ.o" "youngAdult_DragonRN.phl[33]";
+connectAttr "head_controler_rotateX.o" "youngAdult_DragonRN.phl[34]";
+connectAttr "head_controler_rotateY.o" "youngAdult_DragonRN.phl[35]";
+connectAttr "head_controler_rotateZ.o" "youngAdult_DragonRN.phl[36]";
+connectAttr "head_controler_visibility.o" "youngAdult_DragonRN.phl[37]";
+connectAttr "head_controler_translateX.o" "youngAdult_DragonRN.phl[38]";
+connectAttr "head_controler_translateY.o" "youngAdult_DragonRN.phl[39]";
+connectAttr "head_controler_translateZ.o" "youngAdult_DragonRN.phl[40]";
+connectAttr "head_controler_scaleX.o" "youngAdult_DragonRN.phl[41]";
+connectAttr "head_controler_scaleY.o" "youngAdult_DragonRN.phl[42]";
+connectAttr "head_controler_scaleZ.o" "youngAdult_DragonRN.phl[43]";
+connectAttr "nose_controler_rotateX.o" "youngAdult_DragonRN.phl[44]";
+connectAttr "nose_controler_rotateY.o" "youngAdult_DragonRN.phl[45]";
+connectAttr "nose_controler_rotateZ.o" "youngAdult_DragonRN.phl[46]";
+connectAttr "nose_controler_visibility.o" "youngAdult_DragonRN.phl[47]";
+connectAttr "nose_controler_translateX.o" "youngAdult_DragonRN.phl[48]";
+connectAttr "nose_controler_translateY.o" "youngAdult_DragonRN.phl[49]";
+connectAttr "nose_controler_translateZ.o" "youngAdult_DragonRN.phl[50]";
+connectAttr "nose_controler_scaleX.o" "youngAdult_DragonRN.phl[51]";
+connectAttr "nose_controler_scaleY.o" "youngAdult_DragonRN.phl[52]";
+connectAttr "nose_controler_scaleZ.o" "youngAdult_DragonRN.phl[53]";
+connectAttr "mouth_controler_rotateX.o" "youngAdult_DragonRN.phl[54]";
+connectAttr "mouth_controler_rotateY.o" "youngAdult_DragonRN.phl[55]";
+connectAttr "mouth_controler_rotateZ.o" "youngAdult_DragonRN.phl[56]";
+connectAttr "mouth_controler_visibility.o" "youngAdult_DragonRN.phl[57]";
+connectAttr "mouth_controler_translateX.o" "youngAdult_DragonRN.phl[58]";
+connectAttr "mouth_controler_translateY.o" "youngAdult_DragonRN.phl[59]";
+connectAttr "mouth_controler_translateZ.o" "youngAdult_DragonRN.phl[60]";
+connectAttr "mouth_controler_scaleX.o" "youngAdult_DragonRN.phl[61]";
+connectAttr "mouth_controler_scaleY.o" "youngAdult_DragonRN.phl[62]";
+connectAttr "mouth_controler_scaleZ.o" "youngAdult_DragonRN.phl[63]";
+connectAttr "shoulder_R_controler_rotateX.o" "youngAdult_DragonRN.phl[64]";
+connectAttr "shoulder_R_controler_rotateY.o" "youngAdult_DragonRN.phl[65]";
+connectAttr "shoulder_R_controler_rotateZ.o" "youngAdult_DragonRN.phl[66]";
+connectAttr "shoulder_R_controler_visibility.o" "youngAdult_DragonRN.phl[67]";
+connectAttr "shoulder_R_controler_translateX.o" "youngAdult_DragonRN.phl[68]";
+connectAttr "shoulder_R_controler_translateY.o" "youngAdult_DragonRN.phl[69]";
+connectAttr "shoulder_R_controler_translateZ.o" "youngAdult_DragonRN.phl[70]";
+connectAttr "shoulder_R_controler_scaleX.o" "youngAdult_DragonRN.phl[71]";
+connectAttr "shoulder_R_controler_scaleY.o" "youngAdult_DragonRN.phl[72]";
+connectAttr "shoulder_R_controler_scaleZ.o" "youngAdult_DragonRN.phl[73]";
+connectAttr "wing_R_controler_translateX.o" "youngAdult_DragonRN.phl[74]";
+connectAttr "wing_R_controler_translateY.o" "youngAdult_DragonRN.phl[75]";
+connectAttr "wing_R_controler_translateZ.o" "youngAdult_DragonRN.phl[76]";
+connectAttr "wing_R_controler_rotateX.o" "youngAdult_DragonRN.phl[77]";
+connectAttr "wing_R_controler_rotateY.o" "youngAdult_DragonRN.phl[78]";
+connectAttr "wing_R_controler_rotateZ.o" "youngAdult_DragonRN.phl[79]";
+connectAttr "wing_R_controler_scaleX.o" "youngAdult_DragonRN.phl[80]";
+connectAttr "wing_R_controler_scaleY.o" "youngAdult_DragonRN.phl[81]";
+connectAttr "wing_R_controler_scaleZ.o" "youngAdult_DragonRN.phl[82]";
+connectAttr "wing_R_controler_visibility.o" "youngAdult_DragonRN.phl[83]";
+connectAttr "shoulder_L_controler_rotateX.o" "youngAdult_DragonRN.phl[84]";
+connectAttr "shoulder_L_controler_rotateY.o" "youngAdult_DragonRN.phl[85]";
+connectAttr "shoulder_L_controler_rotateZ.o" "youngAdult_DragonRN.phl[86]";
+connectAttr "shoulder_L_controler_visibility.o" "youngAdult_DragonRN.phl[87]";
+connectAttr "shoulder_L_controler_translateX.o" "youngAdult_DragonRN.phl[88]";
+connectAttr "shoulder_L_controler_translateY.o" "youngAdult_DragonRN.phl[89]";
+connectAttr "shoulder_L_controler_translateZ.o" "youngAdult_DragonRN.phl[90]";
+connectAttr "shoulder_L_controler_scaleX.o" "youngAdult_DragonRN.phl[91]";
+connectAttr "shoulder_L_controler_scaleY.o" "youngAdult_DragonRN.phl[92]";
+connectAttr "shoulder_L_controler_scaleZ.o" "youngAdult_DragonRN.phl[93]";
+connectAttr "wing_L_controler_translateX.o" "youngAdult_DragonRN.phl[94]";
+connectAttr "wing_L_controler_translateY.o" "youngAdult_DragonRN.phl[95]";
+connectAttr "wing_L_controler_translateZ.o" "youngAdult_DragonRN.phl[96]";
+connectAttr "wing_L_controler_rotateX.o" "youngAdult_DragonRN.phl[97]";
+connectAttr "wing_L_controler_rotateY.o" "youngAdult_DragonRN.phl[98]";
+connectAttr "wing_L_controler_rotateZ.o" "youngAdult_DragonRN.phl[99]";
+connectAttr "wing_L_controler_scaleX.o" "youngAdult_DragonRN.phl[100]";
+connectAttr "wing_L_controler_scaleY.o" "youngAdult_DragonRN.phl[101]";
+connectAttr "wing_L_controler_scaleZ.o" "youngAdult_DragonRN.phl[102]";
+connectAttr "wing_L_controler_visibility.o" "youngAdult_DragonRN.phl[103]";
+connectAttr "foot_L_controler_translateX.o" "youngAdult_DragonRN.phl[104]";
+connectAttr "foot_L_controler_translateY.o" "youngAdult_DragonRN.phl[105]";
+connectAttr "foot_L_controler_translateZ.o" "youngAdult_DragonRN.phl[106]";
+connectAttr "foot_L_controler_rotateX.o" "youngAdult_DragonRN.phl[107]";
+connectAttr "foot_L_controler_rotateY.o" "youngAdult_DragonRN.phl[108]";
+connectAttr "foot_L_controler_rotateZ.o" "youngAdult_DragonRN.phl[109]";
+connectAttr "foot_L_controler_scaleX.o" "youngAdult_DragonRN.phl[110]";
+connectAttr "foot_L_controler_scaleY.o" "youngAdult_DragonRN.phl[111]";
+connectAttr "foot_L_controler_scaleZ.o" "youngAdult_DragonRN.phl[112]";
+connectAttr "foot_L_controler_visibility.o" "youngAdult_DragonRN.phl[113]";
+connectAttr "foot_R_controler_translateX.o" "youngAdult_DragonRN.phl[114]";
+connectAttr "foot_R_controler_translateY.o" "youngAdult_DragonRN.phl[115]";
+connectAttr "foot_R_controler_translateZ.o" "youngAdult_DragonRN.phl[116]";
+connectAttr "foot_R_controler_rotateX.o" "youngAdult_DragonRN.phl[117]";
+connectAttr "foot_R_controler_rotateY.o" "youngAdult_DragonRN.phl[118]";
+connectAttr "foot_R_controler_rotateZ.o" "youngAdult_DragonRN.phl[119]";
+connectAttr "foot_R_controler_scaleX.o" "youngAdult_DragonRN.phl[120]";
+connectAttr "foot_R_controler_scaleY.o" "youngAdult_DragonRN.phl[121]";
+connectAttr "foot_R_controler_scaleZ.o" "youngAdult_DragonRN.phl[122]";
+connectAttr "foot_R_controler_visibility.o" "youngAdult_DragonRN.phl[123]";
+connectAttr "layer1.di" "youngAdult_DragonRN.phl[124]";
+connectAttr "layer1.di" "youngAdult_DragonRN.phl[125]";
+connectAttr "layer1.di" "youngAdult_DragonRN.phl[126]";
+connectAttr "layer1.di" "youngAdult_DragonRN.phl[127]";
+connectAttr "layer1.di" "youngAdult_DragonRN.phl[128]";
+connectAttr "layer1.di" "youngAdult_DragonRN.phl[129]";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "layerManager.dli[1]" "layer1.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of teenageDragon.ma
