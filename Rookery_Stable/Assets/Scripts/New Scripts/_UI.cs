@@ -20,11 +20,11 @@ public class _UI : MonoBehaviour
     //pointer to the gameobject selected 
     private GameObject selected;
     //GUIText screen positioning and object selection screen positioning
-    private Vector3 selectedScreenPosition, goldDisplayPosition, healthDisplayPosition, waveDisplayPosition;
+    private Vector3 selectedScreenPosition, goldDisplayPosition, healthDisplayPosition, waveDisplayPosition, fireballDisplayPosition;
     //Placable objects will be hard coded in final polish
     public GameObject egg, eggOutline, fireball, fireballTargetCursor;
     private GameObject EggPlacementTileSelector;
-    private GameObject goldDisplay, healthDisplay, waveDisplay;
+    private GameObject goldDisplay, healthDisplay, waveDisplay, fireballDisplay;
     //strings used for GUIText
     private string wyrmGold, wyrmHealth;
 
@@ -71,6 +71,9 @@ public class _UI : MonoBehaviour
         healthDisplay = new GameObject();
         healthDisplay.name = "HealthDisplayObject";
         healthDisplay.AddComponent<GUIText>();
+		fireballDisplay = new GameObject();
+        fireballDisplay.name = "FireballDisplayObject";
+        fireballDisplay.AddComponent<GUIText>();
         waveDisplay = new GameObject();
         waveDisplay.name = "WaveDisplayObject";
         waveDisplay.AddComponent<GUIText>();
@@ -118,6 +121,18 @@ public class _UI : MonoBehaviour
         healthDisplayPosition.x = 0.01f;
         healthDisplayPosition.y = 0.88f;
         healthDisplay.transform.position = healthDisplayPosition;
+		
+		fireballDisplay.guiText.anchor = TextAnchor.UpperLeft;
+        fireballDisplay.guiText.alignment = TextAlignment.Left;
+        fireballDisplay.guiText.lineSpacing = 1;
+        fireballDisplay.guiText.tabSize = 4;
+        //fireballDisplay.guiText.font = 
+        fireballDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
+        fireballDisplay.guiText.fontStyle = FontStyle.Normal;
+        //fireballDisplay.guiText.material = 
+        fireballDisplayPosition.x = 0.01f;
+        fireballDisplayPosition.y = 0.83f;
+        fireballDisplay.transform.position = fireballDisplayPosition;
 
 
 	}
@@ -193,6 +208,9 @@ public class _UI : MonoBehaviour
         string waveNumberString = _Overlord.waveNumber.ToString();
         waveDisplay.guiText.text = "Wave: " + waveNumberString;
         waveDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
+		//display fireball cooldown on GUIText
+		fireballDisplay.guiText.text = "Fireball Cooldown: " + _Overlord.fireball_timer.ToString();
+		fireballDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
 	}
 
     //called when the user has clicked the left mouse button
@@ -278,15 +296,26 @@ public class _UI : MonoBehaviour
             //if the UI is in fireball state
             else if (fireballSelected)
             {
-         //       GameObject.Destroy(fireballTargetCursor);
-                GameObject Fireball;
-                Fireball = Instantiate(fireball, _Wyrm.position, Quaternion.identity) as GameObject;
-                Fireball.GetComponent<_Fireball>().target = hit.transform.position;
+				//if the player has enough gold to afford placing the egg
+                if (_Overlord.gold >= _Overlord.fireball_current_cost && _Overlord.fireball_timer == 0)
+                {
+         			//GameObject.Destroy(fireballTargetCursor);
+                	GameObject Fireball;
+                	Fireball = Instantiate(fireball, _Wyrm.position, Quaternion.identity) as GameObject;
+                	Fireball.GetComponent<_Fireball>().target = hit.transform.position;
 
-                //send forth a fireball at hit.transform
+                	//send forth a fireball at hit.transform
 
-                //exit the fireball state
-                fireballSelected = false;
+                	//exit the fireball state
+                	fireballSelected = false;
+					
+					//Adjust fireball values
+					_Overlord.gold -= _Overlord.fireball_current_cost;
+					_Overlord.fireball_timer = _Overlord.fireball_cooldown;
+					_Overlord.fireball_current_cost = (int)(_Overlord.fireball_current_cost * _Overlord.fireball_increase);
+				}
+				else
+					fireballSelected = false;
             }
         }
     }
