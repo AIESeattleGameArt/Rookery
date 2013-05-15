@@ -43,7 +43,6 @@ public class _DragonFire : _DragonBase
             if (c.tag == "Unit")
             {
                 //set the next time the turret can fire
-                print(nextFire);
                 if (nextFire < Time.time)
                 {
                     nextFire = Time.time + fireRate;

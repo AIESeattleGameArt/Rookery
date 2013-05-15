@@ -36,6 +36,8 @@ public class _Enemy : MonoBehaviour {
         distanceTravelled = 0;
         Physics.IgnoreLayerCollision(8, 8);
         nextTarget = targetTile.transform.position;
+        Transform bar = transform.FindChild("HealthBar");
+        bar.GetComponent<_HealthBar>().maxHp = health;
         moveSpeed = 1;
         rotationSpeed = 200;
         goingForward = true;

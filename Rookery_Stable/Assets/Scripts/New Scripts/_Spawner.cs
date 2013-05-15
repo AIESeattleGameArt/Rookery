@@ -5,41 +5,51 @@ public class _Spawner : MonoBehaviour {
 
 	public int numEnemies;
     public int numEnemiesInEachWave;
-    private int counter;
+    private int counter, waveCounter, countdownToBigerWave;
     private int totalNumberOfEnemiesSpawned;
-    private double timer;
+    private double timer, survivalTimer;
     private int unitTypeToSpawn;
-    public double timeBetweenSpawns;
+    public double timeBetweenSpawns, timeBetweenWaves;
     public bool canSpawnNextWave;
     public GameObject[] enemyTypes = new GameObject[6];
+    public bool survivalMode;
 
-    static public int maxEnemies, survivalMax;
+    static public int maxEnemies;
     //public float spawnRate;
     //private float nextSpawn = 0.0f;
     public int totalSpawned = 0;
-    //public int enemyScaler = 25;
-    //public int enemyScaler2 = 50;
+    public float enemyScaler = 1;
     public _Tile firstTileOnMap;
 
 	// Use this for initialization
 	void Start () {
-        survivalMax = 6;
+        waveCounter = 0;
+        countdownToBigerWave = 5;
         maxEnemies = 6;
         canSpawnNextWave = true;
 	}
 
     void SurvivalSpawning()
     {
-        if (totalSpawned < survivalMax && timer < Time.time)
+        timeBetweenWaves -= Time.deltaTime;
+        if (timeBetweenWaves <= 0)
         {
-            timer = Time.time + timeBetweenSpawns;
-            timeBetweenSpawns = Random.Range(0.5f, 2.5f);
-            totalSpawned++;
-            int selector = Random.Range(1, 6);
-            GameObject spawn = Instantiate(enemyTypes[selector], new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation) as GameObject;
-            spawn.transform.position = transform.position;
-            spawn.GetComponent<_Enemy>().targetTile = this.firstTileOnMap;
-            spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
+            timeBetweenWaves = 30;
+            canSpawnNextWave = false;
+            unitTypeToSpawn = 9;
+            timer = Time.time;
+            counter = 10 - waveCounter;
+            enemyScaler += 0.25f;
+            if (counter < 0)
+            {
+                counter = 0;
+            }
+            countdownToBigerWave--;
+            if (countdownToBigerWave < 0)
+            {
+                countdownToBigerWave = 5;
+                waveCounter++;
+            }
         }
     }
 
@@ -55,6 +65,9 @@ public class _Spawner : MonoBehaviour {
                 spawn.transform.position = transform.position;
                 spawn.GetComponent<_Enemy>().targetTile = this.firstTileOnMap;
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
+                spawn.GetComponent<_Enemy>().health *= enemyScaler;
+                spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
+
                 counter++;
                 if (counter == numEnemiesInEachWave)
                 {
@@ -71,6 +84,8 @@ public class _Spawner : MonoBehaviour {
                 spawn.transform.position = transform.position;
                 spawn.GetComponent<_Enemy>().targetTile = this.firstTileOnMap;
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
+                spawn.GetComponent<_Enemy>().health *= enemyScaler;
+                spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
 
                 counter++;
                 if (counter == 10)
@@ -89,6 +104,8 @@ public class _Spawner : MonoBehaviour {
                 spawn.transform.position = transform.position;
                 spawn.GetComponent<_Enemy>().targetTile = this.firstTileOnMap;
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
+                spawn.GetComponent<_Enemy>().health *= enemyScaler;
+                spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
 
                 counter++;
                 if (counter == 15)
@@ -107,6 +124,8 @@ public class _Spawner : MonoBehaviour {
                 spawn.transform.position = transform.position;
                 spawn.GetComponent<_Enemy>().targetTile = this.firstTileOnMap;
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
+                spawn.GetComponent<_Enemy>().health *= enemyScaler;
+                spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
 
                 counter++;
                 if (counter == 20)
@@ -125,11 +144,12 @@ public class _Spawner : MonoBehaviour {
         GameObject[] gos;
         gos = GameObject.FindGameObjectsWithTag("Unit");
         numEnemies = gos.Length;
-        //foreach (GameObject go in gos)
-        //{
-        //    numEnemies++;
-        //}
-        SurvivalSpawning();
+
+        if (survivalMode)
+        {
+            SurvivalSpawning();
+        }
+
         if (!canSpawnNextWave)
         {
             //currently spawning a wave, cannot send another wave yet
