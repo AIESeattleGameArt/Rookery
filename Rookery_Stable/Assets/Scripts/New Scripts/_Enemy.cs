@@ -16,7 +16,7 @@ public class _Enemy : MonoBehaviour {
     public _Tile targetTile;
     public bool goingForward;
     public bool hasGold;
-	public bool didDamage;
+	public bool attacking;
     public float distanceCheckDisplay1;
     public float distanceCheckDisplay2;
     public float rotationSpeed;
@@ -26,7 +26,7 @@ public class _Enemy : MonoBehaviour {
     public bool slowed, shocked;
     public float modifyMoveSpeed, slowTimer, shockTimer;
     public int distanceTravelled;
-    public ParticleSystem fire, ice, shock;
+    public ParticleSystem fire, ice, shock, egged;
 
     public GameObject ragdoll;
     
@@ -42,7 +42,7 @@ public class _Enemy : MonoBehaviour {
         rotationSpeed = 200;
         goingForward = true;
         hasGold = false;
-		didDamage = false;
+        attacking = false;
         slowed = false;
 	}
 
@@ -83,6 +83,7 @@ public class _Enemy : MonoBehaviour {
                 _Overlord.gold -= gold;
                 gold *= 2;
                 hasGold = true;
+                attacking = false;
             }
             else if (_Overlord.gold > 0 && !hasGold)
             {
@@ -90,12 +91,13 @@ public class _Enemy : MonoBehaviour {
                 _Overlord.gold -= goldTaken;
                 gold += goldTaken;
                 hasGold = true;
+                attacking = false;
             }
-            if (_Overlord.gold <= 0 && !didDamage)
+            if (_Overlord.gold <= 0 && !attacking)
             {
                 //gold is the "damage" the enemy does
                 _Overlord.wyrmHealth = _Overlord.wyrmHealth - gold;
-				didDamage = true;
+                attacking = true;
             }
         }
 
@@ -104,30 +106,33 @@ public class _Enemy : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        //new rotation
-        Vector3 target = targetTile.transform.position - transform.position;
-        Quaternion targetRotation = Quaternion.LookRotation(target);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
-        //end of new rotation
-
-        //new movement
-        float distanceCheckX = 10000;
-        float distanceCheckZ = 10000;
-
-        distanceCheckX = Mathf.Abs(nextTarget.x - this.transform.position.x);
-        distanceCheckZ = Mathf.Abs(nextTarget.z - this.transform.position.z);
-        distanceCheckDisplay1 = distanceCheckX;
-        distanceCheckDisplay2 = distanceCheckZ;
-
-        if (distanceCheckX < 0.1 && distanceCheckZ < 0.1)
+        if (!attacking)
         {
-            targetTile = targetTile.nextTile;
-            nextTarget = targetTile.transform.position;
-            distanceTravelled++;
+            //new rotation
+            Vector3 target = targetTile.transform.position - transform.position;
+            Quaternion targetRotation = Quaternion.LookRotation(target);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+            //end of new rotation
+
+            //new movement
+            float distanceCheckX = 10000;
+            float distanceCheckZ = 10000;
+
+            distanceCheckX = Mathf.Abs(nextTarget.x - this.transform.position.x);
+            distanceCheckZ = Mathf.Abs(nextTarget.z - this.transform.position.z);
+            distanceCheckDisplay1 = distanceCheckX;
+            distanceCheckDisplay2 = distanceCheckZ;
+
+            if (distanceCheckX < 0.1 && distanceCheckZ < 0.1)
+            {
+                targetTile = targetTile.nextTile;
+                nextTarget = targetTile.transform.position;
+                distanceTravelled++;
+            }
+            else
+                transform.Translate(0, 0, moveSpeed * Time.deltaTime);
+            //end of new movement
         }
-        else
-            transform.Translate(0, 0, moveSpeed * Time.deltaTime);
-        //end of new movement
     }
 
     void TakeDamage()
