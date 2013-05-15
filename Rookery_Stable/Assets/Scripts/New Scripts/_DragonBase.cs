@@ -24,6 +24,10 @@ public abstract class _DragonBase : MonoBehaviour
     //level of the dragon
     public int level = 0;
 
+    protected enum targetType { farthest = 0, leastHP, mostHP, first };
+    protected targetType selcted;
+    protected Vector3 target;
+
     public abstract void LevelUp();
 
     public abstract void LevelUp(string type);
