@@ -56,5 +56,9 @@ public class _Overlord : MonoBehaviour {
 		// Decrement the fireball cooldown timer if not ready yet
 		if (fireball_timer > 0)
 			fireball_timer--;
+		
+		// Check to see if game over condition is met and exit if so
+		if (gold <= 0 && wyrmHealth <= 0)
+			Application.LoadLevel("Loser");
 	}
 }
