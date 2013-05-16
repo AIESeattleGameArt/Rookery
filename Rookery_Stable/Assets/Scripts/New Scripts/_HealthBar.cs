@@ -8,6 +8,12 @@ public class _HealthBar : MonoBehaviour
     private Rect healthbarPosition, leftCapPosition, rightCapPosition;
     private GUIStyle style = new GUIStyle();
 
+    void Start()
+    {
+        healthbarHeight = 15.0f;
+        healthbarWidth = 50.0f;
+    }
+
     void Update()
     {
         Vector3 position = Camera.mainCamera.WorldToScreenPoint(transform.position);
@@ -18,27 +24,28 @@ public class _HealthBar : MonoBehaviour
         healthbarPosition.Set(healthBarLeft, healthBarTop, ((hp / maxHp) * healthbarWidth), healthbarHeight);
 
         //left cap position and size
-        float leftCapTop = healthbarPosition.yMin;
-        float leftCapLeft = healthbarPosition.xMin;
-        leftCapPosition.Set(leftCapLeft, leftCapTop, 20f, 10f);
+        float leftCapTop = healthbarPosition.yMin - 8;
+        float leftCapLeft = healthbarPosition.xMin - 15;
+        leftCapPosition.Set(leftCapLeft, leftCapTop, 30f, 16f);
 
         //right cap position and size
-        float rightCapTop = healthbarPosition.yMin;
-        float rightCapLeft = healthbarPosition.xMax;
-        leftCapPosition.Set(rightCapLeft, rightCapTop, 20f, 10f);
+        float rightCapTop = healthbarPosition.yMin - 8;
+        float rightCapLeft = healthbarPosition.xMax + 15;
+        rightCapPosition.Set(rightCapLeft, rightCapTop, 30f, 16f);
     }
 
     void OnGUI()
     {
         //temp healthbar
         GUI.Button(healthbarPosition, "");
-        /*
+
+            /*
         //shows the health bar
         GUI.Label(healthbarPosition, healthBarTexture, style);
         //shows the left cap
         GUI.Label(leftCapPosition, leftCapTexture, style);
         //shows the right cap
         GUI.Label(rightCapPosition, rightCapTexture, style);
-         * */
+            */
     }
 }
