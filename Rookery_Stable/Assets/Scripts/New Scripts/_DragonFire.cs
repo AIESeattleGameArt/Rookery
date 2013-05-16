@@ -41,10 +41,12 @@ public class _DragonFire : _DragonBase
         Collider[] cols = Physics.OverlapSphere(transform.position, range);
         int FurthestDistanceTravelled = -1, lowestPosition = 999;
         float leastHealth = 999, mostHealth = -1;
+        gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.idle);
         foreach (Collider c in cols)
         {
             if (c.tag == "Unit")
             {
+                gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.alert);
                 switch (selcted)
                 {
                     case targetType.first:
@@ -102,6 +104,7 @@ public class _DragonFire : _DragonBase
 
         if (canFire && nextFire < Time.time)
         {
+            gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.attack);
             nextFire = Time.time + fireRate;
             //create a projectile
             GameObject round = Instantiate(projectile, firingPos.transform.position, transform.rotation) as GameObject;
