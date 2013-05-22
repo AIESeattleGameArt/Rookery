@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: MotherDragon_idle.ma
-//Last modified: Wed, May 15, 2013 05:53:04 PM
+//Last modified: Tue, May 21, 2013 03:17:43 PM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "Mother_DragonRN" "C:/Users/student/Documents/GitHub/Rookery/Art/dragon_towers/Animations/Source/Mother_Dragon.ma";
 file -r -ns ":" -dr 1 -rfn "Mother_DragonRN" "C:/Users/student/Documents/GitHub/Rookery/Art/dragon_towers/Animations/Source/Mother_Dragon.ma";
@@ -10,30 +10,32 @@ requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2013";
-fileInfo "version" "2013";
-fileInfo "cutIdentifier" "201202220747-825128";
+fileInfo "version" "2013 x64";
+fileInfo "cutIdentifier" "201202220241-825136";
 fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service Pack 1 (Build 7601)\n";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.8159431292338095 3.3344250810008473 2.345631276230296 ;
-	setAttr ".r" -type "double3" -50.738352729587127 -40.199999999974473 2.082070711435789e-015 ;
+	setAttr ".t" -type "double3" -1.7209424427696947 0.60836125710426592 -0.72064125490730335 ;
+	setAttr ".r" -type "double3" -8.1383527299507339 951.40000000029193 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 4.2971319030192312;
+	setAttr ".coi" 1.5655894039225617;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 100.1 0 ;
+	setAttr ".t" -type "double3" 0 103.46835150699225 -0.056991499999977858 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
+	setAttr ".rp" -type "double3" 0 0 -1.4210854715202004e-014 ;
+	setAttr ".rpt" -type "double3" 0 -1.4210854715202007e-014 1.4210854715202007e-014 ;
 createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
-	setAttr ".coi" 100.1;
+	setAttr ".coi" 100.10000000000002;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
@@ -489,7 +491,7 @@ createNode reference -n "Mother_DragonRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Mother_DragonRN"
 		"Mother_DragonRN" 0
-		"Mother_DragonRN" 3322
+		"Mother_DragonRN" 3336
 		2 "|Mother_Dragon" "miDeriveFromMaya" " 1"
 		2 "|Mother_Dragon" "miHide" " 0"
 		2 "|Mother_Dragon" "miVisible" " 2"
@@ -762,6 +764,8 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Mother_Dragon|Head_etc" "miGlobillum" " 5"
 		2 "|Mother_Dragon|Head_etc" "miExportGeoShader" " 0"
 		2 "|Mother_Dragon|Head_etc" "miProxyRenderable" " 1"
+		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_bottom" "visibility" 
+		" 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_bottom" "miDeriveFromMaya" 
 		" 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_bottom" "miHide" " 0"
@@ -892,6 +896,8 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_bottom|Mother_Dragon_Head_horns_bottomShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_top" "visibility" " 1"
+		
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_top" "miDeriveFromMaya" 
 		" 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_top" "miHide" " 0"
@@ -1019,6 +1025,8 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_horns_top|Mother_Dragon_Head_horns_topShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_mouth_bits" "visibility" " 1"
+		
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_mouth_bits" "miDeriveFromMaya" 
 		" 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_mouth_bits" "miHide" " 0"
@@ -1147,6 +1155,8 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_mouth_bits|Mother_Dragon_Head_mouth_bitsShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_Horn_tip" "visibility" " 1"
+		
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_Horn_tip" "miDeriveFromMaya" 
 		" 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_Horn_tip" "miHide" " 0"
@@ -1272,6 +1282,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Head_Horn_tip|Mother_Dragon_Head_Horn_tipShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Teeth" "visibility" " 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Teeth" "miDeriveFromMaya" " 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Teeth" "miHide" " 0"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Teeth" "miVisible" " 2"
@@ -1393,6 +1404,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Teeth|Mother_Dragon_TeethShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Dragon_eyes" "visibility" " 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Dragon_eyes" "miDeriveFromMaya" 
 		" 1"
 		2 "|Mother_Dragon|Head_etc|Mother_Dragon_Dragon_eyes" "miHide" " 0"
@@ -2146,6 +2158,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|Armor|Mother_Dragon_armor_chest|Mother_Dragon_armor_chestShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|Armor|Mother_Dragon_armor_back" "visibility" " 1"
 		2 "|Mother_Dragon|Armor|Mother_Dragon_armor_back" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|Armor|Mother_Dragon_armor_back" "miHide" " 0"
@@ -2775,6 +2788,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_4|Mother_Dragon_Spine_nubs_4ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_5" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_5" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_5" "miHide" " 0"
@@ -2899,6 +2913,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_5|Mother_Dragon_Spine_nubs_5ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_6" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_6" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_6" "miHide" " 0"
@@ -3023,6 +3038,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_6|Mother_Dragon_Spine_nubs_6ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_7" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_7" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_7" "miHide" " 0"
@@ -3147,6 +3163,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_7|Mother_Dragon_Spine_nubs_7ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_8" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_8" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_8" "miHide" " 0"
@@ -3271,6 +3288,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_8|Mother_Dragon_Spine_nubs_8ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_9" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_9" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_9" "miHide" " 0"
@@ -3395,6 +3413,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_9|Mother_Dragon_Spine_nubs_9ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_10" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_10" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_10" "miHide" " 0"
@@ -3519,6 +3538,7 @@ createNode reference -n "Mother_DragonRN";
 		"miMaxDisplaceOverride" " 0"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_10|Mother_Dragon_Spine_nubs_10ShapeOrig" 
 		"miMaxDisplace" " 0"
+		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_11" "visibility" " 1"
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_11" "miDeriveFromMaya" " 1"
 		
 		2 "|Mother_Dragon|nubs|Mother_Dragon_Spine_nubs_11" "miHide" " 0"
@@ -4549,9 +4569,9 @@ createNode reference -n "Mother_DragonRN";
 		2 "|hips_jnt|hips_jnt_parentConstraint1" "miExportGeoShader" " 0"
 		2 "|hips_jnt|hips_jnt_parentConstraint1" "miProxyRenderable" " 1"
 		2 "|Main_Controler" "translate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler" "translateZ" " -av"
-		2 "|Main_Controler" "translateY" " -av"
 		2 "|Main_Controler" "translateX" " -av"
+		2 "|Main_Controler" "translateY" " -av"
+		2 "|Main_Controler" "translateZ" " -av"
 		2 "|Main_Controler" "rotate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler" "rotateX" " -av"
 		2 "|Main_Controler" "rotateY" " -av"
@@ -4585,9 +4605,9 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|Foot_L_Controler" "miProxyRenderable" " 1"
 		2 "|Main_Controler|Foot_L_Controler1" "translate" " -type \"double3\" 0 0 0"
 		
-		2 "|Main_Controler|Foot_L_Controler1" "translateZ" " -av"
-		2 "|Main_Controler|Foot_L_Controler1" "translateY" " -av"
 		2 "|Main_Controler|Foot_L_Controler1" "translateX" " -av"
+		2 "|Main_Controler|Foot_L_Controler1" "translateY" " -av"
+		2 "|Main_Controler|Foot_L_Controler1" "translateZ" " -av"
 		2 "|Main_Controler|Foot_L_Controler1" "rotate" " -type \"double3\" 0 0 0"
 		
 		2 "|Main_Controler|Foot_L_Controler1" "rotateX" " -av"
@@ -4602,7 +4622,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|Foot_L_Controler1" "miGlobillum" " 5"
 		2 "|Main_Controler|Foot_L_Controler1" "miExportGeoShader" " 0"
 		2 "|Main_Controler|Foot_L_Controler1" "miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2" "translate" " -type \"double3\" 0 0.0270163 0"
+		2 "|Main_Controler|nurbsCircle2" "translate" " -type \"double3\" -0.00269999 0.0234352 -0.000668053"
 		
 		2 "|Main_Controler|nurbsCircle2" "translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2" "translateY" " -av"
@@ -4623,9 +4643,9 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2" "miProxyRenderable" " 1"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translate" " -type \"double3\" 0 0 0"
 		
-		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "rotate" " -type \"double3\" 18.700054 28.376653 9.138822"
 		
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "rotateX" " -av"
@@ -4645,11 +4665,11 @@ createNode reference -n "Mother_DragonRN";
 		" 1"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translate" 
 		" -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translateZ" 
+		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translateX" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translateY" 
 		" -av"
-		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translateX" 
+		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translateZ" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "rotate" 
 		" -type \"double3\" 0 28.538359 0"
@@ -4680,11 +4700,11 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
 		"rotate" " -type \"double3\" 0 23.03006 0"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
@@ -4713,9 +4733,9 @@ createNode reference -n "Mother_DragonRN";
 		"miProxyRenderable" " 1"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "translate" " -type \"double3\" 0 0 0"
 		
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "rotate" " -type \"double3\" 37.690689 -11.115063 -8.471765"
 		
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler" "rotateX" " -av"
@@ -4735,14 +4755,14 @@ createNode reference -n "Mother_DragonRN";
 		
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translate" 
 		" -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translateZ" 
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translateX" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translateY" 
 		" -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translateX" 
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translateZ" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "rotate" 
-		" -type \"double3\" 15.616028 -1.64585 3.445099"
+		" -type \"double3\" 27.973535 -2.824318 2.819057"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "rotateX" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "rotateY" 
@@ -4770,13 +4790,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
-		"rotate" " -type \"double3\" -12.398948 -8.281666 1.813744"
+		"rotate" " -type \"double3\" -9.111652 -11.182346 2.283609"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
@@ -4804,13 +4824,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
-		"rotate" " -type \"double3\" -3.773018 -8.099172 2.182518"
+		"rotate" " -type \"double3\" -10.805618 -15.636531 0.469196"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
@@ -4838,13 +4858,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
-		"rotate" " -type \"double3\" -0.423507 -7.848557 0.0578331"
+		"rotate" " -type \"double3\" -10.814452 -6.831694 3.570431"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
@@ -4872,13 +4892,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
-		"rotate" " -type \"double3\" -1.085845 -19.387657 0.360493"
+		"rotate" " -type \"double3\" -3.18682 -12.85517 11.096221"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
@@ -4906,11 +4926,11 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler" 
 		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler" 
@@ -4940,273 +4960,273 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"rotate" " -type \"double3\" 5.339768 0 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"rotateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"rotateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"rotateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"translateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"rotate" " -type \"double3\" 26.92074 54.574785 -2.5668"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"rotateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"rotateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"rotateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"translateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"rotate" " -type \"double3\" -23.936359 -11.324624 42.930787"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"rotateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"rotateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"rotateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"translateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"rotate" " -type \"double3\" 0 0 7.339649"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"rotateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"rotateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"rotateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"translateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"rotate" " -type \"double3\" 0 0 -25.077467"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"rotateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"rotateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"rotateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miDeriveFromMaya" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miHide" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miVisible" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miTrace" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miShadow" " 2"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miCaustic" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miGlobillum" " 5"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miExportGeoShader" " 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
+		"miProxyRenderable" " 1"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
+		"translateX" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
+		"translateY" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
+		"translateZ" " -av"
+		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"rotate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"rotateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"rotateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"rotateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"translateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"translateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"rotate" " -type \"double3\" -4.737329 55.31162 -22.829592"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"rotateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"rotateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"rotateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"translateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"translateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotate" " -type \"double3\" 0 0 35.327627"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"translateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"translateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotate" " -type \"double3\" 0 0 -0.308559"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"translateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"translateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotate" " -type \"double3\" 0 0 -31.773644"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miDeriveFromMaya" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miHide" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miVisible" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miTrace" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miShadow" " 2"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miCaustic" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miGlobillum" " 5"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miExportGeoShader" " 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group" 
-		"miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"translate" " -type \"double3\" 0 0 0"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"translateY" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"translateX" " -av"
-		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"rotate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
@@ -5252,13 +5272,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
-		"rotate" " -type \"double3\" -29.869889 16.066485 -42.918116"
+		"rotate" " -type \"double3\" -14.283004 16.066485 -42.918116"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
@@ -5304,13 +5324,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotate" " -type \"double3\" 0 0 25.361993"
+		"rotate" " -type \"double3\" 11.009314 6.589562 30.599275"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
@@ -5356,13 +5376,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotate" " -type \"double3\" 0 0 -6.476446"
+		"rotate" " -type \"double3\" 0 0 -0.836593"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
@@ -5408,13 +5428,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotate" " -type \"double3\" 0 0 -31.773644"
+		"rotate" " -type \"double3\" 0 0 -16.752349"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
@@ -5460,13 +5480,13 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"translate" " -type \"double3\" 0 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"translateZ" " -av"
+		"translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"translateX" " -av"
+		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 9.753735"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
@@ -5725,29 +5745,29 @@ createNode reference -n "Mother_DragonRN";
 		2 "momma_dargon_unwrapping_main_body_01:file1" "miOverrideConvertToOptim" 
 		" 0"
 		2 "momma_dargon_unwrapping_main_body_01:file1" "miConvertToOptim" " 0"
-		5 4 "Mother_DragonRN" "|Main_Controler.rotateX" "Mother_DragonRN.placeHolderList[1]" 
+		5 4 "Mother_DragonRN" "|Main_Controler.translateX" "Mother_DragonRN.placeHolderList[1]" 
 		""
-		5 3 "Mother_DragonRN" "|Main_Controler.rotateX" "Mother_DragonRN.placeHolderList[2]" 
+		5 3 "Mother_DragonRN" "|Main_Controler.translateX" "Mother_DragonRN.placeHolderList[2]" 
 		""
-		5 4 "Mother_DragonRN" "|Main_Controler.rotateY" "Mother_DragonRN.placeHolderList[3]" 
+		5 4 "Mother_DragonRN" "|Main_Controler.translateY" "Mother_DragonRN.placeHolderList[3]" 
 		""
-		5 3 "Mother_DragonRN" "|Main_Controler.rotateY" "Mother_DragonRN.placeHolderList[4]" 
+		5 3 "Mother_DragonRN" "|Main_Controler.translateY" "Mother_DragonRN.placeHolderList[4]" 
 		""
-		5 4 "Mother_DragonRN" "|Main_Controler.rotateZ" "Mother_DragonRN.placeHolderList[5]" 
+		5 4 "Mother_DragonRN" "|Main_Controler.translateZ" "Mother_DragonRN.placeHolderList[5]" 
 		""
-		5 3 "Mother_DragonRN" "|Main_Controler.rotateZ" "Mother_DragonRN.placeHolderList[6]" 
+		5 3 "Mother_DragonRN" "|Main_Controler.translateZ" "Mother_DragonRN.placeHolderList[6]" 
 		""
-		5 4 "Mother_DragonRN" "|Main_Controler.translateZ" "Mother_DragonRN.placeHolderList[7]" 
+		5 4 "Mother_DragonRN" "|Main_Controler.rotateX" "Mother_DragonRN.placeHolderList[7]" 
 		""
-		5 3 "Mother_DragonRN" "|Main_Controler.translateZ" "Mother_DragonRN.placeHolderList[8]" 
+		5 3 "Mother_DragonRN" "|Main_Controler.rotateX" "Mother_DragonRN.placeHolderList[8]" 
 		""
-		5 4 "Mother_DragonRN" "|Main_Controler.translateY" "Mother_DragonRN.placeHolderList[9]" 
+		5 4 "Mother_DragonRN" "|Main_Controler.rotateY" "Mother_DragonRN.placeHolderList[9]" 
 		""
-		5 3 "Mother_DragonRN" "|Main_Controler.translateY" "Mother_DragonRN.placeHolderList[10]" 
+		5 3 "Mother_DragonRN" "|Main_Controler.rotateY" "Mother_DragonRN.placeHolderList[10]" 
 		""
-		5 4 "Mother_DragonRN" "|Main_Controler.translateX" "Mother_DragonRN.placeHolderList[11]" 
+		5 4 "Mother_DragonRN" "|Main_Controler.rotateZ" "Mother_DragonRN.placeHolderList[11]" 
 		""
-		5 3 "Mother_DragonRN" "|Main_Controler.translateX" "Mother_DragonRN.placeHolderList[12]" 
+		5 3 "Mother_DragonRN" "|Main_Controler.rotateZ" "Mother_DragonRN.placeHolderList[12]" 
 		""
 		5 4 "Mother_DragonRN" "|Main_Controler.visibility" "Mother_DragonRN.placeHolderList[13]" 
 		""
@@ -5789,17 +5809,17 @@ createNode reference -n "Mother_DragonRN";
 		""
 		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[32]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateX" 
 		"Mother_DragonRN.placeHolderList[33]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateX" 
 		"Mother_DragonRN.placeHolderList[34]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateY" 
 		"Mother_DragonRN.placeHolderList[35]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateY" 
 		"Mother_DragonRN.placeHolderList[36]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateZ" 
 		"Mother_DragonRN.placeHolderList[37]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.translateZ" 
 		"Mother_DragonRN.placeHolderList[38]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|Foot_L_Controler1.rotateX" "Mother_DragonRN.placeHolderList[39]" 
 		""
@@ -5865,17 +5885,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[69]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[70]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[71]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[72]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[73]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[74]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[75]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[76]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[77]" ""
@@ -5897,17 +5917,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[85]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[86]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[87]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[88]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[89]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[90]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[91]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[92]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[93]" ""
@@ -5929,17 +5949,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[101]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[102]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[103]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[104]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[105]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[106]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[107]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[108]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[109]" ""
@@ -5961,17 +5981,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[117]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[118]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[119]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[120]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[121]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[122]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[123]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[124]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[125]" ""
@@ -5993,17 +6013,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[133]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[134]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[135]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[136]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[137]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[138]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[139]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[140]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[141]" ""
@@ -6025,17 +6045,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[149]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[150]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[151]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[152]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[153]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[154]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[155]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[156]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[157]" ""
@@ -6057,17 +6077,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[165]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[166]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[167]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[168]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[169]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[170]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[171]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[172]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[173]" ""
@@ -6089,17 +6109,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[181]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[182]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[183]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[184]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[185]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[186]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[187]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[188]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[189]" ""
@@ -6121,17 +6141,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[197]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[198]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateX" 
 		"Mother_DragonRN.placeHolderList[199]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateX" 
 		"Mother_DragonRN.placeHolderList[200]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateY" 
 		"Mother_DragonRN.placeHolderList[201]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateY" 
 		"Mother_DragonRN.placeHolderList[202]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[203]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[204]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler.visibility" 
 		"Mother_DragonRN.placeHolderList[205]" ""
@@ -6153,17 +6173,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[213]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[214]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[215]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[216]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[217]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[218]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[219]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[220]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|nose_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[221]" ""
@@ -6185,17 +6205,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[229]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[230]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[231]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[232]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[233]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[234]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[235]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[236]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[237]" ""
@@ -6217,17 +6237,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[245]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[246]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[247]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[248]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[249]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[250]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[251]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[252]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[253]" ""
@@ -6249,17 +6269,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[261]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[262]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[263]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[264]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[265]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[266]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[267]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[268]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[269]" ""
@@ -6281,17 +6301,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[277]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[278]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[279]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[280]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[281]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[282]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[283]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[284]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[285]" ""
@@ -6313,17 +6333,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[293]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[294]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[295]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[296]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[297]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[298]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[299]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[300]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[301]" ""
@@ -6345,17 +6365,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[309]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[310]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[311]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[312]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[313]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[314]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[315]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[316]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[317]" ""
@@ -6377,17 +6397,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[325]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[326]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[327]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[328]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[329]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[330]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[331]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[332]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[333]" ""
@@ -6409,17 +6429,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[341]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[342]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[343]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[344]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[345]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[346]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[347]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[348]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[349]" ""
@@ -6441,17 +6461,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[357]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[358]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[359]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[360]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[361]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[362]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[363]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[364]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[365]" ""
@@ -6473,17 +6493,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[373]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[374]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[375]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[376]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[377]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[378]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[379]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[380]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[381]" ""
@@ -6505,17 +6525,17 @@ createNode reference -n "Mother_DragonRN";
 		"Mother_DragonRN.placeHolderList[389]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.rotateZ" 
 		"Mother_DragonRN.placeHolderList[390]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[391]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
 		"Mother_DragonRN.placeHolderList[392]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[393]" ""
 		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateY" 
 		"Mother_DragonRN.placeHolderList[394]" ""
-		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
+		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[395]" ""
-		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateX" 
+		5 3 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.translateZ" 
 		"Mother_DragonRN.placeHolderList[396]" ""
 		5 4 "Mother_DragonRN" "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler.visibility" 
 		"Mother_DragonRN.placeHolderList[397]" ""
@@ -6747,15 +6767,15 @@ createNode animCurveTA -n "Mother_Dragon1_Foot_L_Controler1_rotateZ";
 createNode animCurveTA -n "Mother_Dragon1_nurbsCircle2_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -20.3377395460017;
+	setAttr -s 2 ".ktv[0:1]"  1 -20.3377395460017 32 -20.3377395460017;
 createNode animCurveTA -n "Mother_Dragon1_nurbsCircle2_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTA -n "Mother_Dragon1_nurbsCircle2_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTA -n "Mother_Dragon1_Tail_base_Controler_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
@@ -6773,7 +6793,7 @@ createNode animCurveTA -n "Mother_Dragon1_Tail_base_Controler_rotateY";
 createNode animCurveTA -n "Mother_Dragon1_Tail_base_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 9.138821570166165;
+	setAttr ".ktv[0]"  1 9.1388215701661633;
 createNode animCurveTA -n "Mother_Dragon1_Tail_mid_Controler_rotateX";
 	setAttr ".tan" 1;
 	setAttr ".wgt" no;
@@ -6821,7 +6841,7 @@ createNode animCurveTA -n "Mother_Dragon1_Stomach_Controler_rotateX";
 createNode animCurveTA -n "Mother_Dragon1_Stomach_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -11.115062917095569;
+	setAttr ".ktv[0]"  1 -11.115062917095567;
 createNode animCurveTA -n "Mother_Dragon1_Stomach_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -6829,65 +6849,95 @@ createNode animCurveTA -n "Mother_Dragon1_Stomach_Controler_rotateZ";
 createNode animCurveTA -n "Mother_Dragon1_chest_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 15.616027634452729;
+	setAttr -s 3 ".ktv[0:2]"  1 15.616027634452726 18 27.973534848888939
+		 32 15.616027634452726;
+	setAttr -s 3 ".kit[1:2]"  9 1;
+	setAttr -s 3 ".kot[1:2]"  9 1;
+	setAttr -s 3 ".kix[2]"  1;
+	setAttr -s 3 ".kiy[2]"  0;
+	setAttr -s 3 ".kox[2]"  1;
+	setAttr -s 3 ".koy[2]"  0;
 createNode animCurveTA -n "Mother_Dragon1_chest_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.6458502625322422;
+	setAttr -s 3 ".ktv[0:2]"  1 -1.6458502625322422 18 -2.8243184168904727
+		 32 -1.6458502625322422;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTA -n "Mother_Dragon1_chest_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 3.4450990387523395;
+	setAttr -s 3 ".ktv[0:2]"  1 3.4450990387523395 18 2.8190573422037675
+		 32 3.4450990387523395;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTA -n "Mother_Dragon1_neck_Controler_rotateX";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -12.398947907805129;
-	setAttr ".kix[0]"  0.99984055757522583;
-	setAttr ".kiy[0]"  0.017857063561677933;
-	setAttr ".kox[0]"  0.99984055757522583;
-	setAttr ".koy[0]"  0.017857067286968231;
+	setAttr -s 4 ".ktv[0:3]"  1 -12.398947907805129 10 -7.7786650907815567
+		 18 -9.111652422706829 32 -12.398947907805129;
 createNode animCurveTA -n "Mother_Dragon1_neck_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -8.2816661957325621;
+	setAttr -s 4 ".ktv[0:3]"  1 -8.2816661957325621 10 -8.4207459328667529
+		 18 -11.182345852965938 32 -8.2816661957325621;
 createNode animCurveTA -n "Mother_Dragon1_neck_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.813743747749005;
+	setAttr -s 4 ".ktv[0:3]"  1 1.813743747749005 10 1.9174591716508385
+		 18 2.2836094292930045 32 1.813743747749005;
 createNode animCurveTA -n "Mother_Dragon1_neck_2_Controler_rotateX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -3.7730184216207259;
+	setAttr -s 4 ".ktv[0:3]"  1 -3.7730184216207254 10 -3.983163144108655
+		 18 -10.805618257713396 32 -3.7730184216207254;
+	setAttr -s 4 ".kit[0:3]"  18 9 9 1;
+	setAttr -s 4 ".kot[0:3]"  18 9 9 1;
+	setAttr -s 4 ".kix[3]"  1;
+	setAttr -s 4 ".kiy[3]"  0;
+	setAttr -s 4 ".kox[3]"  1;
+	setAttr -s 4 ".koy[3]"  0;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Mother_Dragon1_neck_2_Controler_rotateY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -8.0991716689656084;
+	setAttr -s 4 ".ktv[0:3]"  1 -8.0991716689656084 10 -8.7908538402614695
+		 18 -15.63653099132106 32 -8.0991716689656084;
+	setAttr -s 4 ".kit[0:3]"  18 9 9 18;
+	setAttr -s 4 ".kot[0:3]"  18 9 9 18;
 createNode animCurveTA -n "Mother_Dragon1_neck_2_Controler_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.1825177814413461;
+	setAttr -s 4 ".ktv[0:3]"  1 2.1825177814413461 10 1.9873267796305798
+		 18 0.46919555883766018 32 2.1825177814413461;
+	setAttr -s 4 ".kit[0:3]"  18 9 9 18;
+	setAttr -s 4 ".kot[0:3]"  18 9 9 18;
 createNode animCurveTA -n "Mother_Dragon1_neck_3_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -7.8485571416673112;
+	setAttr -s 4 ".ktv[0:3]"  1 -7.848557141667313 10 -7.7754885174087081
+		 18 -6.8316938175465127 32 -7.848557141667313;
 createNode animCurveTA -n "Mother_Dragon1_neck_3_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.05783307991624461;
+	setAttr -s 4 ".ktv[0:3]"  1 0.05783307991624461 10 0.35024780890674079
+		 18 3.5704310901697061 32 0.05783307991624461;
 createNode animCurveTA -n "Mother_Dragon1_head_controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.0858445437458202;
+	setAttr -s 4 ".ktv[0:3]"  1 -1.0858445437458202 10 4.2742792467512993
+		 18 -3.1868196678631713 32 -1.0858445437458202;
 createNode animCurveTA -n "Mother_Dragon1_head_controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -19.38765692220262;
+	setAttr -s 4 ".ktv[0:3]"  1 -19.38765692220262 10 -18.97443653721556
+		 18 -12.85516957797223 32 -19.38765692220262;
 createNode animCurveTA -n "Mother_Dragon1_head_controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.36049310817873775;
+	setAttr -s 4 ".ktv[0:3]"  1 0.36049310817873775 10 1.0808441367795649
+		 18 11.096220959784933 32 0.36049310817873775;
 createNode animCurveTA -n "Mother_Dragon1_nose_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -6901,67 +6951,128 @@ createNode animCurveTA -n "Mother_Dragon1_nose_Controler_rotateZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 0;
 createNode animCurveTA -n "Mother_Dragon1_mouth_Controler_rotateX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -5.0518739154889429 8 -5.0518739154889429
+		 18 5.3397677528906078 28 -5.0518739154889429 32 -5.0518739154889429;
+	setAttr -s 5 ".kit[0:4]"  18 1 9 1 1;
+	setAttr -s 5 ".kot[0:4]"  18 1 9 1 1;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTA -n "Mother_Dragon1_mouth_Controler_rotateY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 8 0 28 0 32 0;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTA -n "Mother_Dragon1_mouth_Controler_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 8 0 28 0 32 0;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTA -n "Mother_Dragon1_Shoulder_Controler_rotateX1";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -4.7373285071029319;
+	setAttr -s 3 ".ktv[0:2]"  1 -4.7373285071029319 18 26.920740486561396
+		 32 -4.7373285071029319;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Mother_Dragon1_Shoulder_Controler_rotateY1";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 55.311619944457568;
+	setAttr -s 3 ".ktv[0:2]"  1 55.311619944457568 18 54.574784675624564
+		 32 55.311619944457568;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_Shoulder_Controler_rotateZ1";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -22.829592375762338;
+	setAttr -s 3 ".ktv[0:2]"  1 -22.829592375762338 18 -2.5668002323504582
+		 32 -22.829592375762338;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_arm_Controler_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 18 -23.936358905356073 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 1;
+	setAttr -s 3 ".kot[1:2]"  9 1;
+	setAttr -s 3 ".kix[2]"  1;
+	setAttr -s 3 ".kiy[2]"  0;
+	setAttr -s 3 ".kox[2]"  1;
+	setAttr -s 3 ".koy[2]"  0;
 createNode animCurveTA -n "Mother_Dragon1_arm_Controler_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 18 -11.324624464500907 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 1;
+	setAttr -s 3 ".kot[1:2]"  9 1;
+	setAttr -s 3 ".kix[2]"  1;
+	setAttr -s 3 ".kiy[2]"  0;
+	setAttr -s 3 ".kox[2]"  1;
+	setAttr -s 3 ".koy[2]"  0;
 createNode animCurveTA -n "Mother_Dragon1_arm_Controler_rotateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 35.327626933962598;
+	setAttr -s 3 ".ktv[0:2]"  1 35.327626933962598 18 42.93078672617105
+		 32 35.327626933962598;
+	setAttr -s 3 ".kit[1:2]"  9 1;
+	setAttr -s 3 ".kot[1:2]"  9 1;
+	setAttr -s 3 ".kix[2]"  1;
+	setAttr -s 3 ".kiy[2]"  0;
+	setAttr -s 3 ".kox[2]"  1;
+	setAttr -s 3 ".koy[2]"  0;
 createNode animCurveTA -n "Mother_Dragon1_forearm_Controler_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_forearm_Controler_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_forearm_Controler_rotateZ1";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.30855869078478676;
+	setAttr -s 3 ".ktv[0:2]"  1 -0.30855869078478676 18 7.3396491924265161
+		 32 -0.30855869078478676;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_hand_Controler_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_hand_Controler_rotateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_hand_Controler_rotateZ1";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -31.77364434036684;
+	setAttr -s 3 ".ktv[0:2]"  1 -31.77364434036684 18 -25.077467226416694
+		 32 -31.77364434036684;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_finger_Controler_rotateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -6977,77 +7088,105 @@ createNode animCurveTA -n "Mother_Dragon1_finger_Controler_rotateZ1";
 createNode animCurveTA -n "Mother_Dragon1_Shoulder_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 16.066485186021808;
+	setAttr -s 2 ".ktv[0:1]"  1 16.066485186021808 32 16.066485186021808;
 createNode animCurveTA -n "Mother_Dragon1_Shoulder_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -42.918116282560682;
+	setAttr -s 2 ".ktv[0:1]"  1 -42.918116282560682 32 -42.918116282560682;
 createNode animCurveTA -n "Mother_Dragon1_arm_Controler_rotateX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 18 11.009313889877044 32 0;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_arm_Controler_rotateY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 18 6.5895617797660941 32 0;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_arm_Controler_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 25.36199286203885;
+	setAttr -s 3 ".ktv[0:2]"  1 25.36199286203885 18 30.599275376386185
+		 32 25.36199286203885;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_forearm_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_forearm_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_forearm_Controler_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -6.4764458135609431;
+	setAttr -s 3 ".ktv[0:2]"  1 -6.4764458135609431 18 -0.83659296600423416
+		 32 -6.4764458135609431;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_hand_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_hand_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_hand_Controler_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -31.77364434036684;
+	setAttr -s 3 ".ktv[0:2]"  1 -31.77364434036684 18 -16.752348679168623
+		 32 -31.77364434036684;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTA -n "Mother_Dragon1_finger_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_finger_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTA -n "Mother_Dragon1_finger_Controler_rotateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 18 9.7537351425145236 32 0;
+	setAttr -s 3 ".kit[0:2]"  18 9 9;
+	setAttr -s 3 ".kot[0:2]"  18 9 9;
 createNode animCurveTL -n "Mother_Dragon1_nurbsCircle2_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 11 -0.00066333816145601975 18 -0.0026999921013277808
+		 32 0;
 createNode animCurveTL -n "Mother_Dragon1_nurbsCircle2_translateY";
-	setAttr ".tan" 1;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.027016344567581924;
-	setAttr ".kix[0]"  0.99998539686203003;
-	setAttr ".kiy[0]"  0.005407208576798439;
-	setAttr ".kox[0]"  0.99998539686203003;
-	setAttr ".koy[0]"  0.0054072090424597263;
+	setAttr -s 5 ".ktv[0:4]"  1 0.027016344567581924 11 0.025357238622283788
+		 18 0.02343517560819201 28 0.025990454034175273 32 0.027016344567581924;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTL -n "Mother_Dragon1_nurbsCircle2_translateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 11 0.00054595072691784202 18 -0.00066805263431130154
+		 32 0;
+	setAttr -s 4 ".kit[0:3]"  18 9 9 18;
+	setAttr -s 4 ".kot[0:3]"  18 9 9 18;
 createNode script -n "uiConfigurationScriptNode1";
 	setAttr ".b" -type "string" (
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
@@ -7058,45 +7197,45 @@ createNode script -n "uiConfigurationScriptNode1";
 		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
 		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                $editorName;\nstereoCameraView -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" == $panelName) {\n"
 		+ "\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"top\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n"
-		+ "                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n"
-		+ "                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n"
-		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n"
-		+ "            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n"
-		+ "            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n"
-		+ "                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
-		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
-		+ "            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n"
-		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n"
-		+ "            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
-		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n"
-		+ "            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 4 4 \n            -bumpResolution 4 4 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 0\n"
-		+ "            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n"
-		+ "            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n"
-		+ "                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n"
-		+ "                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n"
-		+ "                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n"
-		+ "            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n"
-		+ "            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\n"
-		+ "modelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n"
-		+ "                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n"
-		+ "                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n"
-		+ "            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
-		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
-		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
-		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n"
-		+ "                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n"
-		+ "                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n"
-		+ "                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\tif ($useSceneConfig) {\n\t\tscriptedPanel -e -to $panelName;\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n"
-		+ "                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
-		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n"
-		+ "            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n"
-		+ "                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n"
-		+ "                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n"
-		+ "                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n"
+		+ "                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n"
+		+ "                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n"
+		+ "\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n"
+		+ "            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n"
+		+ "            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels `;\n"
+		+ "\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"side\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n"
+		+ "                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n"
+		+ "                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n"
+		+ "            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n"
+		+ "            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"front\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
+		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n"
+		+ "                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n"
+		+ "                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n"
+		+ "            -displayAppearance \"wireframe\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n"
+		+ "            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
+		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `modelPanel -unParent -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            modelEditor -e \n                -camera \"persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"smoothShaded\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n"
+		+ "                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 1\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -rendererName \"base_OpenGL_Renderer\" \n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 256 256 \n"
+		+ "                -bumpResolution 512 512 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 1\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 0\n                -ikHandles 0\n                -deformers 1\n"
+		+ "                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -shadows 0\n                $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
+		+ "            -headsUpDisplay 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 1\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 1\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -maxConstantTransparency 1\n            -rendererName \"base_OpenGL_Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n"
+		+ "            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 0\n            -ikHandles 0\n            -deformers 1\n            -dynamics 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n"
+		+ "            -manipulators 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -shadows 0\n            $editorName;\nmodelEditor -e -viewSelected 0 $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels `;\n\t\t\t$editorName = $panelName;\n            outlinerEditor -e \n                -showShapes 0\n                -showReferenceNodes 1\n                -showReferenceMembers 1\n                -showAttributes 0\n                -showConnected 0\n                -showAnimCurvesOnly 0\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
+		+ "                -autoExpand 0\n                -showDagOnly 1\n                -showAssets 1\n                -showContainedOnly 1\n                -showPublishedAsConnected 0\n                -showContainerContents 1\n                -ignoreDagHierarchy 0\n                -expandConnections 0\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 0\n                -highlightActive 1\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"defaultSetFilter\" \n                -showSetMembers 1\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n"
+		+ "                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n"
+		+ "            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n"
+		+ "            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"graphEditor\" -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n"
+		+ "                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n"
+		+ "                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n"
+		+ "                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n"
+		+ "                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n"
+		+ "                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n"
+		+ "                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dopeSheetPanel\" -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n"
+		+ "                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n"
+		+ "                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n"
+		+ "                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n"
+		+ "                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"clipEditorPanel\" -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n"
+		+ "                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"sequenceEditorPanel\" -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels `;\n"
 		+ "\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayKeys 0\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -autoFit 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"hyperGraphPanel\" -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n"
 		+ "                -imageEnabled 0\n                -graphType \"DAG\" \n                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showUnderworld 0\n                -showInvisible 0\n"
@@ -7108,25 +7247,31 @@ createNode script -n "uiConfigurationScriptNode1";
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"blendShapePanel\" (localizedPanelLabel(\"Blend Shape\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\tblendShapePanel -unParent -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels ;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tblendShapePanel -edit -l (localizedPanelLabel(\"Blend Shape\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n"
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"vertical2\\\" -ps 1 21 100 -ps 2 79 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Outliner\")) \n"
-		+ "\t\t\t\t\t\"outlinerPanel\"\n\t\t\t\t\t\"$panelName = `outlinerPanel -unParent -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"outlinerPanel -edit -l (localizedPanelLabel(\\\"Outliner\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\noutlinerEditor -e \\n    -showShapes 0\\n    -showReferenceNodes 1\\n    -showReferenceMembers 1\\n    -showAttributes 0\\n    -showConnected 0\\n    -showAnimCurvesOnly 0\\n    -showMuteInfo 0\\n    -organizeByLayer 1\\n    -showAnimLayerWeight 1\\n    -autoExpandLayers 1\\n    -autoExpand 0\\n    -showDagOnly 1\\n    -showAssets 1\\n    -showContainedOnly 1\\n    -showPublishedAsConnected 0\\n    -showContainerContents 1\\n    -ignoreDagHierarchy 0\\n    -expandConnections 0\\n    -showUpstreamCurves 1\\n    -showUnitlessCurves 1\\n    -showCompounds 1\\n    -showLeafs 1\\n    -showNumericAttrsOnly 0\\n    -highlightActive 1\\n    -autoSelectNewObjects 0\\n    -doNotSelectNewObjects 0\\n    -dropIsParent 1\\n    -transmitFilters 0\\n    -setFilter \\\"defaultSetFilter\\\" \\n    -showSetMembers 1\\n    -allowMultiSelection 1\\n    -alwaysToggleSelect 0\\n    -directSelect 0\\n    -displayMode \\\"DAG\\\" \\n    -expandObjects 0\\n    -setsIgnoreFilters 1\\n    -containersIgnoreFilters 0\\n    -editAttrName 0\\n    -showAttrValues 0\\n    -highlightSecondary 0\\n    -showUVAttrsOnly 0\\n    -showTextureNodesOnly 0\\n    -attrAlphaOrder \\\"default\\\" \\n    -animLayerFilterOptions \\\"allAffecting\\\" \\n    -sortOrder \\\"none\\\" \\n    -longNames 0\\n    -niceNames 1\\n    -showNamespace 1\\n    -showPinIcons 0\\n    -mapMotionTrails 0\\n    $editorName\"\n"
-		+ "\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n"
+		+ "\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 1\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 0\\n    -ikHandles 0\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode1";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 23 -ast 1 -aet 23 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 32 -ast 1 -aet 32 ";
 	setAttr ".st" 6;
 createNode animCurveTA -n "Mother_Dragon1_neck_3_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.42350684057430349;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.42350684057430354 10 0.056524339642419499
+		 18 -10.814451680842264 32 -0.42350684057430354;
 createNode animCurveTA -n "Mother_Dragon1_Shoulder_Controler_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -29.869889228171136;
+	setAttr -s 3 ".ktv[0:2]"  1 -29.869889228171136 18 -14.28300359624291
+		 32 -29.869889228171136;
+	setAttr -s 3 ".kit[1:2]"  9 1;
+	setAttr -s 3 ".kot[1:2]"  9 1;
+	setAttr -s 3 ".kix[2]"  1;
+	setAttr -s 3 ".kiy[2]"  0;
+	setAttr -s 3 ".kox[2]"  1;
+	setAttr -s 3 ".koy[2]"  0;
 createNode animCurveTU -n "Main_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -7176,15 +7321,15 @@ createNode animCurveTL -n "Mother_Dragon1_Foot_L_Controler_translateZ";
 createNode animCurveTU -n "Foot_L_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr ".ktv[0]"  1 0.21528657645602731;
 createNode animCurveTU -n "Foot_L_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr ".ktv[0]"  1 0.21528657645602731;
 createNode animCurveTU -n "Foot_L_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr ".ktv[0]"  1 0.21528657645602731;
 createNode animCurveTU -n "Foot_L_Controler1_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -7205,32 +7350,31 @@ createNode animCurveTL -n "Mother_Dragon1_Foot_L_Controler1_translateZ";
 createNode animCurveTU -n "Foot_L_Controler1_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr ".ktv[0]"  1 0.21528657645602731;
 createNode animCurveTU -n "Foot_L_Controler1_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr ".ktv[0]"  1 0.21528657645602731;
 createNode animCurveTU -n "Foot_L_Controler1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr ".ktv[0]"  1 0.21528657645602731;
 createNode animCurveTU -n "nurbsCircle2_visibility";
-	setAttr ".tan" 9;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "nurbsCircle2_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr -s 2 ".ktv[0:1]"  1 0.21528657645602731 32 0.21528657645602731;
 createNode animCurveTU -n "nurbsCircle2_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr -s 2 ".ktv[0:1]"  1 0.21528657645602731 32 0.21528657645602731;
 createNode animCurveTU -n "nurbsCircle2_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.21528657645602733;
+	setAttr -s 2 ".ktv[0:1]"  1 0.21528657645602731 32 0.21528657645602731;
 createNode animCurveTU -n "Tail_base_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -7350,148 +7494,183 @@ createNode animCurveTU -n "Stomach_Controler_scaleZ";
 createNode animCurveTU -n "chest_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_chest_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTL -n "Mother_Dragon1_chest_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTL -n "Mother_Dragon1_chest_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTU -n "chest_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "chest_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "chest_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "neck_Controler_visibility";
-	setAttr ".tan" 9;
+	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTL -n "Mother_Dragon1_neck_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTL -n "Mother_Dragon1_neck_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTL -n "Mother_Dragon1_neck_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTU -n "neck_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "neck_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "neck_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "neck_2_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "Mother_Dragon1_neck_2_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTL -n "Mother_Dragon1_neck_2_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTL -n "Mother_Dragon1_neck_2_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_2_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_2_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_2_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_3_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "Mother_Dragon1_neck_3_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTL -n "Mother_Dragon1_neck_3_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTL -n "Mother_Dragon1_neck_3_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_3_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_3_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "neck_3_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "head_controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 createNode animCurveTL -n "Mother_Dragon1_head_controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTL -n "Mother_Dragon1_head_controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTL -n "Mother_Dragon1_head_controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 10 0 32 0;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "head_controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "head_controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "head_controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 3 ".ktv[0:2]"  1 1 10 1 32 1;
+	setAttr -s 3 ".kit[1:2]"  9 18;
+	setAttr -s 3 ".kot[1:2]"  9 18;
 createNode animCurveTU -n "nose_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -7522,150 +7701,262 @@ createNode animCurveTU -n "nose_Controler_scaleZ";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 createNode animCurveTU -n "mouth_Controler_visibility";
-	setAttr ".tan" 9;
+	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 4 ".ktv[0:3]"  1 1 8 1 28 1 32 1;
+	setAttr -s 4 ".kit[0:3]"  9 1 1 9;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
 createNode animCurveTL -n "Mother_Dragon1_mouth_Controler_translateX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 8 0 28 0 32 0;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTL -n "Mother_Dragon1_mouth_Controler_translateY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 8 0 28 0 32 0;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTL -n "Mother_Dragon1_mouth_Controler_translateZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 8 0 28 0 32 0;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "mouth_Controler_scaleX";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 8 1 28 1 32 1;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "mouth_Controler_scaleY";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 8 1 28 1 32 1;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "mouth_Controler_scaleZ";
-	setAttr ".tan" 18;
+	setAttr ".tan" 1;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 8 1 28 1 32 1;
+	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
+	setAttr -s 4 ".kix[1:3]"  1 1 1;
+	setAttr -s 4 ".kiy[1:3]"  0 0 0;
+	setAttr -s 4 ".kox[1:3]"  1 1 1;
+	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "Shoulder_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_Shoulder_Controler_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_Shoulder_Controler_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_Shoulder_Controler_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "Shoulder_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "Shoulder_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "Shoulder_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "arm_Controler_visibility";
-	setAttr ".tan" 9;
+	setAttr ".tan" 5;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[0:1]"  9 1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
 createNode animCurveTL -n "Mother_Dragon1_arm_Controler_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  1;
+	setAttr -s 2 ".kot[1]"  1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
+	setAttr -s 2 ".kox[1]"  1;
+	setAttr -s 2 ".koy[1]"  0;
 createNode animCurveTL -n "Mother_Dragon1_arm_Controler_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  1;
+	setAttr -s 2 ".kot[1]"  1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
+	setAttr -s 2 ".kox[1]"  1;
+	setAttr -s 2 ".koy[1]"  0;
 createNode animCurveTL -n "Mother_Dragon1_arm_Controler_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  1;
+	setAttr -s 2 ".kot[1]"  1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
+	setAttr -s 2 ".kox[1]"  1;
+	setAttr -s 2 ".koy[1]"  0;
 createNode animCurveTU -n "arm_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  1;
+	setAttr -s 2 ".kot[1]"  1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
+	setAttr -s 2 ".kox[1]"  1;
+	setAttr -s 2 ".koy[1]"  0;
 createNode animCurveTU -n "arm_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  1;
+	setAttr -s 2 ".kot[1]"  1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
+	setAttr -s 2 ".kox[1]"  1;
+	setAttr -s 2 ".koy[1]"  0;
 createNode animCurveTU -n "arm_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  1;
+	setAttr -s 2 ".kot[1]"  1;
+	setAttr -s 2 ".kix[1]"  1;
+	setAttr -s 2 ".kiy[1]"  0;
+	setAttr -s 2 ".kox[1]"  1;
+	setAttr -s 2 ".koy[1]"  0;
 createNode animCurveTU -n "forearm_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_forearm_Controler_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_forearm_Controler_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_forearm_Controler_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_hand_Controler_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_hand_Controler_translateY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_hand_Controler_translateZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_scaleX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_scaleY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "finger_Controler_visibility";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
@@ -7698,151 +7989,199 @@ createNode animCurveTU -n "finger_Controler_scaleZ";
 createNode animCurveTU -n "Shoulder_Controler_visibility1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_Shoulder_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTL -n "Mother_Dragon1_Shoulder_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTL -n "Mother_Dragon1_Shoulder_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
 createNode animCurveTU -n "Shoulder_Controler_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "Shoulder_Controler_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "Shoulder_Controler_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
 createNode animCurveTU -n "arm_Controler_visibility1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_arm_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_arm_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_arm_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "arm_Controler_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "arm_Controler_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "arm_Controler_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_visibility1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_forearm_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_forearm_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_forearm_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "forearm_Controler_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_visibility1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_hand_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_hand_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_hand_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "hand_Controler_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "finger_Controler_visibility1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kot[0:1]"  5 5;
 createNode animCurveTL -n "Mother_Dragon1_finger_Controler_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_finger_Controler_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTL -n "Mother_Dragon1_finger_Controler_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 32 0;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "finger_Controler_scaleX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "finger_Controler_scaleY1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 createNode animCurveTU -n "finger_Controler_scaleZ1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
+	setAttr -s 2 ".ktv[0:1]"  1 1 32 1;
+	setAttr -s 2 ".kit[1]"  9;
+	setAttr -s 2 ".kot[1]"  9;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 18;
+	setAttr ".unw" 18;
 select -ne :renderPartition;
 	setAttr -s 12 ".st";
 select -ne :initialShadingGroup;
@@ -7868,18 +8207,18 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :characterPartition;
 select -ne :ikSystem;
-connectAttr "Mother_Dragon1.av[75]" "Mother_DragonRN.phl[1]";
-connectAttr "Mother_DragonRN.phl[2]" "Mother_Dragon1.dnsm[146]";
-connectAttr "Mother_Dragon1.av[74]" "Mother_DragonRN.phl[3]";
-connectAttr "Mother_DragonRN.phl[4]" "Mother_Dragon1.dnsm[145]";
-connectAttr "Mother_Dragon1.av[73]" "Mother_DragonRN.phl[5]";
-connectAttr "Mother_DragonRN.phl[6]" "Mother_Dragon1.dnsm[144]";
-connectAttr "Mother_Dragon1.lv[73]" "Mother_DragonRN.phl[7]";
-connectAttr "Mother_DragonRN.phl[8]" "Mother_Dragon1.dnsm[147]";
-connectAttr "Mother_Dragon1.lv[74]" "Mother_DragonRN.phl[9]";
-connectAttr "Mother_DragonRN.phl[10]" "Mother_Dragon1.dnsm[148]";
-connectAttr "Mother_Dragon1.lv[75]" "Mother_DragonRN.phl[11]";
-connectAttr "Mother_DragonRN.phl[12]" "Mother_Dragon1.dnsm[149]";
+connectAttr "Mother_Dragon1.lv[75]" "Mother_DragonRN.phl[1]";
+connectAttr "Mother_DragonRN.phl[2]" "Mother_Dragon1.dnsm[149]";
+connectAttr "Mother_Dragon1.lv[74]" "Mother_DragonRN.phl[3]";
+connectAttr "Mother_DragonRN.phl[4]" "Mother_Dragon1.dnsm[148]";
+connectAttr "Mother_Dragon1.lv[73]" "Mother_DragonRN.phl[5]";
+connectAttr "Mother_DragonRN.phl[6]" "Mother_Dragon1.dnsm[147]";
+connectAttr "Mother_Dragon1.av[75]" "Mother_DragonRN.phl[7]";
+connectAttr "Mother_DragonRN.phl[8]" "Mother_Dragon1.dnsm[146]";
+connectAttr "Mother_Dragon1.av[74]" "Mother_DragonRN.phl[9]";
+connectAttr "Mother_DragonRN.phl[10]" "Mother_Dragon1.dnsm[145]";
+connectAttr "Mother_Dragon1.av[73]" "Mother_DragonRN.phl[11]";
+connectAttr "Mother_DragonRN.phl[12]" "Mother_Dragon1.dnsm[144]";
 connectAttr "Main_Controler_visibility.o" "Mother_DragonRN.phl[13]";
 connectAttr "Main_Controler_scaleX.o" "Mother_DragonRN.phl[14]";
 connectAttr "Main_Controler_scaleY.o" "Mother_DragonRN.phl[15]";
@@ -7900,12 +8239,12 @@ connectAttr "Foot_L_Controler_scaleX.o" "Mother_DragonRN.phl[29]";
 connectAttr "Foot_L_Controler_scaleY.o" "Mother_DragonRN.phl[30]";
 connectAttr "Foot_L_Controler_scaleZ.o" "Mother_DragonRN.phl[31]";
 connectAttr "Foot_L_Controler_visibility.o" "Mother_DragonRN.phl[32]";
-connectAttr "Mother_Dragon1.lv[67]" "Mother_DragonRN.phl[33]";
-connectAttr "Mother_DragonRN.phl[34]" "Mother_Dragon1.dnsm[135]";
+connectAttr "Mother_Dragon1.lv[69]" "Mother_DragonRN.phl[33]";
+connectAttr "Mother_DragonRN.phl[34]" "Mother_Dragon1.dnsm[137]";
 connectAttr "Mother_Dragon1.lv[68]" "Mother_DragonRN.phl[35]";
 connectAttr "Mother_DragonRN.phl[36]" "Mother_Dragon1.dnsm[136]";
-connectAttr "Mother_Dragon1.lv[69]" "Mother_DragonRN.phl[37]";
-connectAttr "Mother_DragonRN.phl[38]" "Mother_Dragon1.dnsm[137]";
+connectAttr "Mother_Dragon1.lv[67]" "Mother_DragonRN.phl[37]";
+connectAttr "Mother_DragonRN.phl[38]" "Mother_Dragon1.dnsm[135]";
 connectAttr "Mother_Dragon1.av[69]" "Mother_DragonRN.phl[39]";
 connectAttr "Mother_DragonRN.phl[40]" "Mother_Dragon1.dnsm[134]";
 connectAttr "Mother_Dragon1.av[68]" "Mother_DragonRN.phl[41]";
@@ -7938,12 +8277,12 @@ connectAttr "Mother_Dragon1.av[62]" "Mother_DragonRN.phl[67]";
 connectAttr "Mother_DragonRN.phl[68]" "Mother_Dragon1.dnsm[121]";
 connectAttr "Mother_Dragon1.av[61]" "Mother_DragonRN.phl[69]";
 connectAttr "Mother_DragonRN.phl[70]" "Mother_Dragon1.dnsm[120]";
-connectAttr "Mother_Dragon1.lv[61]" "Mother_DragonRN.phl[71]";
-connectAttr "Mother_DragonRN.phl[72]" "Mother_Dragon1.dnsm[123]";
+connectAttr "Mother_Dragon1.lv[63]" "Mother_DragonRN.phl[71]";
+connectAttr "Mother_DragonRN.phl[72]" "Mother_Dragon1.dnsm[125]";
 connectAttr "Mother_Dragon1.lv[62]" "Mother_DragonRN.phl[73]";
 connectAttr "Mother_DragonRN.phl[74]" "Mother_Dragon1.dnsm[124]";
-connectAttr "Mother_Dragon1.lv[63]" "Mother_DragonRN.phl[75]";
-connectAttr "Mother_DragonRN.phl[76]" "Mother_Dragon1.dnsm[125]";
+connectAttr "Mother_Dragon1.lv[61]" "Mother_DragonRN.phl[75]";
+connectAttr "Mother_DragonRN.phl[76]" "Mother_Dragon1.dnsm[123]";
 connectAttr "Tail_base_Controler_visibility.o" "Mother_DragonRN.phl[77]";
 connectAttr "Tail_base_Controler_scaleX.o" "Mother_DragonRN.phl[78]";
 connectAttr "Tail_base_Controler_scaleY.o" "Mother_DragonRN.phl[79]";
@@ -7954,12 +8293,12 @@ connectAttr "Mother_Dragon1.av[59]" "Mother_DragonRN.phl[83]";
 connectAttr "Mother_DragonRN.phl[84]" "Mother_Dragon1.dnsm[115]";
 connectAttr "Mother_Dragon1.av[58]" "Mother_DragonRN.phl[85]";
 connectAttr "Mother_DragonRN.phl[86]" "Mother_Dragon1.dnsm[114]";
-connectAttr "Mother_Dragon1.lv[58]" "Mother_DragonRN.phl[87]";
-connectAttr "Mother_DragonRN.phl[88]" "Mother_Dragon1.dnsm[117]";
+connectAttr "Mother_Dragon1.lv[60]" "Mother_DragonRN.phl[87]";
+connectAttr "Mother_DragonRN.phl[88]" "Mother_Dragon1.dnsm[119]";
 connectAttr "Mother_Dragon1.lv[59]" "Mother_DragonRN.phl[89]";
 connectAttr "Mother_DragonRN.phl[90]" "Mother_Dragon1.dnsm[118]";
-connectAttr "Mother_Dragon1.lv[60]" "Mother_DragonRN.phl[91]";
-connectAttr "Mother_DragonRN.phl[92]" "Mother_Dragon1.dnsm[119]";
+connectAttr "Mother_Dragon1.lv[58]" "Mother_DragonRN.phl[91]";
+connectAttr "Mother_DragonRN.phl[92]" "Mother_Dragon1.dnsm[117]";
 connectAttr "Tail_mid_Controler_visibility.o" "Mother_DragonRN.phl[93]";
 connectAttr "Tail_mid_Controler_scaleX.o" "Mother_DragonRN.phl[94]";
 connectAttr "Tail_mid_Controler_scaleY.o" "Mother_DragonRN.phl[95]";
@@ -7970,12 +8309,12 @@ connectAttr "Mother_Dragon1.av[56]" "Mother_DragonRN.phl[99]";
 connectAttr "Mother_DragonRN.phl[100]" "Mother_Dragon1.dnsm[109]";
 connectAttr "Mother_Dragon1.av[55]" "Mother_DragonRN.phl[101]";
 connectAttr "Mother_DragonRN.phl[102]" "Mother_Dragon1.dnsm[108]";
-connectAttr "Mother_Dragon1.lv[55]" "Mother_DragonRN.phl[103]";
-connectAttr "Mother_DragonRN.phl[104]" "Mother_Dragon1.dnsm[111]";
+connectAttr "Mother_Dragon1.lv[57]" "Mother_DragonRN.phl[103]";
+connectAttr "Mother_DragonRN.phl[104]" "Mother_Dragon1.dnsm[113]";
 connectAttr "Mother_Dragon1.lv[56]" "Mother_DragonRN.phl[105]";
 connectAttr "Mother_DragonRN.phl[106]" "Mother_Dragon1.dnsm[112]";
-connectAttr "Mother_Dragon1.lv[57]" "Mother_DragonRN.phl[107]";
-connectAttr "Mother_DragonRN.phl[108]" "Mother_Dragon1.dnsm[113]";
+connectAttr "Mother_Dragon1.lv[55]" "Mother_DragonRN.phl[107]";
+connectAttr "Mother_DragonRN.phl[108]" "Mother_Dragon1.dnsm[111]";
 connectAttr "Tail_end_Controler_visibility.o" "Mother_DragonRN.phl[109]";
 connectAttr "Tail_end_Controler_scaleX.o" "Mother_DragonRN.phl[110]";
 connectAttr "Tail_end_Controler_scaleY.o" "Mother_DragonRN.phl[111]";
@@ -7986,12 +8325,12 @@ connectAttr "Mother_Dragon1.av[53]" "Mother_DragonRN.phl[115]";
 connectAttr "Mother_DragonRN.phl[116]" "Mother_Dragon1.dnsm[103]";
 connectAttr "Mother_Dragon1.av[52]" "Mother_DragonRN.phl[117]";
 connectAttr "Mother_DragonRN.phl[118]" "Mother_Dragon1.dnsm[102]";
-connectAttr "Mother_Dragon1.lv[52]" "Mother_DragonRN.phl[119]";
-connectAttr "Mother_DragonRN.phl[120]" "Mother_Dragon1.dnsm[105]";
+connectAttr "Mother_Dragon1.lv[54]" "Mother_DragonRN.phl[119]";
+connectAttr "Mother_DragonRN.phl[120]" "Mother_Dragon1.dnsm[107]";
 connectAttr "Mother_Dragon1.lv[53]" "Mother_DragonRN.phl[121]";
 connectAttr "Mother_DragonRN.phl[122]" "Mother_Dragon1.dnsm[106]";
-connectAttr "Mother_Dragon1.lv[54]" "Mother_DragonRN.phl[123]";
-connectAttr "Mother_DragonRN.phl[124]" "Mother_Dragon1.dnsm[107]";
+connectAttr "Mother_Dragon1.lv[52]" "Mother_DragonRN.phl[123]";
+connectAttr "Mother_DragonRN.phl[124]" "Mother_Dragon1.dnsm[105]";
 connectAttr "Stomach_Controler_visibility.o" "Mother_DragonRN.phl[125]";
 connectAttr "Stomach_Controler_scaleX.o" "Mother_DragonRN.phl[126]";
 connectAttr "Stomach_Controler_scaleY.o" "Mother_DragonRN.phl[127]";
@@ -8002,12 +8341,12 @@ connectAttr "Mother_Dragon1.av[50]" "Mother_DragonRN.phl[131]";
 connectAttr "Mother_DragonRN.phl[132]" "Mother_Dragon1.dnsm[97]";
 connectAttr "Mother_Dragon1.av[49]" "Mother_DragonRN.phl[133]";
 connectAttr "Mother_DragonRN.phl[134]" "Mother_Dragon1.dnsm[96]";
-connectAttr "Mother_Dragon1.lv[49]" "Mother_DragonRN.phl[135]";
-connectAttr "Mother_DragonRN.phl[136]" "Mother_Dragon1.dnsm[99]";
+connectAttr "Mother_Dragon1.lv[51]" "Mother_DragonRN.phl[135]";
+connectAttr "Mother_DragonRN.phl[136]" "Mother_Dragon1.dnsm[101]";
 connectAttr "Mother_Dragon1.lv[50]" "Mother_DragonRN.phl[137]";
 connectAttr "Mother_DragonRN.phl[138]" "Mother_Dragon1.dnsm[100]";
-connectAttr "Mother_Dragon1.lv[51]" "Mother_DragonRN.phl[139]";
-connectAttr "Mother_DragonRN.phl[140]" "Mother_Dragon1.dnsm[101]";
+connectAttr "Mother_Dragon1.lv[49]" "Mother_DragonRN.phl[139]";
+connectAttr "Mother_DragonRN.phl[140]" "Mother_Dragon1.dnsm[99]";
 connectAttr "chest_Controler_visibility.o" "Mother_DragonRN.phl[141]";
 connectAttr "chest_Controler_scaleX.o" "Mother_DragonRN.phl[142]";
 connectAttr "chest_Controler_scaleY.o" "Mother_DragonRN.phl[143]";
@@ -8018,12 +8357,12 @@ connectAttr "Mother_Dragon1.av[47]" "Mother_DragonRN.phl[147]";
 connectAttr "Mother_DragonRN.phl[148]" "Mother_Dragon1.dnsm[91]";
 connectAttr "Mother_Dragon1.av[46]" "Mother_DragonRN.phl[149]";
 connectAttr "Mother_DragonRN.phl[150]" "Mother_Dragon1.dnsm[90]";
-connectAttr "Mother_Dragon1.lv[46]" "Mother_DragonRN.phl[151]";
-connectAttr "Mother_DragonRN.phl[152]" "Mother_Dragon1.dnsm[93]";
+connectAttr "Mother_Dragon1.lv[48]" "Mother_DragonRN.phl[151]";
+connectAttr "Mother_DragonRN.phl[152]" "Mother_Dragon1.dnsm[95]";
 connectAttr "Mother_Dragon1.lv[47]" "Mother_DragonRN.phl[153]";
 connectAttr "Mother_DragonRN.phl[154]" "Mother_Dragon1.dnsm[94]";
-connectAttr "Mother_Dragon1.lv[48]" "Mother_DragonRN.phl[155]";
-connectAttr "Mother_DragonRN.phl[156]" "Mother_Dragon1.dnsm[95]";
+connectAttr "Mother_Dragon1.lv[46]" "Mother_DragonRN.phl[155]";
+connectAttr "Mother_DragonRN.phl[156]" "Mother_Dragon1.dnsm[93]";
 connectAttr "neck_Controler_visibility.o" "Mother_DragonRN.phl[157]";
 connectAttr "neck_Controler_scaleX.o" "Mother_DragonRN.phl[158]";
 connectAttr "neck_Controler_scaleY.o" "Mother_DragonRN.phl[159]";
@@ -8034,12 +8373,12 @@ connectAttr "Mother_Dragon1.av[44]" "Mother_DragonRN.phl[163]";
 connectAttr "Mother_DragonRN.phl[164]" "Mother_Dragon1.dnsm[85]";
 connectAttr "Mother_Dragon1.av[43]" "Mother_DragonRN.phl[165]";
 connectAttr "Mother_DragonRN.phl[166]" "Mother_Dragon1.dnsm[84]";
-connectAttr "Mother_Dragon1.lv[43]" "Mother_DragonRN.phl[167]";
-connectAttr "Mother_DragonRN.phl[168]" "Mother_Dragon1.dnsm[87]";
+connectAttr "Mother_Dragon1.lv[45]" "Mother_DragonRN.phl[167]";
+connectAttr "Mother_DragonRN.phl[168]" "Mother_Dragon1.dnsm[89]";
 connectAttr "Mother_Dragon1.lv[44]" "Mother_DragonRN.phl[169]";
 connectAttr "Mother_DragonRN.phl[170]" "Mother_Dragon1.dnsm[88]";
-connectAttr "Mother_Dragon1.lv[45]" "Mother_DragonRN.phl[171]";
-connectAttr "Mother_DragonRN.phl[172]" "Mother_Dragon1.dnsm[89]";
+connectAttr "Mother_Dragon1.lv[43]" "Mother_DragonRN.phl[171]";
+connectAttr "Mother_DragonRN.phl[172]" "Mother_Dragon1.dnsm[87]";
 connectAttr "neck_2_Controler_visibility.o" "Mother_DragonRN.phl[173]";
 connectAttr "neck_2_Controler_scaleX.o" "Mother_DragonRN.phl[174]";
 connectAttr "neck_2_Controler_scaleY.o" "Mother_DragonRN.phl[175]";
@@ -8050,12 +8389,12 @@ connectAttr "Mother_Dragon1.av[41]" "Mother_DragonRN.phl[179]";
 connectAttr "Mother_DragonRN.phl[180]" "Mother_Dragon1.dnsm[79]";
 connectAttr "Mother_Dragon1.av[40]" "Mother_DragonRN.phl[181]";
 connectAttr "Mother_DragonRN.phl[182]" "Mother_Dragon1.dnsm[78]";
-connectAttr "Mother_Dragon1.lv[40]" "Mother_DragonRN.phl[183]";
-connectAttr "Mother_DragonRN.phl[184]" "Mother_Dragon1.dnsm[81]";
+connectAttr "Mother_Dragon1.lv[42]" "Mother_DragonRN.phl[183]";
+connectAttr "Mother_DragonRN.phl[184]" "Mother_Dragon1.dnsm[83]";
 connectAttr "Mother_Dragon1.lv[41]" "Mother_DragonRN.phl[185]";
 connectAttr "Mother_DragonRN.phl[186]" "Mother_Dragon1.dnsm[82]";
-connectAttr "Mother_Dragon1.lv[42]" "Mother_DragonRN.phl[187]";
-connectAttr "Mother_DragonRN.phl[188]" "Mother_Dragon1.dnsm[83]";
+connectAttr "Mother_Dragon1.lv[40]" "Mother_DragonRN.phl[187]";
+connectAttr "Mother_DragonRN.phl[188]" "Mother_Dragon1.dnsm[81]";
 connectAttr "neck_3_Controler_visibility.o" "Mother_DragonRN.phl[189]";
 connectAttr "neck_3_Controler_scaleX.o" "Mother_DragonRN.phl[190]";
 connectAttr "neck_3_Controler_scaleY.o" "Mother_DragonRN.phl[191]";
@@ -8066,12 +8405,12 @@ connectAttr "Mother_Dragon1.av[38]" "Mother_DragonRN.phl[195]";
 connectAttr "Mother_DragonRN.phl[196]" "Mother_Dragon1.dnsm[73]";
 connectAttr "Mother_Dragon1.av[37]" "Mother_DragonRN.phl[197]";
 connectAttr "Mother_DragonRN.phl[198]" "Mother_Dragon1.dnsm[72]";
-connectAttr "Mother_Dragon1.lv[37]" "Mother_DragonRN.phl[199]";
-connectAttr "Mother_DragonRN.phl[200]" "Mother_Dragon1.dnsm[75]";
+connectAttr "Mother_Dragon1.lv[39]" "Mother_DragonRN.phl[199]";
+connectAttr "Mother_DragonRN.phl[200]" "Mother_Dragon1.dnsm[77]";
 connectAttr "Mother_Dragon1.lv[38]" "Mother_DragonRN.phl[201]";
 connectAttr "Mother_DragonRN.phl[202]" "Mother_Dragon1.dnsm[76]";
-connectAttr "Mother_Dragon1.lv[39]" "Mother_DragonRN.phl[203]";
-connectAttr "Mother_DragonRN.phl[204]" "Mother_Dragon1.dnsm[77]";
+connectAttr "Mother_Dragon1.lv[37]" "Mother_DragonRN.phl[203]";
+connectAttr "Mother_DragonRN.phl[204]" "Mother_Dragon1.dnsm[75]";
 connectAttr "head_controler_visibility.o" "Mother_DragonRN.phl[205]";
 connectAttr "head_controler_scaleX.o" "Mother_DragonRN.phl[206]";
 connectAttr "head_controler_scaleY.o" "Mother_DragonRN.phl[207]";
@@ -8082,12 +8421,12 @@ connectAttr "Mother_Dragon1.av[35]" "Mother_DragonRN.phl[211]";
 connectAttr "Mother_DragonRN.phl[212]" "Mother_Dragon1.dnsm[67]";
 connectAttr "Mother_Dragon1.av[34]" "Mother_DragonRN.phl[213]";
 connectAttr "Mother_DragonRN.phl[214]" "Mother_Dragon1.dnsm[66]";
-connectAttr "Mother_Dragon1.lv[34]" "Mother_DragonRN.phl[215]";
-connectAttr "Mother_DragonRN.phl[216]" "Mother_Dragon1.dnsm[69]";
+connectAttr "Mother_Dragon1.lv[36]" "Mother_DragonRN.phl[215]";
+connectAttr "Mother_DragonRN.phl[216]" "Mother_Dragon1.dnsm[71]";
 connectAttr "Mother_Dragon1.lv[35]" "Mother_DragonRN.phl[217]";
 connectAttr "Mother_DragonRN.phl[218]" "Mother_Dragon1.dnsm[70]";
-connectAttr "Mother_Dragon1.lv[36]" "Mother_DragonRN.phl[219]";
-connectAttr "Mother_DragonRN.phl[220]" "Mother_Dragon1.dnsm[71]";
+connectAttr "Mother_Dragon1.lv[34]" "Mother_DragonRN.phl[219]";
+connectAttr "Mother_DragonRN.phl[220]" "Mother_Dragon1.dnsm[69]";
 connectAttr "nose_Controler_visibility.o" "Mother_DragonRN.phl[221]";
 connectAttr "nose_Controler_scaleX.o" "Mother_DragonRN.phl[222]";
 connectAttr "nose_Controler_scaleY.o" "Mother_DragonRN.phl[223]";
@@ -8098,12 +8437,12 @@ connectAttr "Mother_Dragon1.av[32]" "Mother_DragonRN.phl[227]";
 connectAttr "Mother_DragonRN.phl[228]" "Mother_Dragon1.dnsm[61]";
 connectAttr "Mother_Dragon1.av[31]" "Mother_DragonRN.phl[229]";
 connectAttr "Mother_DragonRN.phl[230]" "Mother_Dragon1.dnsm[60]";
-connectAttr "Mother_Dragon1.lv[31]" "Mother_DragonRN.phl[231]";
-connectAttr "Mother_DragonRN.phl[232]" "Mother_Dragon1.dnsm[63]";
+connectAttr "Mother_Dragon1.lv[33]" "Mother_DragonRN.phl[231]";
+connectAttr "Mother_DragonRN.phl[232]" "Mother_Dragon1.dnsm[65]";
 connectAttr "Mother_Dragon1.lv[32]" "Mother_DragonRN.phl[233]";
 connectAttr "Mother_DragonRN.phl[234]" "Mother_Dragon1.dnsm[64]";
-connectAttr "Mother_Dragon1.lv[33]" "Mother_DragonRN.phl[235]";
-connectAttr "Mother_DragonRN.phl[236]" "Mother_Dragon1.dnsm[65]";
+connectAttr "Mother_Dragon1.lv[31]" "Mother_DragonRN.phl[235]";
+connectAttr "Mother_DragonRN.phl[236]" "Mother_Dragon1.dnsm[63]";
 connectAttr "mouth_Controler_visibility.o" "Mother_DragonRN.phl[237]";
 connectAttr "mouth_Controler_scaleX.o" "Mother_DragonRN.phl[238]";
 connectAttr "mouth_Controler_scaleY.o" "Mother_DragonRN.phl[239]";
@@ -8114,12 +8453,12 @@ connectAttr "Mother_Dragon1.av[29]" "Mother_DragonRN.phl[243]";
 connectAttr "Mother_DragonRN.phl[244]" "Mother_Dragon1.dnsm[55]";
 connectAttr "Mother_Dragon1.av[28]" "Mother_DragonRN.phl[245]";
 connectAttr "Mother_DragonRN.phl[246]" "Mother_Dragon1.dnsm[54]";
-connectAttr "Mother_Dragon1.lv[28]" "Mother_DragonRN.phl[247]";
-connectAttr "Mother_DragonRN.phl[248]" "Mother_Dragon1.dnsm[57]";
+connectAttr "Mother_Dragon1.lv[30]" "Mother_DragonRN.phl[247]";
+connectAttr "Mother_DragonRN.phl[248]" "Mother_Dragon1.dnsm[59]";
 connectAttr "Mother_Dragon1.lv[29]" "Mother_DragonRN.phl[249]";
 connectAttr "Mother_DragonRN.phl[250]" "Mother_Dragon1.dnsm[58]";
-connectAttr "Mother_Dragon1.lv[30]" "Mother_DragonRN.phl[251]";
-connectAttr "Mother_DragonRN.phl[252]" "Mother_Dragon1.dnsm[59]";
+connectAttr "Mother_Dragon1.lv[28]" "Mother_DragonRN.phl[251]";
+connectAttr "Mother_DragonRN.phl[252]" "Mother_Dragon1.dnsm[57]";
 connectAttr "Shoulder_Controler_visibility.o" "Mother_DragonRN.phl[253]";
 connectAttr "Shoulder_Controler_scaleX.o" "Mother_DragonRN.phl[254]";
 connectAttr "Shoulder_Controler_scaleY.o" "Mother_DragonRN.phl[255]";
@@ -8130,12 +8469,12 @@ connectAttr "Mother_Dragon1.av[26]" "Mother_DragonRN.phl[259]";
 connectAttr "Mother_DragonRN.phl[260]" "Mother_Dragon1.dnsm[49]";
 connectAttr "Mother_Dragon1.av[25]" "Mother_DragonRN.phl[261]";
 connectAttr "Mother_DragonRN.phl[262]" "Mother_Dragon1.dnsm[48]";
-connectAttr "Mother_Dragon1.lv[25]" "Mother_DragonRN.phl[263]";
-connectAttr "Mother_DragonRN.phl[264]" "Mother_Dragon1.dnsm[51]";
+connectAttr "Mother_Dragon1.lv[27]" "Mother_DragonRN.phl[263]";
+connectAttr "Mother_DragonRN.phl[264]" "Mother_Dragon1.dnsm[53]";
 connectAttr "Mother_Dragon1.lv[26]" "Mother_DragonRN.phl[265]";
 connectAttr "Mother_DragonRN.phl[266]" "Mother_Dragon1.dnsm[52]";
-connectAttr "Mother_Dragon1.lv[27]" "Mother_DragonRN.phl[267]";
-connectAttr "Mother_DragonRN.phl[268]" "Mother_Dragon1.dnsm[53]";
+connectAttr "Mother_Dragon1.lv[25]" "Mother_DragonRN.phl[267]";
+connectAttr "Mother_DragonRN.phl[268]" "Mother_Dragon1.dnsm[51]";
 connectAttr "arm_Controler_visibility.o" "Mother_DragonRN.phl[269]";
 connectAttr "arm_Controler_scaleX.o" "Mother_DragonRN.phl[270]";
 connectAttr "arm_Controler_scaleY.o" "Mother_DragonRN.phl[271]";
@@ -8146,12 +8485,12 @@ connectAttr "Mother_Dragon1.av[23]" "Mother_DragonRN.phl[275]";
 connectAttr "Mother_DragonRN.phl[276]" "Mother_Dragon1.dnsm[43]";
 connectAttr "Mother_Dragon1.av[22]" "Mother_DragonRN.phl[277]";
 connectAttr "Mother_DragonRN.phl[278]" "Mother_Dragon1.dnsm[42]";
-connectAttr "Mother_Dragon1.lv[22]" "Mother_DragonRN.phl[279]";
-connectAttr "Mother_DragonRN.phl[280]" "Mother_Dragon1.dnsm[45]";
+connectAttr "Mother_Dragon1.lv[24]" "Mother_DragonRN.phl[279]";
+connectAttr "Mother_DragonRN.phl[280]" "Mother_Dragon1.dnsm[47]";
 connectAttr "Mother_Dragon1.lv[23]" "Mother_DragonRN.phl[281]";
 connectAttr "Mother_DragonRN.phl[282]" "Mother_Dragon1.dnsm[46]";
-connectAttr "Mother_Dragon1.lv[24]" "Mother_DragonRN.phl[283]";
-connectAttr "Mother_DragonRN.phl[284]" "Mother_Dragon1.dnsm[47]";
+connectAttr "Mother_Dragon1.lv[22]" "Mother_DragonRN.phl[283]";
+connectAttr "Mother_DragonRN.phl[284]" "Mother_Dragon1.dnsm[45]";
 connectAttr "forearm_Controler_visibility.o" "Mother_DragonRN.phl[285]";
 connectAttr "forearm_Controler_scaleX.o" "Mother_DragonRN.phl[286]";
 connectAttr "forearm_Controler_scaleY.o" "Mother_DragonRN.phl[287]";
@@ -8162,12 +8501,12 @@ connectAttr "Mother_Dragon1.av[20]" "Mother_DragonRN.phl[291]";
 connectAttr "Mother_DragonRN.phl[292]" "Mother_Dragon1.dnsm[37]";
 connectAttr "Mother_Dragon1.av[19]" "Mother_DragonRN.phl[293]";
 connectAttr "Mother_DragonRN.phl[294]" "Mother_Dragon1.dnsm[36]";
-connectAttr "Mother_Dragon1.lv[19]" "Mother_DragonRN.phl[295]";
-connectAttr "Mother_DragonRN.phl[296]" "Mother_Dragon1.dnsm[39]";
+connectAttr "Mother_Dragon1.lv[21]" "Mother_DragonRN.phl[295]";
+connectAttr "Mother_DragonRN.phl[296]" "Mother_Dragon1.dnsm[41]";
 connectAttr "Mother_Dragon1.lv[20]" "Mother_DragonRN.phl[297]";
 connectAttr "Mother_DragonRN.phl[298]" "Mother_Dragon1.dnsm[40]";
-connectAttr "Mother_Dragon1.lv[21]" "Mother_DragonRN.phl[299]";
-connectAttr "Mother_DragonRN.phl[300]" "Mother_Dragon1.dnsm[41]";
+connectAttr "Mother_Dragon1.lv[19]" "Mother_DragonRN.phl[299]";
+connectAttr "Mother_DragonRN.phl[300]" "Mother_Dragon1.dnsm[39]";
 connectAttr "hand_Controler_visibility.o" "Mother_DragonRN.phl[301]";
 connectAttr "hand_Controler_scaleX.o" "Mother_DragonRN.phl[302]";
 connectAttr "hand_Controler_scaleY.o" "Mother_DragonRN.phl[303]";
@@ -8178,12 +8517,12 @@ connectAttr "Mother_Dragon1.av[17]" "Mother_DragonRN.phl[307]";
 connectAttr "Mother_DragonRN.phl[308]" "Mother_Dragon1.dnsm[31]";
 connectAttr "Mother_Dragon1.av[16]" "Mother_DragonRN.phl[309]";
 connectAttr "Mother_DragonRN.phl[310]" "Mother_Dragon1.dnsm[30]";
-connectAttr "Mother_Dragon1.lv[16]" "Mother_DragonRN.phl[311]";
-connectAttr "Mother_DragonRN.phl[312]" "Mother_Dragon1.dnsm[33]";
+connectAttr "Mother_Dragon1.lv[18]" "Mother_DragonRN.phl[311]";
+connectAttr "Mother_DragonRN.phl[312]" "Mother_Dragon1.dnsm[35]";
 connectAttr "Mother_Dragon1.lv[17]" "Mother_DragonRN.phl[313]";
 connectAttr "Mother_DragonRN.phl[314]" "Mother_Dragon1.dnsm[34]";
-connectAttr "Mother_Dragon1.lv[18]" "Mother_DragonRN.phl[315]";
-connectAttr "Mother_DragonRN.phl[316]" "Mother_Dragon1.dnsm[35]";
+connectAttr "Mother_Dragon1.lv[16]" "Mother_DragonRN.phl[315]";
+connectAttr "Mother_DragonRN.phl[316]" "Mother_Dragon1.dnsm[33]";
 connectAttr "finger_Controler_visibility.o" "Mother_DragonRN.phl[317]";
 connectAttr "finger_Controler_scaleX.o" "Mother_DragonRN.phl[318]";
 connectAttr "finger_Controler_scaleY.o" "Mother_DragonRN.phl[319]";
@@ -8194,12 +8533,12 @@ connectAttr "Mother_Dragon1.av[14]" "Mother_DragonRN.phl[323]";
 connectAttr "Mother_DragonRN.phl[324]" "Mother_Dragon1.dnsm[25]";
 connectAttr "Mother_Dragon1.av[13]" "Mother_DragonRN.phl[325]";
 connectAttr "Mother_DragonRN.phl[326]" "Mother_Dragon1.dnsm[24]";
-connectAttr "Mother_Dragon1.lv[13]" "Mother_DragonRN.phl[327]";
-connectAttr "Mother_DragonRN.phl[328]" "Mother_Dragon1.dnsm[27]";
+connectAttr "Mother_Dragon1.lv[15]" "Mother_DragonRN.phl[327]";
+connectAttr "Mother_DragonRN.phl[328]" "Mother_Dragon1.dnsm[29]";
 connectAttr "Mother_Dragon1.lv[14]" "Mother_DragonRN.phl[329]";
 connectAttr "Mother_DragonRN.phl[330]" "Mother_Dragon1.dnsm[28]";
-connectAttr "Mother_Dragon1.lv[15]" "Mother_DragonRN.phl[331]";
-connectAttr "Mother_DragonRN.phl[332]" "Mother_Dragon1.dnsm[29]";
+connectAttr "Mother_Dragon1.lv[13]" "Mother_DragonRN.phl[331]";
+connectAttr "Mother_DragonRN.phl[332]" "Mother_Dragon1.dnsm[27]";
 connectAttr "Shoulder_Controler_visibility1.o" "Mother_DragonRN.phl[333]";
 connectAttr "Shoulder_Controler_scaleX1.o" "Mother_DragonRN.phl[334]";
 connectAttr "Shoulder_Controler_scaleY1.o" "Mother_DragonRN.phl[335]";
@@ -8210,12 +8549,12 @@ connectAttr "Mother_Dragon1.av[11]" "Mother_DragonRN.phl[339]";
 connectAttr "Mother_DragonRN.phl[340]" "Mother_Dragon1.dnsm[19]";
 connectAttr "Mother_Dragon1.av[10]" "Mother_DragonRN.phl[341]";
 connectAttr "Mother_DragonRN.phl[342]" "Mother_Dragon1.dnsm[18]";
-connectAttr "Mother_Dragon1.lv[10]" "Mother_DragonRN.phl[343]";
-connectAttr "Mother_DragonRN.phl[344]" "Mother_Dragon1.dnsm[21]";
+connectAttr "Mother_Dragon1.lv[12]" "Mother_DragonRN.phl[343]";
+connectAttr "Mother_DragonRN.phl[344]" "Mother_Dragon1.dnsm[23]";
 connectAttr "Mother_Dragon1.lv[11]" "Mother_DragonRN.phl[345]";
 connectAttr "Mother_DragonRN.phl[346]" "Mother_Dragon1.dnsm[22]";
-connectAttr "Mother_Dragon1.lv[12]" "Mother_DragonRN.phl[347]";
-connectAttr "Mother_DragonRN.phl[348]" "Mother_Dragon1.dnsm[23]";
+connectAttr "Mother_Dragon1.lv[10]" "Mother_DragonRN.phl[347]";
+connectAttr "Mother_DragonRN.phl[348]" "Mother_Dragon1.dnsm[21]";
 connectAttr "arm_Controler_visibility1.o" "Mother_DragonRN.phl[349]";
 connectAttr "arm_Controler_scaleX1.o" "Mother_DragonRN.phl[350]";
 connectAttr "arm_Controler_scaleY1.o" "Mother_DragonRN.phl[351]";
@@ -8226,12 +8565,12 @@ connectAttr "Mother_Dragon1.av[8]" "Mother_DragonRN.phl[355]";
 connectAttr "Mother_DragonRN.phl[356]" "Mother_Dragon1.dnsm[13]";
 connectAttr "Mother_Dragon1.av[7]" "Mother_DragonRN.phl[357]";
 connectAttr "Mother_DragonRN.phl[358]" "Mother_Dragon1.dnsm[12]";
-connectAttr "Mother_Dragon1.lv[7]" "Mother_DragonRN.phl[359]";
-connectAttr "Mother_DragonRN.phl[360]" "Mother_Dragon1.dnsm[15]";
+connectAttr "Mother_Dragon1.lv[9]" "Mother_DragonRN.phl[359]";
+connectAttr "Mother_DragonRN.phl[360]" "Mother_Dragon1.dnsm[17]";
 connectAttr "Mother_Dragon1.lv[8]" "Mother_DragonRN.phl[361]";
 connectAttr "Mother_DragonRN.phl[362]" "Mother_Dragon1.dnsm[16]";
-connectAttr "Mother_Dragon1.lv[9]" "Mother_DragonRN.phl[363]";
-connectAttr "Mother_DragonRN.phl[364]" "Mother_Dragon1.dnsm[17]";
+connectAttr "Mother_Dragon1.lv[7]" "Mother_DragonRN.phl[363]";
+connectAttr "Mother_DragonRN.phl[364]" "Mother_Dragon1.dnsm[15]";
 connectAttr "forearm_Controler_visibility1.o" "Mother_DragonRN.phl[365]";
 connectAttr "forearm_Controler_scaleX1.o" "Mother_DragonRN.phl[366]";
 connectAttr "forearm_Controler_scaleY1.o" "Mother_DragonRN.phl[367]";
@@ -8242,12 +8581,12 @@ connectAttr "Mother_Dragon1.av[5]" "Mother_DragonRN.phl[371]";
 connectAttr "Mother_DragonRN.phl[372]" "Mother_Dragon1.dnsm[7]";
 connectAttr "Mother_Dragon1.av[4]" "Mother_DragonRN.phl[373]";
 connectAttr "Mother_DragonRN.phl[374]" "Mother_Dragon1.dnsm[6]";
-connectAttr "Mother_Dragon1.lv[4]" "Mother_DragonRN.phl[375]";
-connectAttr "Mother_DragonRN.phl[376]" "Mother_Dragon1.dnsm[9]";
+connectAttr "Mother_Dragon1.lv[6]" "Mother_DragonRN.phl[375]";
+connectAttr "Mother_DragonRN.phl[376]" "Mother_Dragon1.dnsm[11]";
 connectAttr "Mother_Dragon1.lv[5]" "Mother_DragonRN.phl[377]";
 connectAttr "Mother_DragonRN.phl[378]" "Mother_Dragon1.dnsm[10]";
-connectAttr "Mother_Dragon1.lv[6]" "Mother_DragonRN.phl[379]";
-connectAttr "Mother_DragonRN.phl[380]" "Mother_Dragon1.dnsm[11]";
+connectAttr "Mother_Dragon1.lv[4]" "Mother_DragonRN.phl[379]";
+connectAttr "Mother_DragonRN.phl[380]" "Mother_Dragon1.dnsm[9]";
 connectAttr "hand_Controler_visibility1.o" "Mother_DragonRN.phl[381]";
 connectAttr "hand_Controler_scaleX1.o" "Mother_DragonRN.phl[382]";
 connectAttr "hand_Controler_scaleY1.o" "Mother_DragonRN.phl[383]";
@@ -8258,12 +8597,12 @@ connectAttr "Mother_Dragon1.av[2]" "Mother_DragonRN.phl[387]";
 connectAttr "Mother_DragonRN.phl[388]" "Mother_Dragon1.dnsm[1]";
 connectAttr "Mother_Dragon1.av[1]" "Mother_DragonRN.phl[389]";
 connectAttr "Mother_DragonRN.phl[390]" "Mother_Dragon1.dnsm[0]";
-connectAttr "Mother_Dragon1.lv[1]" "Mother_DragonRN.phl[391]";
-connectAttr "Mother_DragonRN.phl[392]" "Mother_Dragon1.dnsm[3]";
+connectAttr "Mother_Dragon1.lv[3]" "Mother_DragonRN.phl[391]";
+connectAttr "Mother_DragonRN.phl[392]" "Mother_Dragon1.dnsm[5]";
 connectAttr "Mother_Dragon1.lv[2]" "Mother_DragonRN.phl[393]";
 connectAttr "Mother_DragonRN.phl[394]" "Mother_Dragon1.dnsm[4]";
-connectAttr "Mother_Dragon1.lv[3]" "Mother_DragonRN.phl[395]";
-connectAttr "Mother_DragonRN.phl[396]" "Mother_Dragon1.dnsm[5]";
+connectAttr "Mother_Dragon1.lv[1]" "Mother_DragonRN.phl[395]";
+connectAttr "Mother_DragonRN.phl[396]" "Mother_Dragon1.dnsm[3]";
 connectAttr "finger_Controler_visibility1.o" "Mother_DragonRN.phl[397]";
 connectAttr "finger_Controler_scaleX1.o" "Mother_DragonRN.phl[398]";
 connectAttr "finger_Controler_scaleY1.o" "Mother_DragonRN.phl[399]";

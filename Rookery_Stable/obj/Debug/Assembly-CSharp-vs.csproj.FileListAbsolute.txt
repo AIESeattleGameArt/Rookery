@@ -1,0 +1,11 @@
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\Assembly-CSharp.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\Assembly-CSharp.pdb
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\Assembly-UnityScript-firstpass.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\obj\Debug\Assembly-CSharp.dll
+C:\Users\Student\Documents\GitHub\Rookery\Rookery_Stable\obj\Debug\Assembly-CSharp.pdb

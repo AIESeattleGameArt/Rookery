@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\Attacks\AttackBlue.cs" />
      <Compile Include="Assets\Scripts\Attacks\AttackRed.cs" />
      <Compile Include="Assets\Scripts\Attacks\AttackWhite.cs" />
+     <Compile Include="Assets\Scripts\DEVCHEATS.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_BurnMark.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_CameraControls.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_DragonAnimation.cs" />

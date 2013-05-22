@@ -7,12 +7,6 @@ using System.Text;
 
 public class _GameSaveLoad: MonoBehaviour
 { 
-	// An example where the encoding can be found is at 
-	// http://www.eggheadcafe.com/articles/system.xml.xmlserialization.asp 
-	// We will just use the KISS method and cheat a little and use 
-	// the examples from the web page since they are fully described 
- 
-	// This is our local private members 
 	Rect _Save, _Load, _SaveMSG, _LoadMSG; 
 	bool _ShouldSave, _ShouldLoad,_SwitchSave,_SwitchLoad; 
 	string _FileLocation,_FileName; 
@@ -20,8 +14,9 @@ public class _GameSaveLoad: MonoBehaviour
 	UserData myData; 
 	// string _PlayerName; 
 	string _data;
-	int _PlayerGold;
-	int _PlayerHealth;
+    // Put variables you want to be saved/ loaded in the Struct at the bottom of this file
+    //int _PlayerGold;
+    //int _PlayerHealth;
 	
 	Vector3 VPosition; 
  
@@ -40,15 +35,47 @@ public class _GameSaveLoad: MonoBehaviour
 		_FileName="SaveData.xml"; 
 		
 		//Save player Gold total
-		
-		_PlayerGold = _Overlord.gold;
-		_PlayerHealth = _Overlord.wyrmHealth;
-		
+
+        //_PlayerGold = _Overlord.gold;
+        //_PlayerHealth = _Overlord.wyrmHealth;
+		//No. This is not how this works. - Nathan
+
 		// we need something to store the information into 
 		myData=new UserData(); 
 	} 
 	
-	void Update () {} 
+	void Update () {}
+
+    public void Load()
+    {
+        LoadXML();
+        if (_data.ToString() != "")
+        {
+            // notice how I use a reference to type (UserData) here, you need this 
+            // so that the returned object is converted into the correct type 
+            myData = (UserData)DeserializeObject(_data);
+            _Overlord.gold = myData._iUser.gold;
+            _Overlord.wyrmHealth = myData._iUser.health;
+            _OptionsController.musicLevel = myData._iUser.musicLevel;
+            _OptionsController.sfxLevel = myData._iUser.sfxLevel;
+            // just a way to show that we loaded in ok 
+            Debug.Log(myData._iUser.name);
+        } 
+    }
+
+    public void Save()
+    {
+        //myData._iUser.name=_PlayerName;
+        myData._iUser.gold = _Overlord.gold;
+        myData._iUser.health = _Overlord.wyrmHealth;
+        myData._iUser.sfxLevel = _OptionsController.sfxLevel;
+        myData._iUser.musicLevel = _OptionsController.musicLevel;
+
+        // Time to creat our XML! 
+        _data = SerializeObject(myData);
+        // This is the final resulting XML from the serialization process 
+        CreateXML(); 
+    }
  
 	void OnGUI() 
 	{    
@@ -60,17 +87,7 @@ public class _GameSaveLoad: MonoBehaviour
 		{ 
 			GUI.Label(_LoadMSG,"Loading from: "+_FileLocation); 
 			// Load our UserData into myData 
-			LoadXML(); 
-			if(_data.ToString() != "") 
-			{ 
-				// notice how I use a reference to type (UserData) here, you need this 
-				// so that the returned object is converted into the correct type 
-				myData = (UserData)DeserializeObject(_data); 
-				_Overlord.gold = myData._iUser.gold;
-				_Overlord.wyrmHealth = myData._iUser.health;
-				// just a way to show that we loaded in ok 
-				Debug.Log(myData._iUser.name); 
-			} 
+            Load();
 		} 
  
 		//*************************************************** 
@@ -79,15 +96,8 @@ public class _GameSaveLoad: MonoBehaviour
 		if (GUI.Button(_Save,"Save"))
 		{ 
  
-			GUI.Label(_SaveMSG,"Saving to: "+_FileLocation);  
-			//myData._iUser.name=_PlayerName;
-			myData._iUser.gold= _Overlord.gold;
-			myData._iUser.health = _Overlord.wyrmHealth;
- 
-			// Time to creat our XML! 
-			_data = SerializeObject(myData); 
-			// This is the final resulting XML from the serialization process 
-			CreateXML(); 
+			GUI.Label(_SaveMSG,"Saving to: "+_FileLocation);
+            Save();
 			Debug.Log(_data); 
 		} 
 	} 
@@ -173,5 +183,6 @@ public class UserData
 		public string name;
 		public int gold;
 		public int health;
+        public int musicLevel, sfxLevel;
 	} 
 }
