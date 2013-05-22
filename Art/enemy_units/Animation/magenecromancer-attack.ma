@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: magenecromancer-attack.ma
-//Last modified: Wed, May 22, 2013 10:55:24 AM
+//Last modified: Wed, May 22, 2013 11:21:30 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "mage_necromancerRN" "C:/Users/student/Documents/GitHub/Rookery/Art/enemy_units/Animation/Source/mage_necromancer.mb";
 file -r -ns ":" -dr 1 -rfn "mage_necromancerRN" "C:/Users/student/Documents/GitHub/Rookery/Art/enemy_units/Animation/Source/mage_necromancer.mb";
@@ -15,12 +15,12 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.3384708081495444 1.039841618971532 0.051558981808697002 ;
-	setAttr ".r" -type "double3" -15.938352729604997 -84.200000000000884 0 ;
+	setAttr ".t" -type "double3" 1.5663671597461948 0.66017673294316803 1.4110592771964046 ;
+	setAttr ".r" -type "double3" -5.7383527294468832 45.799999999998896 -5.7026568535210894e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 1.5090170977627893;
+	setAttr ".coi" 2.0482717405947026;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -66,10 +66,23 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
+createNode transform -n "pPlane1";
+	setAttr ".s" -type "double3" 5.9779336401629362 5.9779336401629362 5.9779336401629362 ;
+createNode mesh -n "pPlaneShape1" -p "pPlane1";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode displayLayerManager -n "layerManager";
+	setAttr -s 2 ".dli[1]"  1;
+	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
@@ -205,9 +218,25 @@ createNode reference -n "mage_necromancerRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"mage_necromancerRN"
 		"mage_necromancerRN" 0
-		"mage_necromancerRN" 282
+		"mage_necromancerRN" 298
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translate" " -type \"double3\" 0 0.409149 0.0742912"
+		
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translateZ" 
+		" -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translateY" 
+		" -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translateX" 
+		" -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "rotateZ" " -av"
+		
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "rotateY" " -av"
+		
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "rotateX" " -av"
+		
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translate" 
-		" -type \"double3\" 0.0345494 0.205589 0.025427"
+		" -type \"double3\" 0.0739984 0.0298006 -0.0070136"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translateY" 
@@ -215,7 +244,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotate" 
-		" -type \"double3\" 34.538405 0 0"
+		" -type \"double3\" 2.90283e-005 0 0"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotateY" 
@@ -223,7 +252,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translate" 
-		" -type \"double3\" -0.0277585 0.233513 -0.0581199"
+		" -type \"double3\" -0.0766809 0.0275249 0.0775485"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translateY" 
@@ -231,7 +260,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotate" 
-		" -type \"double3\" 47.990193 0 0"
+		" -type \"double3\" -4.61038e-005 0 0"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotateY" 
@@ -239,7 +268,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translate" 
-		" -type \"double3\" 0.118803 0.659994 0.0159931"
+		" -type \"double3\" 0.0812258 0.592149 0.146009"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translateY" 
@@ -247,7 +276,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotate" 
-		" -type \"double3\" -0.00614601 -36.712006 -74.209057"
+		" -type \"double3\" -115.559269 -45.853336 17.890231"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotateY" 
@@ -255,7 +284,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translate" 
-		" -type \"double3\" -0.122584 0.655209 0.0722354"
+		" -type \"double3\" -0.0508657 0.500542 0.0865112"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translateY" 
@@ -263,7 +292,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotate" 
-		" -type \"double3\" -0.009003 45.885724 73.615061"
+		" -type \"double3\" 43.064332 40.191204 124.404316"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotateY" 
@@ -271,7 +300,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translate" 
-		" -type \"double3\" 0.0399253 0.410665 0.0451072"
+		" -type \"double3\" 0.0588605 0.211076 0.0898481"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translateY" 
@@ -279,7 +308,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotate" 
-		" -type \"double3\" 5.479494 0.278529 -1.474895"
+		" -type \"double3\" 28.040651 -1.158521 4.156581"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotateY" 
@@ -287,7 +316,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translate" 
-		" -type \"double3\" -0.0366092 0.411036 0.0461849"
+		" -type \"double3\" -0.0599009 0.222499 0.142167"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translateY" 
@@ -295,7 +324,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotate" 
-		" -type \"double3\" 30.411647 -1.108335 2.203697"
+		" -type \"double3\" 18.274252 0.67657 -4.695499"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotateY" 
@@ -303,7 +332,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translate" 
-		" -type \"double3\" 0.0893132 0.764272 -0.0648166"
+		" -type \"double3\" -0.00837246 0.563223 0.0490083"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translateY" 
@@ -311,7 +340,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotate" 
-		" -type \"double3\" -0.0085584 -36.711997 -74.209001"
+		" -type \"double3\" -146.075235 -45.853361 17.892092"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotateY" 
@@ -319,7 +348,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translate" 
-		" -type \"double3\" -0.0960406 0.745485 -0.0248173"
+		" -type \"double3\" -0.109212 0.585741 -0.000725619"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translateY" 
@@ -327,7 +356,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotate" 
-		" -type \"double3\" -0.00931292 45.886266 73.615111"
+		" -type \"double3\" 43.055938 40.191327 124.404364"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotateY" 
@@ -335,7 +364,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translate" 
-		" -type \"double3\" 0.0588047 0.872226 0.0159982"
+		" -type \"double3\" 0.0588047 0.676797 0.0902893"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translateY" 
@@ -343,7 +372,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotate" 
-		" -type \"double3\" -0.00107879 35.766525 -74.220116"
+		" -type \"double3\" -1.914985 17.371797 -120.602103"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotateY" 
@@ -351,7 +380,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translate" 
-		" -type \"double3\" -0.0588048 0.872227 0.0159982"
+		" -type \"double3\" -0.0588048 0.676798 0.0902893"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translateY" 
@@ -359,7 +388,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotate" 
-		" -type \"double3\" 0.00290307 -17.169561 73.630056"
+		" -type \"double3\" 43.842483 -41.167015 61.030487"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotateY" 
@@ -367,14 +396,14 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translate" 
-		" -type \"double3\" 0.0451154 0.604578 0"
+		" -type \"double3\" 0.0451154 0.409149 0.0742911"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translateY" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translateX" 
 		" -av"
-		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotate" " -type \"double3\" -13.085726 -0.0961423 -1.51072"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotate" " -type \"double3\" -4.480187 -1.316699 4.072694"
 		
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotateZ" 
 		" -av"
@@ -383,7 +412,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translate" 
-		" -type \"double3\" -0.0451154 0.604578 0"
+		" -type \"double3\" -0.0451154 0.409149 0.0742911"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translateY" 
@@ -391,15 +420,25 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotate" 
-		" -type \"double3\" -13.403799 -0.409434 2.614038"
+		" -type \"double3\" -19.925515 0.562923 -4.73303"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotateY" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotateX" 
 		" -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translate" " -type \"double3\" 0 0.440897 0.0742912"
+		
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translateZ" " -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translateY" " -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translateX" " -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "rotate" " -type \"double3\" 0 0 0"
+		
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "rotateZ" " -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "rotateY" " -av"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
-		"rotate" " -type \"double3\" -13.085726 -0.0961423 -1.51072"
+		"rotate" " -type \"double3\" -4.480187 -1.316699 4.072694"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
@@ -407,7 +446,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
-		"rotate" " -type \"double3\" 18.565536 0.35683 0.119724"
+		"rotate" " -type \"double3\" 32.522778 0.151141 0.09597"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
@@ -415,7 +454,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
-		"rotate" " -type \"double3\" 29.053548 -0.136342 1.494754"
+		"rotate" " -type \"double3\" -28.048365 -0.932559 -4.212942"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
@@ -423,7 +462,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
-		"rotate" " -type \"double3\" -13.403799 -0.409434 2.614038"
+		"rotate" " -type \"double3\" -19.925515 0.562923 -4.73303"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
@@ -431,7 +470,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
-		"rotate" " -type \"double3\" 43.812875 -0.584764 -0.561136"
+		"rotate" " -type \"double3\" 38.199422 0.0940548 0.0740131"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
@@ -439,7 +478,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg|Character1_Ctrl_RightFoot" 
-		"rotate" " -type \"double3\" 17.56067 -0.160183 -2.46139"
+		"rotate" " -type \"double3\" -18.268168 0.830452 4.670793"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg|Character1_Ctrl_RightFoot" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg|Character1_Ctrl_RightFoot" 
@@ -455,7 +494,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
-		"rotate" " -type \"double3\" -0.00107872 35.766524 -74.220116"
+		"rotate" " -type \"double3\" -1.914985 17.371797 -120.602103"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
@@ -463,7 +502,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
-		"rotate" " -type \"double3\" -0.0265407 -72.478523 0.026163"
+		"rotate" " -type \"double3\" -161.474594 -32.971658 148.075911"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
@@ -471,7 +510,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm|Character1_Ctrl_LeftHand" 
-		"rotate" " -type \"double3\" 0.00237958 -9.39639e-006 -4.46886e-005"
+		"rotate" " -type \"double3\" 30.51463 0.000702123 0.00108977"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm|Character1_Ctrl_LeftHand" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm|Character1_Ctrl_LeftHand" 
@@ -487,7 +526,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
-		"rotate" " -type \"double3\" 0.00290307 -17.169561 73.630056"
+		"rotate" " -type \"double3\" 43.842483 -41.167015 61.030487"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
@@ -495,7 +534,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
-		"rotate" " -type \"double3\" -0.0254529 63.055832 -0.0286655"
+		"rotate" " -type \"double3\" 0.0405678 99.618103 0.0278305"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
@@ -503,7 +542,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm|Character1_Ctrl_RightHand" 
-		"rotate" " -type \"double3\" 0.00034583 -0.000541938 -3.49061e-005"
+		"rotate" " -type \"double3\" 0.00842465 -0.00011547 5.72919e-005"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm|Character1_Ctrl_RightHand" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm|Character1_Ctrl_RightHand" 
@@ -828,554 +867,613 @@ createNode script -n "uiConfigurationScriptNode1";
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode1";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 22 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
 createNode animCurveTA -n "Character1_Ctrl_LeftShoulderEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.0010799656178580889;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.0010799656178580889 12 -0.32256422506958565
+		 18 -1.9149849820174922 22 -0.18372598346635147;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftShoulderEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 35.766525673031403;
+	setAttr -s 4 ".ktv[0:3]"  1 35.766525673031403 12 51.275044517829734
+		 18 17.371796766001548 22 -56.74594593539279;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftShoulderEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -74.22011770729209;
+	setAttr -s 4 ".ktv[0:3]"  1 -74.22011770729209 12 -68.191934079090728
+		 18 -120.60210170630394 22 -69.264432697323571;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftArm_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -74.22011599302013;
+	setAttr -s 4 ".ktv[0:3]"  1 -74.22011599302013 12 -68.191934408996261
+		 18 -120.60210303434404 22 -69.264435312639634;
 createNode animCurveTA -n "Character1_Ctrl_LeftArm_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 35.766523801662338;
+	setAttr -s 4 ".ktv[0:3]"  1 35.766523801662338 12 51.275045570194514
+		 18 17.371796759252998 22 -56.745947712353782;
 createNode animCurveTA -n "Character1_Ctrl_LeftArm_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.0010787166488249757;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.0010787166488249757 12 -0.32256547008217873
+		 18 -1.9149851042620936 22 -0.18372435896758046;
 createNode animCurveTA -n "Character1_Ctrl_LeftForeArm_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.026162973091979385;
+	setAttr -s 4 ".ktv[0:3]"  1 0.026162973091979385 12 179.93186709139229
+		 18 148.07591068424543 22 0.014019670280688068;
 createNode animCurveTA -n "Character1_Ctrl_LeftForeArm_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -72.478522934906849;
+	setAttr -s 4 ".ktv[0:3]"  1 -72.478522934906849 12 -73.197640397035926
+		 18 -32.971657869335964 22 -32.418272836283585;
 createNode animCurveTA -n "Character1_Ctrl_LeftForeArm_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.026540653320822748;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.026540653320822748 12 -179.93050376105003
+		 18 -161.47459403333633 22 0.00070627769751090412;
 createNode animCurveTA -n "Character1_Ctrl_LeftHand_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -4.4688646918479367e-005;
+	setAttr -s 4 ".ktv[0:3]"  1 -4.4688646918479367e-005 12 -8.7712905816868415e-005
+		 18 0.0010897683223782945 22 -0.00012605921489842973;
 createNode animCurveTA -n "Character1_Ctrl_LeftHand_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -9.3963902961460961e-006;
+	setAttr -s 4 ".ktv[0:3]"  1 -9.3963902961460961e-006 12 0.00084820988212290721
+		 18 0.00070212320020771057 22 0.0013116753360838526;
 createNode animCurveTA -n "Character1_Ctrl_LeftHand_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.0023795799881062871;
+	setAttr -s 4 ".ktv[0:3]"  1 0.0023795799881062871 12 0.012195578149665588
+		 18 30.514630198132544 22 -0.010777793519290393;
 createNode animCurveTA -n "Character1_Ctrl_LeftShoulder_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 12 0 18 0 22 0;
 createNode animCurveTA -n "Character1_Ctrl_LeftShoulder_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 12 0 18 0 22 0;
 createNode animCurveTA -n "Character1_Ctrl_LeftShoulder_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 12 0 18 0 22 0;
 createNode animCurveTL -n "Character1_Ctrl_LeftWristEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.015993140637874603;
+	setAttr -s 4 ".ktv[0:3]"  1 0.015993140637874603 12 0.093863643705844879
+		 18 0.14600871503353119 22 0.3410722017288208;
 createNode animCurveTL -n "Character1_Ctrl_LeftWristEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.65999424457550049;
+	setAttr -s 4 ".ktv[0:3]"  1 0.65999424457550049 12 0.52574610710144043
+		 18 0.59214890003204346 22 0.60413837432861328;
 createNode animCurveTL -n "Character1_Ctrl_LeftWristEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.11880304664373398;
+	setAttr -s 4 ".ktv[0:3]"  1 0.11880304664373398 12 0.12007854133844376
+		 18 0.081225819885730743 22 0.086597360670566559;
 createNode animCurveTA -n "Character1_Ctrl_LeftWristEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.0061453706559701487;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.0061453706559701487 12 -0.36859302014243955
+		 18 -115.55927451362828 22 -187.65475001733455;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftWristEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -36.712006375417793;
+	setAttr -s 4 ".ktv[0:3]"  1 -36.712006375417793 12 -55.525363843635212
+		 18 -45.853336043856558 22 -90.844477187752631;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftWristEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -74.209057489985028;
+	setAttr -s 4 ".ktv[0:3]"  1 -74.209057489985028 12 -67.611738415077539
+		 18 17.890232160879943 22 118.23345411110272;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_LeftElbowEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.064816564321517944;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.064816564321517944 12 -0.017576746642589569
+		 18 0.049008339643478394 22 0.2059067040681839;
 createNode animCurveTL -n "Character1_Ctrl_LeftElbowEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.76427173614501953;
+	setAttr -s 4 ".ktv[0:3]"  1 0.76427173614501953 12 0.59649455547332764
+		 18 0.56322300434112549 22 0.60589152574539185;
 createNode animCurveTL -n "Character1_Ctrl_LeftElbowEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.089313216507434845;
+	setAttr -s 4 ".ktv[0:3]"  1 0.089313216507434845 12 0.090934865176677704
+		 18 -0.0083724558353424072 22 0.085655353963375092;
 createNode animCurveTA -n "Character1_Ctrl_LeftElbowEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.0085580814553296077;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.0085580814553296077 12 -0.38092337582265196
+		 18 33.924767373415207 22 -7.664299210057675;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftElbowEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -36.711997275311788;
+	setAttr -s 4 ".ktv[0:3]"  1 -36.711997275311788 12 -55.526213629361536
+		 18 -134.14663849328485 22 -89.156806542482371;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftElbowEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -74.2090012329666;
+	setAttr -s 4 ".ktv[0:3]"  1 -74.2090012329666 12 -67.611575147256886
+		 18 -162.10790791113857 22 -61.746219929338622;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_LeftShoulderEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.015998244285583496;
+	setAttr -s 4 ".ktv[0:3]"  1 0.015998244285583496 12 0.090289317071437836
+		 18 0.090289317071437836 22 0.090289317071437836;
 createNode animCurveTL -n "Character1_Ctrl_LeftShoulderEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.87222599983215332;
+	setAttr -s 4 ".ktv[0:3]"  1 0.87222599983215332 12 0.67679691314697266
+		 18 0.67679691314697266 22 0.67679691314697266;
 createNode animCurveTL -n "Character1_Ctrl_LeftShoulderEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.058804705739021301;
+	setAttr -s 4 ".ktv[0:3]"  1 0.058804705739021301 12 0.058804705739021301
+		 18 0.058804705739021301 22 0.058804705739021301;
 createNode animCurveTA -n "Character1_Ctrl_HipsEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_HipsEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_HipsEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_Hips_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0.074291199445724487;
 createNode animCurveTL -n "Character1_Ctrl_Hips_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.63632673025131226;
+	setAttr -s 2 ".ktv[0:1]"  1 0.63632673025131226 12 0.44089716672897339;
 createNode animCurveTL -n "Character1_Ctrl_Hips_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 createNode animCurveTA -n "Character1_Ctrl_Hips_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 createNode animCurveTA -n "Character1_Ctrl_Hips_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 createNode animCurveTA -n "Character1_Ctrl_Hips_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 createNode animCurveTL -n "Character1_Ctrl_HipsEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0.074291199445724487;
 createNode animCurveTL -n "Character1_Ctrl_HipsEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.60457885265350342;
+	setAttr -s 2 ".ktv[0:1]"  1 0.60457885265350342 12 0.40914928913116455;
 createNode animCurveTL -n "Character1_Ctrl_HipsEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 createNode animCurveTA -n "Character1_Ctrl_RightShoulderEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.002903697138916991;
+	setAttr -s 4 ".ktv[0:3]"  1 0.002903697138916991 12 31.386830058655029
+		 18 43.842482221758019 22 14.491084817890693;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightShoulderEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -17.169561449674031;
+	setAttr -s 4 ".ktv[0:3]"  1 -17.169561449674031 12 -69.970981457556221
+		 18 -41.167014881621434 22 42.3009593709413;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightShoulderEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 73.630056720837558;
+	setAttr -s 4 ".ktv[0:3]"  1 73.630056720837558 12 50.335742568712703
+		 18 61.030486135257206 22 77.259568180478496;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightArm_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 73.630056412236428;
+	setAttr -s 4 ".ktv[0:3]"  1 73.630056412236428 12 50.335742314551297
+		 18 61.030487033101785 22 77.25956888873479;
 createNode animCurveTA -n "Character1_Ctrl_RightArm_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -17.16956137537337;
+	setAttr -s 4 ".ktv[0:3]"  1 -17.16956137537337 12 -69.970982449348767
+		 18 -41.167015457580248 22 42.300959842577171;
 createNode animCurveTA -n "Character1_Ctrl_RightArm_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.0029030694415067295;
+	setAttr -s 4 ".ktv[0:3]"  1 0.0029030694415067295 12 31.38683140634523
+		 18 43.842483264851431 22 14.491084818319084;
 createNode animCurveTA -n "Character1_Ctrl_RightForeArm_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.028665498841497307;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.028665498841497307 12 0.034368137876910669
+		 18 0.027830549807341065 22 -0.029083392603846233;
 createNode animCurveTA -n "Character1_Ctrl_RightForeArm_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 63.055832072221918;
+	setAttr -s 4 ".ktv[0:3]"  1 63.055832072221918 12 118.41625565755216
+		 18 99.618102863689288 22 53.394367397075541;
 createNode animCurveTA -n "Character1_Ctrl_RightForeArm_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.025452889867816457;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.025452889867816457 12 0.038940583839160811
+		 18 0.040567848763611393 22 -0.018164839691698742;
 createNode animCurveTA -n "Character1_Ctrl_RightHand_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -3.4906076590214091e-005;
+	setAttr -s 4 ".ktv[0:3]"  1 -3.4906076590214091e-005 12 9.6267229966668238e-006
+		 18 5.7291907493560086e-005 22 -2.0470048892139776e-005;
 createNode animCurveTA -n "Character1_Ctrl_RightHand_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.00054193797626011109;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.00054193797626011109 12 -0.00061778666491125577
+		 18 -0.00011546956925279818 22 -0.00077048628030055904;
 createNode animCurveTA -n "Character1_Ctrl_RightHand_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.00034582992808470108;
+	setAttr -s 4 ".ktv[0:3]"  1 0.00034582992808470108 12 0.018209027091443179
+		 18 0.0084246488421852641 22 -0.0031013842672953178;
 createNode animCurveTA -n "Character1_Ctrl_RightShoulder_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 12 0 18 0 22 0;
 createNode animCurveTA -n "Character1_Ctrl_RightShoulder_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 12 0 18 0 22 0;
 createNode animCurveTA -n "Character1_Ctrl_RightShoulder_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 12 0 18 0 22 0;
 createNode animCurveTL -n "Character1_Ctrl_RightWristEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.072235427796840668;
+	setAttr -s 4 ".ktv[0:3]"  1 0.072235427796840668 12 0.055595561861991882
+		 18 0.086511194705963135 22 0.31530889868736267;
 createNode animCurveTL -n "Character1_Ctrl_RightWristEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.65520948171615601;
+	setAttr -s 4 ".ktv[0:3]"  1 0.65520948171615601 12 0.54438209533691406
+		 18 0.50054192543029785 22 0.58190149068832397;
 createNode animCurveTL -n "Character1_Ctrl_RightWristEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.12258416414260864;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.12258416414260864 12 -0.088199600577354431
+		 18 -0.050865665078163147 22 -0.052466347813606262;
 createNode animCurveTA -n "Character1_Ctrl_RightWristEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.0090018187409717943;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.0090018187409717943 12 14.562520603920364
+		 18 43.064331022726947 22 121.50745451900639;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightWristEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 45.885724718005427;
+	setAttr -s 4 ".ktv[0:3]"  1 45.885724718005427 12 44.771971648930275
+		 18 40.191203887447308 22 77.483174886545129;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightWristEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 73.615061492254881;
+	setAttr -s 4 ".ktv[0:3]"  1 73.615061492254881 12 90.493622555952683
+		 18 124.4043153886239 22 189.51679621757793;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_RightElbowEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.024817317724227905;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.024817317724227905 12 -0.039609953761100769
+		 18 -0.00072561949491500854 22 0.18334263563156128;
 createNode animCurveTL -n "Character1_Ctrl_RightElbowEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.74548476934432983;
+	setAttr -s 4 ".ktv[0:3]"  1 0.74548476934432983 12 0.64034390449523926
+		 18 0.58574092388153076 22 0.57705676555633545;
 createNode animCurveTL -n "Character1_Ctrl_RightElbowEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.09604056179523468;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.09604056179523468 12 -0.089026525616645813
+		 18 -0.10921217501163483 22 -0.081360504031181335;
 createNode animCurveTA -n "Character1_Ctrl_RightElbowEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.0093143633077820472;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.0093143633077820472 12 14.54445367560414
+		 18 43.055938223996321 22 121.51344768023978;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightElbowEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 45.886264675681169;
+	setAttr -s 4 ".ktv[0:3]"  1 45.886264675681169 12 44.772570852978475
+		 18 40.191327571928561 22 77.482757822855049;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightElbowEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 73.615109263412592;
+	setAttr -s 4 ".ktv[0:3]"  1 73.615109263412592 12 90.493827133030507
+		 18 124.40436270409027 22 189.51977055621944;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_RightShoulderEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.015998244285583496;
+	setAttr -s 4 ".ktv[0:3]"  1 0.015998244285583496 12 0.090289317071437836
+		 18 0.090289317071437836 22 0.090289317071437836;
 createNode animCurveTL -n "Character1_Ctrl_RightShoulderEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.87222748994827271;
+	setAttr -s 4 ".ktv[0:3]"  1 0.87222748994827271 12 0.67679840326309204
+		 18 0.67679840326309204 22 0.67679840326309204;
 createNode animCurveTL -n "Character1_Ctrl_RightShoulderEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.058804754167795181;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.058804754167795181 12 -0.058804754167795181
+		 18 -0.058804754167795181 22 -0.058804754167795181;
 createNode animCurveTA -n "Character1_Ctrl_LeftAnkleEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 34.538403001529254;
+	setAttr -s 2 ".ktv[0:1]"  1 34.538378768298848 12 2.9028307636553185e-005;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftAnkleEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftAnkleEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftUpLeg_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.5107198581122432;
+	setAttr -s 2 ".ktv[0:1]"  1 -1.5408043624537537 12 4.0726935627490262;
 createNode animCurveTA -n "Character1_Ctrl_LeftUpLeg_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.096142324157561437;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.097871229470243626 12 -1.3166986328751598;
 createNode animCurveTA -n "Character1_Ctrl_LeftUpLeg_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -13.08572627493464;
+	setAttr -s 2 ".ktv[0:1]"  1 -18.599320695100928 12 -4.4801872309280366;
 createNode animCurveTA -n "Character1_Ctrl_LeftLeg_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.11972448724514081;
+	setAttr -s 2 ".ktv[0:1]"  1 0.20424468499336157 12 0.095970024562755385;
 createNode animCurveTA -n "Character1_Ctrl_LeftLeg_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.35683043433394102;
+	setAttr -s 2 ".ktv[0:1]"  1 0.3651802513691742 12 0.15114124970123358;
 createNode animCurveTA -n "Character1_Ctrl_LeftLeg_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 18.565536173201195;
+	setAttr -s 2 ".ktv[0:1]"  1 29.254914015739832 12 32.522777995100476;
 createNode animCurveTA -n "Character1_Ctrl_LeftFoot_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1.494754392535415;
+	setAttr -s 2 ".ktv[0:1]"  1 1.4964035208654882 12 -4.2129415281593872;
 createNode animCurveTA -n "Character1_Ctrl_LeftFoot_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.13634164041688865;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.037270534922541274 12 -0.93255924885014907;
 createNode animCurveTA -n "Character1_Ctrl_LeftFoot_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 29.053547890659715;
+	setAttr -s 2 ".ktv[0:1]"  1 23.878801327811981 12 -28.048365030706638;
 createNode animCurveTL -n "Character1_Ctrl_LeftAnkleEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.025427008047699928;
+	setAttr -s 2 ".ktv[0:1]"  1 0.025426987558603287 12 -0.0070135965943336487;
 createNode animCurveTL -n "Character1_Ctrl_LeftAnkleEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.20558935403823853;
+	setAttr -s 2 ".ktv[0:1]"  1 0.21343295276165009 12 0.02980060875415802;
 createNode animCurveTL -n "Character1_Ctrl_LeftAnkleEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.034549366682767868;
+	setAttr -s 2 ".ktv[0:1]"  1 0.034549377858638763 12 0.073998428881168365;
 createNode animCurveTL -n "Character1_Ctrl_LeftKneeEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.045107178390026093;
+	setAttr -s 2 ".ktv[0:1]"  1 0.063530430197715759 12 0.089848116040229797;
 createNode animCurveTL -n "Character1_Ctrl_LeftKneeEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.41066491603851318;
+	setAttr -s 2 ".ktv[0:1]"  1 0.41589623689651489 12 0.21107630431652069;
 createNode animCurveTL -n "Character1_Ctrl_LeftKneeEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.039925288408994675;
+	setAttr -s 2 ".ktv[0:1]"  1 0.039931200444698334 12 0.058860484510660172;
 createNode animCurveTA -n "Character1_Ctrl_LeftKneeEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 5.4794940756518571;
+	setAttr -s 2 ".ktv[0:1]"  1 10.655087900088265 12 28.040651337583967;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftKneeEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.27852864499375313;
+	setAttr -s 2 ".ktv[0:1]"  1 0.31337972103676948 12 -1.1585211967613931;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftKneeEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.474895252188714;
+	setAttr -s 2 ".ktv[0:1]"  1 -1.4637028221459043 12 4.1565809514903291;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_LeftHipEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0.07429107278585434;
 createNode animCurveTL -n "Character1_Ctrl_LeftHipEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.60457777976989746;
+	setAttr -s 2 ".ktv[0:1]"  1 0.60457777976989746 12 0.40914887189865112;
 createNode animCurveTL -n "Character1_Ctrl_LeftHipEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.045115426182746887;
+	setAttr -s 2 ".ktv[0:1]"  1 0.045115426182746887 12 0.045115426182746887;
 createNode animCurveTA -n "Character1_Ctrl_LeftHipEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -13.085726345094562;
+	setAttr -s 2 ".ktv[0:1]"  1 -18.59932062093954 12 -4.4801870129845218;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftHipEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.096142320391467681;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.097871228564752888 12 -1.3166986036869981;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_LeftHipEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.51071982830814;
+	setAttr -s 2 ".ktv[0:1]"  1 -1.5408043387386241 12 4.0726935218248084;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightAnkleEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 47.990196101093659;
+	setAttr -s 2 ".ktv[0:1]"  1 47.990171116038816 12 -4.6103791146471044e-005;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightAnkleEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightAnkleEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightUpLeg_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.6140381504163721;
+	setAttr -s 2 ".ktv[0:1]"  1 2.8610755566658708 12 -4.7330303740467858;
 createNode animCurveTA -n "Character1_Ctrl_RightUpLeg_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.40943397959806421;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.45037470542668401 12 0.56292266223696374;
 createNode animCurveTA -n "Character1_Ctrl_RightUpLeg_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -13.403799460955662;
+	setAttr -s 2 ".ktv[0:1]"  1 -22.911036411720421 12 -19.925515097495921;
 createNode animCurveTA -n "Character1_Ctrl_RightLeg_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.56113623470260088;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.91214932766293877 12 0.074013050084819038;
 createNode animCurveTA -n "Character1_Ctrl_RightLeg_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.58476374620710847;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.44327877139314092 12 0.094054796584635378;
 createNode animCurveTA -n "Character1_Ctrl_RightLeg_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 43.812875335365746;
+	setAttr -s 2 ".ktv[0:1]"  1 64.08466236235914 12 38.199421912992179;
 createNode animCurveTA -n "Character1_Ctrl_RightFoot_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -2.4613899066162332;
+	setAttr -s 2 ".ktv[0:1]"  1 -2.4497808869374573 12 4.6707934464761047;
 createNode animCurveTA -n "Character1_Ctrl_RightFoot_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.16018271151059491;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.53102355422667535 12 0.83045206473732125;
 createNode animCurveTA -n "Character1_Ctrl_RightFoot_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 17.560670328268721;
+	setAttr -s 2 ".ktv[0:1]"  1 6.7984994577806246 12 -18.268167620018435;
 createNode animCurveTL -n "Character1_Ctrl_RightAnkleEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.058119878172874451;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.058119788765907288 12 0.077548451721668243;
 createNode animCurveTL -n "Character1_Ctrl_RightAnkleEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.2335134744644165;
+	setAttr -s 2 ".ktv[0:1]"  1 0.26644769310951233 12 0.027524858713150024;
 createNode animCurveTL -n "Character1_Ctrl_RightAnkleEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.027758538722991943;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.027758544310927391 12 -0.076680928468704224;
 createNode animCurveTL -n "Character1_Ctrl_RightKneeEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.046184919774532318;
+	setAttr -s 2 ".ktv[0:1]"  1 0.077542833983898163 12 0.14216697216033936;
 createNode animCurveTL -n "Character1_Ctrl_RightKneeEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.41103625297546387;
+	setAttr -s 2 ".ktv[0:1]"  1 0.42133554816246033 12 0.22249948978424072;
 createNode animCurveTL -n "Character1_Ctrl_RightKneeEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.036609206348657608;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.036567147821187973 12 -0.059900891035795212;
 createNode animCurveTA -n "Character1_Ctrl_RightKneeEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 30.411646080700155;
+	setAttr -s 2 ".ktv[0:1]"  1 41.179793586119189 12 18.274251783606097;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightKneeEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -1.1083354647883676;
+	setAttr -s 2 ".ktv[0:1]"  1 -1.2137467896676286 12 0.67657040869582896;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightKneeEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.2036969849794463;
+	setAttr -s 2 ".ktv[0:1]"  1 2.1933483355227157 12 -4.6954991947042162;
 	setAttr ".roti" 5;
 createNode animCurveTL -n "Character1_Ctrl_RightHipEffector_translateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
+	setAttr -s 2 ".ktv[0:1]"  1 0 12 0.07429107278585434;
 createNode animCurveTL -n "Character1_Ctrl_RightHipEffector_translateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.60457777976989746;
+	setAttr -s 2 ".ktv[0:1]"  1 0.60457777976989746 12 0.40914887189865112;
 createNode animCurveTL -n "Character1_Ctrl_RightHipEffector_translateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.045115426182746887;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.045115426182746887 12 -0.045115426182746887;
 createNode animCurveTA -n "Character1_Ctrl_RightHipEffector_rotateX";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -13.403799040651855;
+	setAttr -s 2 ".ktv[0:1]"  1 -22.911036542654617 12 -19.925515141531964;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightHipEffector_rotateY";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 -0.40943398342236653;
+	setAttr -s 2 ".ktv[0:1]"  1 -0.45037472932003431 12 0.56292266629952425;
 	setAttr ".roti" 5;
 createNode animCurveTA -n "Character1_Ctrl_RightHipEffector_rotateZ";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 2.6140380901608742;
+	setAttr -s 2 ".ktv[0:1]"  1 2.8610756667719279 12 -4.7330304205945257;
 	setAttr ".roti" 5;
+createNode polyPlane -n "polyPlane1";
+	setAttr ".cuv" 2;
+createNode displayLayer -n "layer1";
+	setAttr ".dt" 2;
+	setAttr ".do" 1;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 18;
+	setAttr ".unw" 18;
 select -ne :renderPartition;
 	setAttr -s 5 ".st";
 select -ne :initialShadingGroup;
@@ -1615,11 +1713,15 @@ connectAttr "Character1_Ctrl_RightForeArm_rotateX.o" "mage_necromancerRN.phl[123
 connectAttr "Character1_Ctrl_RightHand_rotateZ.o" "mage_necromancerRN.phl[124]";
 connectAttr "Character1_Ctrl_RightHand_rotateY.o" "mage_necromancerRN.phl[125]";
 connectAttr "Character1_Ctrl_RightHand_rotateX.o" "mage_necromancerRN.phl[126]";
+connectAttr "layer1.di" "pPlane1.do";
+connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
+connectAttr "layerManager.dli[1]" "layer1.id";
+connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of magenecromancer-attack.ma
