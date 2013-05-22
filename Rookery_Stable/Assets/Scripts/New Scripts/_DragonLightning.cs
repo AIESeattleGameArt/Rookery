@@ -112,6 +112,10 @@ public class _DragonLightning : _DragonBase
             round.GetComponent<_ProjectileLightning>().target = this.target;
             //sets the damage of the projectile
             round.GetComponent<_ProjectileLightning>().damage = this.damage;
+			//sets the bounce of the projectile
+			round.GetComponent<_ProjectileLightning>().bounces = 6;
+			//sets the decay of the projectile
+			round.GetComponent<_ProjectileLightning>().decay = 20;
 
             //attack.CrossFade("Attack", 0.2f);
         }
