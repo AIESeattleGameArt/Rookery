@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: archer-attack.ma
-//Last modified: Wed, May 22, 2013 02:29:39 PM
+//Last modified: Wed, May 22, 2013 02:40:47 PM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "archer_riggedRN" "C:/Users/student/Documents/GitHub/Rookery/Art/enemy_units/Animation/Source/archer_rigged.ma";
 file -r -ns ":" -dr 1 -rfn "archer_riggedRN" "C:/Users/student/Documents/GitHub/Rookery/Art/enemy_units/Animation/Source/archer_rigged.ma";
