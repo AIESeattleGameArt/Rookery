@@ -18,6 +18,8 @@ public class _Menu : MonoBehaviour
 	// Global variable initialization
 	void Start ()
 	{
+
+
 		// Assign screen dimention variables to the current window size
 		screenWidth = Screen.width;
 		screenHeight = Screen.height;
@@ -26,6 +28,7 @@ public class _Menu : MonoBehaviour
 	// Called once per frame
 	void Update ()
 	{
+        audio.volume = (float) _OptionsController.musicLevel / 100;
 		// Readjust screen dimention variables if the user has changed the window size
 		screenWidth = Screen.width;
         screenHeight = Screen.height;
