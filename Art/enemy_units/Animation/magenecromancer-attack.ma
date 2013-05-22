@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: magenecromancer-attack.ma
-//Last modified: Wed, May 22, 2013 11:21:30 AM
+//Last modified: Wed, May 22, 2013 11:24:03 AM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "mage_necromancerRN" "C:/Users/student/Documents/GitHub/Rookery/Art/enemy_units/Animation/Source/mage_necromancer.mb";
 file -r -ns ":" -dr 1 -rfn "mage_necromancerRN" "C:/Users/student/Documents/GitHub/Rookery/Art/enemy_units/Animation/Source/mage_necromancer.mb";
@@ -66,23 +66,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
-createNode transform -n "pPlane1";
-	setAttr ".s" -type "double3" 5.9779336401629362 5.9779336401629362 5.9779336401629362 ;
-createNode mesh -n "pPlaneShape1" -p "pPlane1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode displayLayerManager -n "layerManager";
+	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
-	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
 createNode renderLayer -n "defaultRenderLayer";
@@ -219,7 +208,7 @@ createNode reference -n "mage_necromancerRN";
 		"mage_necromancerRN"
 		"mage_necromancerRN" 0
 		"mage_necromancerRN" 298
-		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translate" " -type \"double3\" 0 0.409149 0.0742912"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translate" " -type \"double3\" 0 0.480215 0.0472762"
 		
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "translateZ" 
 		" -av"
@@ -236,7 +225,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_HipsEffector" "rotateX" " -av"
 		
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translate" 
-		" -type \"double3\" 0.0739984 0.0298006 -0.0070136"
+		" -type \"double3\" 0.0596533 0.096576 0.00478298"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translateY" 
@@ -244,7 +233,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotate" 
-		" -type \"double3\" 2.90283e-005 0 0"
+		" -type \"double3\" 11.469563 0 0"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotateY" 
@@ -252,7 +241,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftAnkleEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translate" 
-		" -type \"double3\" -0.0766809 0.0275249 0.0775485"
+		" -type \"double3\" -0.058891 0.114406 0.0282145"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translateY" 
@@ -260,7 +249,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotate" 
-		" -type \"double3\" -4.61038e-005 0 0"
+		" -type \"double3\" 15.936599 0 0"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotateY" 
@@ -268,7 +257,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightAnkleEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translate" 
-		" -type \"double3\" 0.0812258 0.592149 0.146009"
+		" -type \"double3\" 0.123383 0.561259 0.0646257"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translateY" 
@@ -276,7 +265,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotate" 
-		" -type \"double3\" -115.559269 -45.853336 17.890231"
+		" -type \"double3\" 5.568452 -46.075286 -73.295674"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotateY" 
@@ -284,7 +273,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftWristEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translate" 
-		" -type \"double3\" -0.0508657 0.500542 0.0865112"
+		" -type \"double3\" -0.102473 0.5831 0.0578358"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translateY" 
@@ -292,7 +281,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotate" 
-		" -type \"double3\" 43.064332 40.191204 124.404316"
+		" -type \"double3\" 7.605322 45.15305 82.373406"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotateY" 
@@ -300,7 +289,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightWristEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translate" 
-		" -type \"double3\" 0.0588605 0.211076 0.0898481"
+		" -type \"double3\" 0.0519771 0.285556 0.080278"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translateY" 
@@ -308,7 +297,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotate" 
-		" -type \"double3\" 28.040651 -1.158521 4.156581"
+		" -type \"double3\" 22.283835 -0.481183 2.342884"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotateY" 
@@ -316,7 +305,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftKneeEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translate" 
-		" -type \"double3\" -0.0599009 0.222499 0.142167"
+		" -type \"double3\" -0.0514159 0.294804 0.118667"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translateY" 
@@ -324,7 +313,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotate" 
-		" -type \"double3\" 18.274252 0.67657 -4.695499"
+		" -type \"double3\" 25.904005 0.35728 -2.330617"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotateY" 
@@ -332,7 +321,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightKneeEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translate" 
-		" -type \"double3\" -0.00837246 0.563223 0.0490083"
+		" -type \"double3\" 0.0998919 0.651955 -0.0386442"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translateY" 
@@ -340,7 +329,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotate" 
-		" -type \"double3\" -146.075235 -45.853361 17.892092"
+		" -type \"double3\" 6.475311 -45.316815 -71.850065"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotateY" 
@@ -348,7 +337,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftElbowEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translate" 
-		" -type \"double3\" -0.109212 0.585741 -0.000725619"
+		" -type \"double3\" -0.0892892 0.678315 -0.0387047"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translateY" 
@@ -356,7 +345,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotate" 
-		" -type \"double3\" 43.055938 40.191327 124.404364"
+		" -type \"double3\" 7.592398 45.153163 82.373491"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotateY" 
@@ -364,7 +353,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightElbowEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translate" 
-		" -type \"double3\" 0.0588047 0.676797 0.0902893"
+		" -type \"double3\" 0.0588047 0.737705 0.0671355"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translateY" 
@@ -372,7 +361,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotate" 
-		" -type \"double3\" -1.914985 17.371797 -120.602103"
+		" -type \"double3\" 1.200307 48.329588 -65.385391"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotateY" 
@@ -380,7 +369,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftShoulderEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translate" 
-		" -type \"double3\" -0.0588048 0.676798 0.0902893"
+		" -type \"double3\" -0.0588048 0.737706 0.0671355"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translateY" 
@@ -388,7 +377,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotate" 
-		" -type \"double3\" 43.842483 -41.167015 61.030487"
+		" -type \"double3\" 10.643398 -55.373235 66.943619"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotateY" 
@@ -396,14 +385,14 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightShoulderEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translate" 
-		" -type \"double3\" 0.0451154 0.409149 0.0742911"
+		" -type \"double3\" 0.0451154 0.480214 0.0472761"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translateY" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "translateX" 
 		" -av"
-		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotate" " -type \"double3\" -4.480187 -1.316699 4.072694"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotate" " -type \"double3\" -9.15527 -0.758882 2.243839"
 		
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotateZ" 
 		" -av"
@@ -412,7 +401,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_LeftHipEffector" "rotateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translate" 
-		" -type \"double3\" -0.0451154 0.409149 0.0742911"
+		" -type \"double3\" -0.0451154 0.480214 0.0472761"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translateY" 
@@ -420,14 +409,14 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "translateX" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotate" 
-		" -type \"double3\" -19.925515 0.562923 -4.73303"
+		" -type \"double3\" -20.901741 0.182653 -2.217116"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotateZ" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotateY" 
 		" -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_RightHipEffector" "rotateX" 
 		" -av"
-		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translate" " -type \"double3\" 0 0.440897 0.0742912"
+		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translate" " -type \"double3\" 0 0.511962 0.0472762"
 		
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "translateY" " -av"
@@ -438,7 +427,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "rotateY" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips" "rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
-		"rotate" " -type \"double3\" -4.480187 -1.316699 4.072694"
+		"rotate" " -type \"double3\" -9.614417 -0.873489 2.031422"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
@@ -446,7 +435,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
-		"rotate" " -type \"double3\" 32.522778 0.151141 0.09597"
+		"rotate" " -type \"double3\" 31.334464 0.228974 0.135343"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
@@ -454,7 +443,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
-		"rotate" " -type \"double3\" -28.048365 -0.932559 -4.212942"
+		"rotate" " -type \"double3\" -9.16576 -0.607 -2.136816"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
@@ -462,7 +451,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_LeftUpLeg|Character1_Ctrl_LeftLeg|Character1_Ctrl_LeftFoot" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
-		"rotate" " -type \"double3\" -19.925515 0.562923 -4.73303"
+		"rotate" " -type \"double3\" -21.011159 0.194451 -1.971537"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
@@ -470,7 +459,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
-		"rotate" " -type \"double3\" 38.199422 0.0940548 0.0740131"
+		"rotate" " -type \"double3\" 47.612236 -0.101339 -0.284591"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
@@ -478,7 +467,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg|Character1_Ctrl_RightFoot" 
-		"rotate" " -type \"double3\" -18.268168 0.830452 4.670793"
+		"rotate" " -type \"double3\" -9.153016 0.33537 2.081494"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg|Character1_Ctrl_RightFoot" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_RightUpLeg|Character1_Ctrl_RightLeg|Character1_Ctrl_RightFoot" 
@@ -494,7 +483,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
-		"rotate" " -type \"double3\" -1.914985 17.371797 -120.602103"
+		"rotate" " -type \"double3\" -0.0706372 49.672063 -65.076824"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
@@ -502,7 +491,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
-		"rotate" " -type \"double3\" -161.474594 -32.971658 148.075911"
+		"rotate" " -type \"double3\" -125.619648 -76.806427 126.897285"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
@@ -510,7 +499,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm|Character1_Ctrl_LeftHand" 
-		"rotate" " -type \"double3\" 30.51463 0.000702123 0.00108977"
+		"rotate" " -type \"double3\" -2.89727 0.000594845 -0.000182879"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm|Character1_Ctrl_LeftHand" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_LeftShoulder|Character1_Ctrl_LeftArm|Character1_Ctrl_LeftForeArm|Character1_Ctrl_LeftHand" 
@@ -526,7 +515,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
-		"rotate" " -type \"double3\" 43.842483 -41.167015 61.030487"
+		"rotate" " -type \"double3\" 20.418792 -56.259299 56.576677"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
@@ -534,7 +523,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
-		"rotate" " -type \"double3\" 0.0405678 99.618103 0.0278305"
+		"rotate" " -type \"double3\" 0.0187165 102.953629 0.0153458"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
@@ -542,7 +531,7 @@ createNode reference -n "mage_necromancerRN";
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm" 
 		"rotateX" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm|Character1_Ctrl_RightHand" 
-		"rotate" " -type \"double3\" 0.00842465 -0.00011547 5.72919e-005"
+		"rotate" " -type \"double3\" 0.013574 -0.000635628 -3.75654e-006"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm|Character1_Ctrl_RightHand" 
 		"rotateZ" " -av"
 		2 "|Character1_Ctrl_Reference|Character1_Ctrl_Hips|Character1_Ctrl_Spine|Character1_Ctrl_Spine1|Character1_Ctrl_Spine2|Character1_Ctrl_RightShoulder|Character1_Ctrl_RightArm|Character1_Ctrl_RightForeArm|Character1_Ctrl_RightHand" 
@@ -1466,14 +1455,9 @@ createNode animCurveTA -n "Character1_Ctrl_RightHipEffector_rotateZ";
 	setAttr ".wgt" no;
 	setAttr -s 2 ".ktv[0:1]"  1 2.8610756667719279 12 -4.7330304205945257;
 	setAttr ".roti" 5;
-createNode polyPlane -n "polyPlane1";
-	setAttr ".cuv" 2;
-createNode displayLayer -n "layer1";
-	setAttr ".dt" 2;
-	setAttr ".do" 1;
 select -ne :time1;
-	setAttr ".o" 18;
-	setAttr ".unw" 18;
+	setAttr ".o" 8;
+	setAttr ".unw" 8;
 select -ne :renderPartition;
 	setAttr -s 5 ".st";
 select -ne :initialShadingGroup;
@@ -1713,15 +1697,11 @@ connectAttr "Character1_Ctrl_RightForeArm_rotateX.o" "mage_necromancerRN.phl[123
 connectAttr "Character1_Ctrl_RightHand_rotateZ.o" "mage_necromancerRN.phl[124]";
 connectAttr "Character1_Ctrl_RightHand_rotateY.o" "mage_necromancerRN.phl[125]";
 connectAttr "Character1_Ctrl_RightHand_rotateX.o" "mage_necromancerRN.phl[126]";
-connectAttr "layer1.di" "pPlane1.do";
-connectAttr "polyPlane1.out" "pPlaneShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "layerManager.dli[1]" "layer1.id";
-connectAttr "pPlaneShape1.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 // End of magenecromancer-attack.ma
