@@ -62,9 +62,11 @@
      <Compile Include="Assets\Scripts\New Scripts\_Fireball.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_GameSaveLoad.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_HealthBar.cs" />
+     <Compile Include="Assets\Scripts\New Scripts\_InGameOptionsController.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_Menu.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_MenuButton.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_MenuOptionsMenu.cs" />
+     <Compile Include="Assets\Scripts\New Scripts\_OptionsController.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_Overlord.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_ProjectileBase.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_ProjectileEgg.cs" />
