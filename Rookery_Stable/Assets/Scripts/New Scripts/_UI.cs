@@ -20,6 +20,8 @@ public class _UI : MonoBehaviour
     //pointer to the gameobject selected 
     private GameObject selected;
     //GUIText screen positioning and object selection screen positioning
+    public GameObject OptionsPopUp;
+
     private Vector3 selectedScreenPosition, goldDisplayPosition, healthDisplayPosition, waveDisplayPosition, fireballDisplayPosition;
     //Placable objects will be hard coded in final polish
     public GameObject egg, eggOutline, fireball, fireballTargetCursor;
@@ -143,6 +145,14 @@ public class _UI : MonoBehaviour
         //for Dev use to correct screen size change with window
         screenWidth = Screen.width;
         screenHeight = Screen.height;
+        if (options && Input.GetKeyDown(KeyCode.Escape))
+        {
+            //stop displaying the options
+            options = false;
+            //unpause the game
+            pause = false;
+            _Overlord.worldTime = 1;
+        }
         //if the user has clicked the left mouse button
         if (Input.GetMouseButtonDown(0))
         {
@@ -355,9 +365,12 @@ public class _UI : MonoBehaviour
             buttonInfo.height = screenHeight * 0.9f;
             buttonInfo.x = (screenWidth / 2) - buttonInfo.width;
             buttonInfo.y = (screenHeight / 2) - buttonInfo.height;
+            OptionsPopUp.SetActive(true);
             //GUI.Label(buttonInfo, menuTexture, style);
             //things on the menu
         }
+        else
+            OptionsPopUp.SetActive(false);
         ///Control Button Start///
         //calculates size of all control buttons: options, play, pause, fast forward on/off
         buttonInfo.width = screenWidth * (controlButtonSize * widthRatio);
@@ -375,6 +388,8 @@ public class _UI : MonoBehaviour
             	pause = true;
                 //display the options
             	options = true;
+                _Overlord.worldTime = 0;
+
 			}
             //if the options are unselected
 			else
@@ -383,6 +398,7 @@ public class _UI : MonoBehaviour
 				options = false;
                 //unpause the game
 				pause = false;
+                _Overlord.worldTime = 1;
 			}
         }
         //sets the position of the play/pause button
