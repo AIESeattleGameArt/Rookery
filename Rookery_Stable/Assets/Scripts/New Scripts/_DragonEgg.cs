@@ -73,7 +73,7 @@ public class _DragonEgg : _DragonBase
         Collider[] cols = Physics.OverlapSphere(transform.position, range);
         int FurthestDistanceTravelled = -1, lowestPosition = 999;
         float leastHealth = 999, mostHealth = -1;
-		gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.idle);
+        gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.idle);
         foreach (Collider c in cols)
         {
             if (c.tag == "Unit")
@@ -132,7 +132,7 @@ public class _DragonEgg : _DragonBase
             //rotate towards target (Vector3)
             Vector3 normalizedV = target - this.transform.position;
             normalizedV.Normalize();
-            
+
             targetRotation = Quaternion.LookRotation(normalizedV);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
@@ -169,6 +169,7 @@ public class _DragonEgg : _DragonBase
 
             //attack.CrossFade("Attack", 0.2f);
         }
+    }
 
     public override void LevelUp()
     {
