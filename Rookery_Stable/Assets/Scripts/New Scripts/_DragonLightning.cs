@@ -5,6 +5,8 @@ public class _DragonLightning : _DragonBase
 {
     public static int cost, sellPrice;
     public GameObject nextLevel;
+    private Quaternion targetRotation;
+    private float rotationDifference, rotationSpeed = 45;
 	
 	void Start()
     {
@@ -92,17 +94,37 @@ public class _DragonLightning : _DragonBase
             }
         }
 
+        bool facingTarget = false;
+
+        if (gameObject.GetComponentInChildren<_DragonAnimation>().currentAnimation == _DragonAnimation.animationState.alert ||
+            gameObject.GetComponentInChildren<_DragonAnimation>().currentAnimation == _DragonAnimation.animationState.attack)
+        {
+            //rotate towards target (Vector3)
+            Vector3 normalizedV = target - this.transform.position;
+            normalizedV.Normalize();
+
+            targetRotation = Quaternion.LookRotation(normalizedV);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            rotationDifference = Quaternion.Angle(targetRotation, transform.rotation);
+            if (rotationDifference < 25f)
+            {
+                facingTarget = true;
+            }
+        }
+
         bool canFire = false;
-        if (!canFire && FurthestDistanceTravelled != -1)
+        if (facingTarget && !canFire && FurthestDistanceTravelled != -1)
             canFire = true;
-        else if (!canFire && lowestPosition != 999)
+        else if (facingTarget && !canFire && lowestPosition != 999)
             canFire = true;
-        else if (!canFire && leastHealth != 999)
+        else if (facingTarget && !canFire && leastHealth != 999)
             canFire = true;
-        else if (!canFire && mostHealth != -1)
+        else if (facingTarget && !canFire && mostHealth != -1)
             canFire = true;
 
-        if (canFire && nextFire < Time.time)
+        if (facingTarget && canFire && nextFire < Time.time)
         {
             gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.attack);
             nextFire = Time.time + fireRate;
@@ -112,10 +134,6 @@ public class _DragonLightning : _DragonBase
             round.GetComponent<_ProjectileLightning>().target = this.target;
             //sets the damage of the projectile
             round.GetComponent<_ProjectileLightning>().damage = this.damage;
-			//sets the bounce of the projectile
-			round.GetComponent<_ProjectileLightning>().bounces = 6;
-			//sets the decay of the projectile
-			round.GetComponent<_ProjectileLightning>().decay = 20;
 
             //attack.CrossFade("Attack", 0.2f);
         }

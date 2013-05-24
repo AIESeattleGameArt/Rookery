@@ -11,6 +11,7 @@ public class _ProjectileEgg : _ProjectileBase
     public override void Hit(GameObject other)
     {
         other.GetComponent<_Enemy>().health -= damage;
+        other.GetComponent<_Enemy>().egg.Play();
         Destroy(gameObject);
     }
 }

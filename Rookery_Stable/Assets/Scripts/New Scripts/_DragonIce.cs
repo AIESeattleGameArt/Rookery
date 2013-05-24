@@ -108,11 +108,9 @@ public class _DragonIce : _DragonBase
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
             rotationDifference = Quaternion.Angle(targetRotation, transform.rotation);
-            print(rotationDifference);
             if (rotationDifference < 25f)
             {
                 facingTarget = true;
-                print(transform.rotation);
             }
         }
 
@@ -133,9 +131,9 @@ public class _DragonIce : _DragonBase
             //create a projectile
             GameObject round = Instantiate(projectile, firingPos.transform.position, transform.rotation) as GameObject;
             //sets the target of the projectile
-            round.GetComponent<_ProjectileFire>().target = this.target;
+            round.GetComponent<_ProjectileIce>().target = this.target;
             //sets the damage of the projectile
-            round.GetComponent<_ProjectileFire>().damage = this.damage;
+            round.GetComponent<_ProjectileIce>().damage = this.damage;
 
             //attack.CrossFade("Attack", 0.2f);
         }

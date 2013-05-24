@@ -110,11 +110,9 @@ public class _DragonFire : _DragonBase
             transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
             rotationDifference = Quaternion.Angle(targetRotation, transform.rotation);
-            print(rotationDifference);
             if (rotationDifference < 25f)
             {
                 facingTarget = true;
-                print(transform.rotation);
             }
         }
 

@@ -26,7 +26,7 @@ public class _Enemy : MonoBehaviour {
     public bool slowed, shocked;
     public float modifyMoveSpeed, slowTimer, shockTimer;
     public int distanceTravelled;
-    public ParticleSystem fire, ice, shock, egged;
+    public ParticleSystem fire, ice, shock, egg;
 
     public GameObject ragdoll;
     
@@ -56,6 +56,7 @@ public class _Enemy : MonoBehaviour {
 
     void Move()
     {
+        gameObject.GetComponentInChildren<_EnemyAnimation>().ChangeState(_EnemyAnimation.animationState.walk);
         //speeds up slowed down enemy at end of effect's duration
         if (slowed && slowTimer < Time.time)
         {
@@ -132,6 +133,10 @@ public class _Enemy : MonoBehaviour {
             else
                 transform.Translate(0, 0, moveSpeed * Time.deltaTime);
             //end of new movement
+        }
+        else
+        {
+            gameObject.GetComponentInChildren<_EnemyAnimation>().ChangeState(_EnemyAnimation.animationState.attack);
         }
     }
 
