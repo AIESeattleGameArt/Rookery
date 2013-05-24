@@ -10,8 +10,8 @@ public class _HealthBar : MonoBehaviour
 
     void Start()
     {
-        healthbarHeight = 15.0f;
-        healthbarWidth = 50.0f;
+        healthbarHeight = 5.0f;
+        healthbarWidth = 35.0f;
     }
 
     void Update()
@@ -24,28 +24,26 @@ public class _HealthBar : MonoBehaviour
         healthbarPosition.Set(healthBarLeft, healthBarTop, ((hp / maxHp) * healthbarWidth), healthbarHeight);
 
         //left cap position and size
-        float leftCapTop = healthbarPosition.yMin - 8;
-        float leftCapLeft = healthbarPosition.xMin - 15;
+        float leftCapTop = healthbarPosition.yMin - 5;
+        float leftCapLeft = healthbarPosition.xMin  - 19;
         leftCapPosition.Set(leftCapLeft, leftCapTop, 30f, 16f);
 
         //right cap position and size
-        float rightCapTop = healthbarPosition.yMin - 8;
-        float rightCapLeft = healthbarPosition.xMax + 15;
+        float rightCapTop = healthbarPosition.yMin - 5;
+        float rightCapLeft = healthbarPosition.xMax - 10.5f;
         rightCapPosition.Set(rightCapLeft, rightCapTop, 30f, 16f);
     }
 
     void OnGUI()
     {
         //temp healthbar
-        GUI.Button(healthbarPosition, "");
+        //GUI.Button(healthbarPosition, "");
 
-            /*
         //shows the health bar
-        GUI.Label(healthbarPosition, healthBarTexture, style);
+        GUI.DrawTexture(healthbarPosition, healthBarTexture);
         //shows the left cap
-        GUI.Label(leftCapPosition, leftCapTexture, style);
+        GUI.DrawTexture(leftCapPosition, leftCapTexture, ScaleMode.ScaleToFit, true);
         //shows the right cap
-        GUI.Label(rightCapPosition, rightCapTexture, style);
-            */
+        GUI.DrawTexture(rightCapPosition, rightCapTexture, ScaleMode.ScaleToFit, true);
     }
 }

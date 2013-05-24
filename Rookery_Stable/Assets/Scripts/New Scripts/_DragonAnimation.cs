@@ -4,7 +4,7 @@ using System.Collections;
 public class _DragonAnimation : MonoBehaviour 
 {
     public enum animationState { idle, alert, attack };
-    private animationState currentAnimation;
+    public animationState currentAnimation;
 
 	// Use this for initialization
 	void Start () 

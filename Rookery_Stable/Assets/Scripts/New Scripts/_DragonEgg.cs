@@ -5,6 +5,8 @@ public class _DragonEgg : _DragonBase
 {
     public GameObject fireDragon, iceDragon, lightningDragon;
     public static int cost, sellPrice;
+    private Quaternion targetRotation;
+    private float rotationDifference, rotationSpeed = 45;
 
     void Start()
     {
@@ -122,30 +124,51 @@ public class _DragonEgg : _DragonBase
             }
         }
 
+        bool facingTarget = false;
+
+        if (gameObject.GetComponentInChildren<_DragonAnimation>().currentAnimation == _DragonAnimation.animationState.alert ||
+            gameObject.GetComponentInChildren<_DragonAnimation>().currentAnimation == _DragonAnimation.animationState.attack)
+        {
+            //rotate towards target (Vector3)
+            Vector3 normalizedV = target - this.transform.position;
+            normalizedV.Normalize();
+            
+            targetRotation = Quaternion.LookRotation(normalizedV);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+            rotationDifference = Quaternion.Angle(targetRotation, transform.rotation);
+            print(rotationDifference);
+            if (rotationDifference < 25f)
+            {
+                facingTarget = true;
+                print(transform.rotation);
+            }
+        }
+
         bool canFire = false;
-        if (!canFire && FurthestDistanceTravelled != -1)
+        if (facingTarget && !canFire && FurthestDistanceTravelled != -1)
             canFire = true;
-        else if (!canFire && lowestPosition != 999)
+        else if (facingTarget && !canFire && lowestPosition != 999)
             canFire = true;
-        else if (!canFire && leastHealth != 999)
+        else if (facingTarget && !canFire && leastHealth != 999)
             canFire = true;
-        else if (!canFire && mostHealth != -1)
+        else if (facingTarget && !canFire && mostHealth != -1)
             canFire = true;
 
-        if (canFire && nextFire < Time.time)
+        if (facingTarget && canFire && nextFire < Time.time)
         {
             gameObject.GetComponentInChildren<_DragonAnimation>().ChangeState(_DragonAnimation.animationState.attack);
             nextFire = Time.time + fireRate;
             //create a projectile
             GameObject round = Instantiate(projectile, firingPos.transform.position, transform.rotation) as GameObject;
             //sets the target of the projectile
-            round.GetComponent<_ProjectileEgg>().target = this.target;
+            round.GetComponent<_ProjectileFire>().target = this.target;
             //sets the damage of the projectile
-            round.GetComponent<_ProjectileEgg>().damage = this.damage;
+            round.GetComponent<_ProjectileFire>().damage = this.damage;
 
             //attack.CrossFade("Attack", 0.2f);
         }
-    }
 
     public override void LevelUp()
     {

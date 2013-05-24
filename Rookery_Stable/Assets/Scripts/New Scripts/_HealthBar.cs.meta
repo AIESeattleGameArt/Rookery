@@ -3,9 +3,9 @@ guid: 79c5ce9ed8ecd5841af23e63cafacebc
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
-  - healthBarTexture: {fileID: 2800000, guid: 1dfbb4a8661d9164ca377d04fe2e47de, type: 3}
-  - leftCapTexture: {fileID: 2800000, guid: a1f0dd9e794fbd548983131005e316ad, type: 3}
-  - rightCapTexture: {fileID: 2800000, guid: cf605ebcbe4bcef4980dfea93c73229b, type: 3}
+  - healthBarTexture: {fileID: 2800000, guid: e03e470a1e186a04994628c95f62347c, type: 3}
+  - leftCapTexture: {fileID: 2800000, guid: 6f86babc38387f34d9e0b74f7e923a39, type: 3}
+  - rightCapTexture: {fileID: 2800000, guid: 3d44488ed987f804bb854c2234cd2890, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
