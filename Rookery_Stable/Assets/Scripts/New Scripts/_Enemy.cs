@@ -27,6 +27,7 @@ public class _Enemy : MonoBehaviour {
     public float health;
     public int gold;
     public int positionInWave;
+    private double attackTimer;
     public bool slowed, shocked;
     public float modifyMoveSpeed, slowTimer, shockTimer;
     public int distanceTravelled;
@@ -49,6 +50,7 @@ public class _Enemy : MonoBehaviour {
         hasGold = false;
         attacking = false;
         slowed = false;
+        attackTimer = 0;
 	}
 
 	// Update is called once per frame
@@ -102,7 +104,6 @@ public class _Enemy : MonoBehaviour {
             if (_Overlord.gold <= 0 && !attacking)
             {
                 //gold is the "damage" the enemy does
-                _Overlord.wyrmHealth = _Overlord.wyrmHealth - gold;
                 attacking = true;
                 nextTarget = new Vector3(Random.Range(attackBox.leftX, attackBox.rightX), targetTile.transform.position.y, Random.Range(attackBox.topZ, attackBox.bottomZ));
                 beginAttack = false;
@@ -178,6 +179,12 @@ public class _Enemy : MonoBehaviour {
 
 
                 gameObject.GetComponentInChildren<_EnemyAnimation>().ChangeState(_EnemyAnimation.animationState.attack);
+                attackTimer -= Time.deltaTime;
+                if (attackTimer <= 0)
+                {
+                    _Overlord.wyrmHealth--;
+                    attackTimer = 1;
+                }
             }
         }
     }
