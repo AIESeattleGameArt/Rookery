@@ -183,6 +183,7 @@ public class _Enemy : MonoBehaviour {
                 if (attackTimer <= 0)
                 {
                     _Overlord.wyrmHealth--;
+                    this.health--;
                     attackTimer = 1;
                 }
             }

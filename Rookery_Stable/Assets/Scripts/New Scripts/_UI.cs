@@ -285,6 +285,11 @@ public class _UI : MonoBehaviour
                         	_Overlord.gold -= _DragonEgg.cost;
                         //set the tile to be unable to be placed on again
                         EggPlacementTileSelector.GetComponent<_Tile>().canPlace = false;
+
+                        //HEY JEFFERY. GUESS WHAT
+                        // SEE THE LINE above this comment. Well.... look down
+
+
                   		//hit.transform.GetComponent<_Tile>().canPlace = false;
                         //creates an empty game object for the egg to be stored in
                         GameObject newTurret;
@@ -293,6 +298,10 @@ public class _UI : MonoBehaviour
                         //sets the position of the egg to the selected tiles position
                         newTurret.transform.position = EggPlacementTileSelector.transform.position;
                         //exit the egg placement state
+
+                        //HERE. oh look. The base tile of the egg is set, and now we can place turrets on spaces
+                        //previously occupied by eggs/dragons that were sold
+                        newTurret.GetComponent<_DragonBase>().baseTile = EggPlacementTileSelector.GetComponent<_Tile>();
                         eggPlacement = false;
                     }
 					else

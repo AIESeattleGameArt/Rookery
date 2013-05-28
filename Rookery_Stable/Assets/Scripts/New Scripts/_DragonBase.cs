@@ -4,9 +4,9 @@ using System.Collections;
 public abstract class _DragonBase : MonoBehaviour 
 {
     //the turret base this dragon is attached to
-    private _Tile baseTile;
-    //data protection and accessing
-    public _Tile BaseTile { get { return baseTile; } set { baseTile = value; } }
+    public _Tile baseTile;
+    //data protection and accessing             //fuck this. 
+    //public _Tile BaseTile { get { return baseTile; } set { baseTile = value; } }
     //the range of this turret
     public float range;
     //how much damage this dragon does

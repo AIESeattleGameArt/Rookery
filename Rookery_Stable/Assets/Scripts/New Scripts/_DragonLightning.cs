@@ -25,6 +25,7 @@ public class _DragonLightning : _DragonBase
             _Overlord.gold -= cost;
             GameObject newDragon = Instantiate(nextLevel, transform.position, transform.rotation) as GameObject;
             newDragon.GetComponent<_DragonLightning>().damage *= 1.5f;
+            newDragon.GetComponent<_DragonBase>().baseTile = this.baseTile;
             Destroy(this.gameObject);
         }
     }
@@ -35,6 +36,8 @@ public class _DragonLightning : _DragonBase
 		if (nextLevel == null)
 			_Overlord.gold += cost;
         _Overlord.gold += sellPrice;
+        baseTile.canPlace = true;
+
         Destroy(gameObject);
     }
 

@@ -27,7 +27,8 @@ public class _DragonEgg : _DragonBase
 			if (_Overlord.gold >= _Overlord.fire_cost)
 			{
             	//create dragon at egg's location
-            	Instantiate(fireDragon, transform.position, Quaternion.identity);
+            	GameObject o = Instantiate(fireDragon, transform.position, Quaternion.identity) as GameObject;
+                o.GetComponent<_DragonBase>().baseTile = this.baseTile;
             	//get rid of the egg
             	Destroy(gameObject);
 				//deduct the cost
@@ -40,7 +41,8 @@ public class _DragonEgg : _DragonBase
 			if (_Overlord.gold >= _Overlord.ice_cost)
 			{
             	//create dragon at egg's location
-            	Instantiate(iceDragon, transform.position, Quaternion.identity);
+            	GameObject o = Instantiate(iceDragon, transform.position, Quaternion.identity) as GameObject;
+                o.GetComponent<_DragonBase>().baseTile = this.baseTile;
             	//get rid of the egg
             	Destroy(gameObject);
 				//deduct the cost
@@ -53,7 +55,9 @@ public class _DragonEgg : _DragonBase
 			if (_Overlord.gold >= _Overlord.lightening_cost)
 			{
             	//create dragon at egg's location
-            	Instantiate(lightningDragon, transform.position, Quaternion.identity);
+            	
+                GameObject o = Instantiate(lightningDragon, transform.position, Quaternion.identity) as GameObject;
+                o.GetComponent<_DragonBase>().baseTile = this.baseTile;
             	//get rid of the egg
             	Destroy(gameObject);
 				//deduct the cost
@@ -65,6 +69,7 @@ public class _DragonEgg : _DragonBase
     public override void Sell()
     {
         _Overlord.gold += sellPrice;
+        baseTile.canPlace = true;
         Destroy(gameObject);
     }
 
