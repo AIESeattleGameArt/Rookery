@@ -6,7 +6,7 @@ public class _DragonFire : _DragonBase
     public static int cost, sellPrice;
     public GameObject nextLevel;
     private Quaternion targetRotation;
-    private float rotationDifference, rotationSpeed = 45;
+    private float rotationDifference, rotationSpeed = 90;
 
 
     void Start()

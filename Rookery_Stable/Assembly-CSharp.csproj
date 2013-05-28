@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\New Scripts\_DragonIce.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_DragonLightning.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_Enemy.cs" />
+     <Compile Include="Assets\Scripts\New Scripts\_EnemyAnimation.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_Fireball.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_GameSaveLoad.cs" />
      <Compile Include="Assets\Scripts\New Scripts\_HealthBar.cs" />
