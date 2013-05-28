@@ -60,7 +60,7 @@ public class _Menu : MonoBehaviour
 		
 		// React to the object based on its tag
 		if (ObjectClickedName == "PlayButton-Collider")
-			Application.LoadLevel("AlphaPlains");
+			Application.LoadLevel("AlphaVolcano");
 		else if (ObjectClickedName == "LeaderboardButton-Collider")
 			Application.LoadLevel("Leaderboard");
 		else if (ObjectClickedName == "HighScoreButton-Collider")
