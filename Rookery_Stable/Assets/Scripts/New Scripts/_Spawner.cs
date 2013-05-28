@@ -20,6 +20,9 @@ public class _Spawner : MonoBehaviour {
     public int totalSpawned = 0;
     public float enemyScaler = 1;
     public _Tile firstTileOnMap;
+    public _Tile tileDragonIsOn;
+    private _AttackBox attackBox;
+   // public GameObject AdventurerAttackRange;                //rectangle which holds the valid positions of adventurers attacking the dragon
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +30,11 @@ public class _Spawner : MonoBehaviour {
         countdownToBigerWave = 5;
         maxEnemies = 6;
         canSpawnNextWave = true;
+        attackBox = new _AttackBox();
+        attackBox.leftX = -1;
+        attackBox.rightX = 3;
+        attackBox.topZ = 1;
+        attackBox.bottomZ = -0.75f;
 	}
 
     void SurvivalSpawning()
@@ -67,6 +75,9 @@ public class _Spawner : MonoBehaviour {
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
                 spawn.GetComponent<_Enemy>().health *= enemyScaler;
                 spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
+                spawn.GetComponent<_Enemy>().dragonPositionTile = tileDragonIsOn;
+                spawn.GetComponent<_Enemy>().attackBox = this.attackBox;
+
 
                 counter++;
                 if (counter == numEnemiesInEachWave)
@@ -86,6 +97,9 @@ public class _Spawner : MonoBehaviour {
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
                 spawn.GetComponent<_Enemy>().health *= enemyScaler;
                 spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
+                spawn.GetComponent<_Enemy>().dragonPositionTile = tileDragonIsOn;
+                spawn.GetComponent<_Enemy>().attackBox = this.attackBox;
+
 
                 counter++;
                 if (counter == 10)
@@ -106,6 +120,9 @@ public class _Spawner : MonoBehaviour {
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
                 spawn.GetComponent<_Enemy>().health *= enemyScaler;
                 spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
+                spawn.GetComponent<_Enemy>().dragonPositionTile = tileDragonIsOn;
+                spawn.GetComponent<_Enemy>().attackBox = this.attackBox;
+
 
                 counter++;
                 if (counter == 15)
@@ -126,6 +143,8 @@ public class _Spawner : MonoBehaviour {
                 spawn.GetComponent<_Enemy>().positionInWave = totalNumberOfEnemiesSpawned;
                 spawn.GetComponent<_Enemy>().health *= enemyScaler;
                 spawn.GetComponent<_Enemy>().gold += _Overlord.waveNumber;
+                spawn.GetComponent<_Enemy>().dragonPositionTile = tileDragonIsOn;
+                spawn.GetComponent<_Enemy>().attackBox = this.attackBox;
 
                 counter++;
                 if (counter == 20)
