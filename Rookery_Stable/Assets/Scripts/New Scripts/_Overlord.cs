@@ -33,13 +33,13 @@ public class _Overlord : MonoBehaviour {
         worldTime = 1;
 		
 		// Placement cost and selling values
-		egg_cost = 100;
-		egg_sale = 75;
-		fire_cost = 50;
+		egg_cost = 50;
+		egg_sale = 40;
+		fire_cost = 100;
 		fire_sale = 125;
-		ice_cost = 50;
+		ice_cost = 100;
 		ice_sale = 125;
-		lightening_cost = 50;
+		lightening_cost = 100;
 		lightening_sale = 125;
 		
 		// Fireball values
