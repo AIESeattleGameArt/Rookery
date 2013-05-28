@@ -14,9 +14,13 @@ public class _Enemy : MonoBehaviour {
     public float moveSpeed;
     public Vector3 nextTarget;
     public _Tile targetTile;
+    public _Tile dragonPositionTile;
+    public _AttackBox attackBox;
+   // public GameObject adventurerAttackRange;
     public bool goingForward;
     public bool hasGold;
 	public bool attacking;
+    private bool beginAttack;                       //set to true once random position around the dragon has been found
     public float distanceCheckDisplay1;
     public float distanceCheckDisplay2;
     public float rotationSpeed;
@@ -33,6 +37,7 @@ public class _Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        beginAttack = false;
         distanceTravelled = 0;
         Physics.IgnoreLayerCollision(8, 8);
         nextTarget = targetTile.transform.position;
@@ -99,6 +104,8 @@ public class _Enemy : MonoBehaviour {
                 //gold is the "damage" the enemy does
                 _Overlord.wyrmHealth = _Overlord.wyrmHealth - gold;
                 attacking = true;
+                nextTarget = new Vector3(Random.Range(attackBox.leftX, attackBox.rightX), targetTile.transform.position.y, Random.Range(attackBox.topZ, attackBox.bottomZ));
+                beginAttack = false;
             }
         }
 
@@ -136,7 +143,42 @@ public class _Enemy : MonoBehaviour {
         }
         else
         {
-            gameObject.GetComponentInChildren<_EnemyAnimation>().ChangeState(_EnemyAnimation.animationState.attack);
+            //enemy is attacking
+            if (!beginAttack)
+            {
+                Vector3 target = nextTarget - transform.position;
+                Quaternion targetRotation = Quaternion.LookRotation(target);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+
+                float distanceCheckX = 10000;
+                float distanceCheckZ = 10000;
+
+                distanceCheckX = Mathf.Abs(nextTarget.x - this.transform.position.x);
+                distanceCheckZ = Mathf.Abs(nextTarget.z - this.transform.position.z);
+                distanceCheckDisplay1 = distanceCheckX;
+                distanceCheckDisplay2 = distanceCheckZ;
+
+                if (distanceCheckX < 0.1 && distanceCheckZ < 0.1)
+                {
+                    beginAttack = true;
+                }
+                else
+                {
+                    transform.Translate(0, 0, moveSpeed * 2 * Time.deltaTime);
+                }
+            }
+            else
+            {
+                //rotate to face the dragon //Nate addition 5/28
+                Vector3 target = dragonPositionTile.transform.position - transform.position;
+                target.Normalize();
+                Quaternion targetRotation = Quaternion.LookRotation(target);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+                //end of new rotation
+
+
+                gameObject.GetComponentInChildren<_EnemyAnimation>().ChangeState(_EnemyAnimation.animationState.attack);
+            }
         }
     }
 
