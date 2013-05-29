@@ -1,6 +1,6 @@
 //Maya ASCII 2013 scene
 //Name: MotherDragon_idle.ma
-//Last modified: Tue, May 28, 2013 05:18:22 PM
+//Last modified: Tue, May 28, 2013 05:47:50 PM
 //Codeset: 1252
 file -rdi 1 -ns ":" -rfn "Mother_DragonRN" "C:/Users/student/Documents/GitHub/Rookery/Art/dragon_towers/Animations/Source/Mother_Dragon.ma";
 file -r -ns ":" -dr 1 -rfn "Mother_DragonRN" "C:/Users/student/Documents/GitHub/Rookery/Art/dragon_towers/Animations/Source/Mother_Dragon.ma";
@@ -16,12 +16,12 @@ fileInfo "osv" "Microsoft Windows 7 Business Edition, 64-bit Windows 7 Service P
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.7011500494257861 0.84993950521393358 1.0830137516526261 ;
-	setAttr ".r" -type "double3" -3.9383527299226042 -84.999999999831985 4.5615965470077493e-015 ;
+	setAttr ".t" -type "double3" -3.1214671232364548 1.8479133623635904 1.7444895523816726 ;
+	setAttr ".r" -type "double3" -20.138352729922861 -49.39999999983241 2.4436698605050597e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 1.7132355059435209;
+	setAttr ".coi" 3.1055139669764706;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4623,7 +4623,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|Foot_L_Controler1" "miGlobillum" " 5"
 		2 "|Main_Controler|Foot_L_Controler1" "miExportGeoShader" " 0"
 		2 "|Main_Controler|Foot_L_Controler1" "miProxyRenderable" " 1"
-		2 "|Main_Controler|nurbsCircle2" "translate" " -type \"double3\" -0.00201508 0.0240369 -0.000193642"
+		2 "|Main_Controler|nurbsCircle2" "translate" " -type \"double3\" -0.000286587 0.0260253 0.000485792"
 		
 		2 "|Main_Controler|nurbsCircle2" "translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2" "translateY" " -av"
@@ -4647,7 +4647,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateY" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "translateZ" " -av"
-		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "rotate" " -type \"double3\" 21.069093 38.2807 13.42534"
+		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "rotate" " -type \"double3\" 19.780057 32.891734 11.09297"
 		
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler" "rotateY" " -av"
@@ -4673,7 +4673,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "translateZ" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "rotate" 
-		" -type \"double3\" 0 22.870264 0"
+		" -type \"double3\" 0 14.445964 0"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "rotateX" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler" "rotateY" 
@@ -4707,7 +4707,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
-		"rotate" " -type \"double3\" 0 0.108087 0"
+		"rotate" " -type \"double3\" 0 15.378869 0"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Tail_base_Controler|Tail_mid_Controler|Tail_end_Controler" 
@@ -4763,7 +4763,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "translateZ" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "rotate" 
-		" -type \"double3\" 26.954852 -2.727172 2.870665"
+		" -type \"double3\" 20.176207 -2.08073 3.214077"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "rotateX" 
 		" -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler" "rotateY" 
@@ -4797,7 +4797,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
-		"rotate" " -type \"double3\" -8.443778 -10.341155 2.187191"
+		"rotate" " -type \"double3\" -8.361746 -8.347104 1.87093"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler" 
@@ -4831,7 +4831,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
-		"rotate" " -type \"double3\" -8.949015 -13.819107 0.868281"
+		"rotate" " -type \"double3\" -3.456138 -8.167136 2.133896"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler" 
@@ -4865,7 +4865,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
-		"rotate" " -type \"double3\" -7.374807 -7.113191 2.62008"
+		"rotate" " -type \"double3\" -0.0040557 -7.814178 0.195416"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler" 
@@ -4899,7 +4899,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
-		"rotate" " -type \"double3\" 0.16139 -14.694495 8.096126"
+		"rotate" " -type \"double3\" 3.59783 -19.193234 0.699424"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler" 
@@ -4967,7 +4967,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
-		"rotate" " -type \"double3\" 3.095173 0 0"
+		"rotate" " -type \"double3\" -5.051874 0 0"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|neck_Controler|neck_2_Controler|neck_3_Controler|head_controler|mouth_Controler" 
@@ -5019,7 +5019,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
-		"rotate" " -type \"double3\" 24.311028 54.635525 -4.23715"
+		"rotate" " -type \"double3\" 6.945163 55.039712 -15.352197"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler" 
@@ -5071,7 +5071,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotate" " -type \"double3\" -21.160507 -8.81084 42.12271"
+		"rotate" " -type \"double3\" -6.978466 0.313268 37.885227"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
@@ -5123,7 +5123,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotate" " -type \"double3\" 0 0 -2.433901"
+		"rotate" " -type \"double3\" 0 0 -22.305165"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
@@ -5175,7 +5175,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotate" " -type \"double3\" 0 0 -29.808982"
+		"rotate" " -type \"double3\" 0 0 -38.043625"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
@@ -5227,7 +5227,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"rotate" " -type \"double3\" 0 0 -6.372754"
+		"rotate" " -type \"double3\" 0 0 -14.102794"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_R_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
@@ -5279,7 +5279,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
-		"rotate" " -type \"double3\" -15.567899 16.066485 -42.918116"
+		"rotate" " -type \"double3\" -24.118001 16.066485 -42.918116"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler" 
@@ -5331,7 +5331,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
-		"rotate" " -type \"double3\" 8.958358 4.570036 33.729123"
+		"rotate" " -type \"double3\" 0 0 29.535873"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler" 
@@ -5383,7 +5383,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
-		"rotate" " -type \"double3\" 0.156876 0.162652 -11.384424"
+		"rotate" " -type \"double3\" 0 0 -31.156394"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler" 
@@ -5435,7 +5435,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
-		"rotate" " -type \"double3\" 0 0 -24.444062"
+		"rotate" " -type \"double3\" 0 0 -39.208049"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler" 
@@ -5487,7 +5487,7 @@ createNode reference -n "Mother_DragonRN";
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"translateZ" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
-		"rotate" " -type \"double3\" 0 0 0.902156"
+		"rotate" " -type \"double3\" 0 0 -17.943967"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
 		"rotateX" " -av"
 		2 "|Main_Controler|nurbsCircle2|Stomach_Controler|chest_Controler|shoulder_L_Controler_group|Shoulder_Controler|arm_Controler_group|arm_Controler|forearm_Controler_group|forearm_Controler|hand_Controler_group|hand_Controler|finger_Controler_group|finger_Controler" 
@@ -6803,8 +6803,8 @@ createNode animCurveTA -n "Mother_Dragon1_Tail_mid_Controler_rotateX";
 createNode animCurveTA -n "Mother_Dragon1_Tail_mid_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 28.53835947643601 16 22.797116511246205
-		 32 28.53835947643601;
+	setAttr -s 5 ".ktv[0:4]"  1 28.53835947643601 8 14.445964402861829
+		 16 22.797116511246205 24 30.486440036389688 32 28.53835947643601;
 createNode animCurveTA -n "Mother_Dragon1_Tail_mid_Controler_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -6818,8 +6818,8 @@ createNode animCurveTA -n "Mother_Dragon1_Tail_end_Controler_rotateX";
 createNode animCurveTA -n "Mother_Dragon1_Tail_end_Controler_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 23.030060472543131 16 -0.1877254263597587
-		 32 23.030060472543131;
+	setAttr -s 5 ".ktv[0:4]"  1 23.030060472543131 8 15.378868915629353
+		 16 -0.1877254263597587 24 21.617253034771934 32 23.030060472543131;
 	setAttr ".pre" 3;
 	setAttr ".pst" 3;
 createNode animCurveTA -n "Mother_Dragon1_Tail_end_Controler_rotateZ";
@@ -8218,8 +8218,8 @@ createNode animCurveTU -n "finger_Controler_scaleZ1";
 	setAttr -s 3 ".kox[1:2]"  1 1;
 	setAttr -s 3 ".koy[1:2]"  0 0;
 select -ne :time1;
-	setAttr ".o" 15;
-	setAttr ".unw" 15;
+	setAttr ".o" 8;
+	setAttr ".unw" 8;
 select -ne :renderPartition;
 	setAttr -s 12 ".st";
 select -ne :initialShadingGroup;
@@ -8245,6 +8245,7 @@ select -ne :defaultHardwareRenderGlobals;
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
 select -ne :characterPartition;
 select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Mother_Dragon1.lv[75]" "Mother_DragonRN.phl[1]";
 connectAttr "Mother_DragonRN.phl[2]" "Mother_Dragon1.dnsm[149]";
 connectAttr "Mother_Dragon1.lv[74]" "Mother_DragonRN.phl[3]";
