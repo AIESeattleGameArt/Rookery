@@ -27,7 +27,7 @@ public class _DragonFire : _DragonBase
         {
             _Overlord.gold -= cost;
             GameObject newDragon = Instantiate(nextLevel, transform.position, transform.rotation) as GameObject;
-            newDragon.GetComponent<_DragonFire>().damage *= 1.75f;
+            //newDragon.GetComponent<_DragonFire>().damage *= 1.75f;
             newDragon.GetComponent<_DragonBase>().baseTile = this.baseTile;
             Destroy(this.gameObject);
         }
