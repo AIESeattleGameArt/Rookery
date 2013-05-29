@@ -17,11 +17,13 @@ using System.Collections;
 public class _Overlord : MonoBehaviour {
 
     //Global Variables
-    public static int 	gold, wyrmHealth, waveNumber, worldTime,
-						egg_cost, fire_cost, ice_cost, lightening_cost,
-						egg_sale, fire_sale, ice_sale, lightening_sale,
-						fireball_base_cost, fireball_current_cost, 
-						fireball_cooldown, fireball_timer;
+    public static int gold, wyrmHealth, waveNumber, worldTime,
+                        egg_cost, fire_cost, ice_cost, lightening_cost,
+                        egg_sale, fire_sale, ice_sale, lightening_sale,
+                        fireball_base_cost, fireball_current_cost,
+                        fireball_cooldown, fireball_timer, level2_upgrade,
+                        fire2_cost, ice2_cost, lightning2_cost, fire2_sell,
+                        ice2_sell, lightning2_sell;
 	public static double fireball_increase;
 
 	// Initialization
@@ -34,13 +36,20 @@ public class _Overlord : MonoBehaviour {
 		
 		// Placement cost and selling values
 		egg_cost = 50;
-		egg_sale = 40;
-		fire_cost = 100;
-		fire_sale = 125;
-		ice_cost = 100;
-		ice_sale = 125;
+		egg_sale = 25;
+		fire_cost = 75;
+		fire_sale = 60;
+		ice_cost = 50;
+		ice_sale = 50;
 		lightening_cost = 100;
-		lightening_sale = 125;
+		lightening_sale = 75;
+        fire2_cost = 100;
+        ice2_cost = 75;
+        lightning2_cost = 125;
+        fire2_sell = 112;
+        ice2_sell = 87;
+        lightning2_sell = 137;
+        level2_upgrade = 150;
 		
 		// Fireball values
 		fireball_base_cost = 0;
