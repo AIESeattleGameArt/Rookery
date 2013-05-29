@@ -30,7 +30,7 @@ public class _Overlord : MonoBehaviour {
 	void Start ()
 	{
         wyrmHealth = 100;
-        gold = 500;
+        gold = 800;
         waveNumber = 1;
         worldTime = 1;
 		
