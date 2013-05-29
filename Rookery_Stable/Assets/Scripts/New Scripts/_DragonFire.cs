@@ -12,7 +12,7 @@ public class _DragonFire : _DragonBase
     void Start()
     {
 		// Pull prices and sale costs from _Overlord script
-		cost = _Overlord.fire_cost;
+        cost = _Overlord.fire2_cost;
         sellPrice = _Overlord.fire_sale;
         selcted = targetType.farthest;
         target = Vector3.forward;
@@ -20,8 +20,9 @@ public class _DragonFire : _DragonBase
 
     public override void LevelUp()
     {
-        //keep track of new level
+        //this function will be called to level up from 1 to 2 (egg is level 0)
         level++;
+        Debug.Log(level.ToString());
         if (nextLevel != null && _Overlord.gold >= cost)
         {
             _Overlord.gold -= cost;
@@ -35,9 +36,13 @@ public class _DragonFire : _DragonBase
     public override void Sell()
     {
 		//give the player an extra refund if they upgraded the level
-		if (nextLevel == null)
-			_Overlord.gold += cost;
-        _Overlord.gold += sellPrice;
+        //if (nextLevel == null)
+        //    _Overlord.gold += cost;
+        //_Overlord.gold += sellPrice;
+        if (level == 1)
+            _Overlord.gold += sellPrice;
+        else if (level == 2)
+            _Overlord.gold += _Overlord.fire2_sell;
         baseTile.canPlace = true;
         Destroy(gameObject);
     }

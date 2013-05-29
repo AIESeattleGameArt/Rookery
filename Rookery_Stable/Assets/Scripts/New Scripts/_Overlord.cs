@@ -30,7 +30,7 @@ public class _Overlord : MonoBehaviour {
 	void Start ()
 	{
         wyrmHealth = 100;
-        gold = 300;
+        gold = 500;
         waveNumber = 1;
         worldTime = 1;
 		
@@ -49,7 +49,7 @@ public class _Overlord : MonoBehaviour {
         fire2_sell = 112;
         ice2_sell = 87;
         lightning2_sell = 137;
-        level2_upgrade = 150;
+        //level2_upgrade = 150;
 		
 		// Fireball values
 		fireball_base_cost = 0;

@@ -11,7 +11,7 @@ public class _DragonLightning : _DragonBase
 	void Start()
     {
 		// Pull prices and sale costs from _Overlord script
-		cost = _Overlord.lightening_cost;
+        cost = _Overlord.lightning2_cost;
         sellPrice = _Overlord.lightening_sale;
         selcted = targetType.farthest;
     }
@@ -33,9 +33,13 @@ public class _DragonLightning : _DragonBase
     public override void Sell()
     {
 		//give the player an extra refund if they upgraded the level
-		if (nextLevel == null)
-			_Overlord.gold += cost;
-        _Overlord.gold += sellPrice;
+        //if (nextLevel == null)
+        //    _Overlord.gold += cost;
+        //_Overlord.gold += sellPrice;
+        if (level == 1)
+            _Overlord.gold += _Overlord.lightening_sale;
+        else if (level == 2)
+            _Overlord.gold += _Overlord.lightning2_sell;
         baseTile.canPlace = true;
 
         Destroy(gameObject);

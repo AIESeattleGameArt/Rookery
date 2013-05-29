@@ -11,7 +11,7 @@ public class _DragonIce : _DragonBase
     void Start()
     {
 		// Pull prices and sale costs from _Overlord script
-		cost = _Overlord.ice_cost;
+        cost = _Overlord.ice2_cost;
         sellPrice = _Overlord.ice_sale;
         selcted = targetType.farthest;
     }
@@ -33,9 +33,13 @@ public class _DragonIce : _DragonBase
     public override void Sell()
     {
 		//give the player an extra refund if they upgraded the level
-		if (nextLevel == null)
-			_Overlord.gold += cost;
-        _Overlord.gold += sellPrice;
+        //if (nextLevel == null)
+        //    _Overlord.gold += cost;
+        //_Overlord.gold += sellPrice;
+        if (level == 1)
+            _Overlord.gold += sellPrice;
+        else if (level == 2)
+            _Overlord.gold += _Overlord.ice2_sell;
         baseTile.canPlace = true;
 
         Destroy(gameObject);
