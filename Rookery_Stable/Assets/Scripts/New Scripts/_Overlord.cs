@@ -43,7 +43,7 @@ public class _Overlord : MonoBehaviour {
 		lightening_sale = 125;
 		
 		// Fireball values
-		fireball_base_cost = 100;
+		fireball_base_cost = 0;
 		fireball_current_cost = fireball_base_cost;
 		fireball_cooldown = 400;
 		fireball_timer = 0;

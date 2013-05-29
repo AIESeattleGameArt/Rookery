@@ -21,7 +21,7 @@ public class _Spawner : MonoBehaviour {
     public float enemyScaler = 1;
     public _Tile firstTileOnMap;
     public _Tile tileDragonIsOn;
-    private _AttackBox attackBox;
+    private _AttackBox attackBox = new _AttackBox(-1, 3, 1, -0.75f);
    // public GameObject AdventurerAttackRange;                //rectangle which holds the valid positions of adventurers attacking the dragon
 
 	// Use this for initialization
@@ -30,11 +30,10 @@ public class _Spawner : MonoBehaviour {
         countdownToBigerWave = 5;
         maxEnemies = 6;
         canSpawnNextWave = true;
-        attackBox = new _AttackBox();
-        attackBox.leftX = -1;
-        attackBox.rightX = 3;
-        attackBox.topZ = 1;
-        attackBox.bottomZ = -0.75f;
+        //attackBox.leftX = -1;
+        //attackBox.rightX = 3;
+        //attackBox.topZ = 1;
+        //attackBox.bottomZ = -0.75f;
 	}
 
     void SurvivalSpawning()

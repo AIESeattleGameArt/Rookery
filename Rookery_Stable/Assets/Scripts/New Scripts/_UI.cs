@@ -160,6 +160,18 @@ public class _UI : MonoBehaviour
             MouseDown();
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (eggPlacement)
+            {
+                eggPlacement = false;
+            }
+            if (fireballSelected)
+            {
+                fireballSelected = false;
+            }
+        }
+
         //move target cursor to mouse position in world space
         if (eggPlacement)
         {
@@ -487,6 +499,8 @@ public class _UI : MonoBehaviour
         {
             //set UI state to egg placment
             eggPlacement = true;
+            if (fireballSelected)
+                fireballSelected = false;
             //unselect any game object
             objectSelected = false;
         }
@@ -499,6 +513,8 @@ public class _UI : MonoBehaviour
             //set the UI state to fireball
             fireballSelected = true;
 
+            if (eggPlacement)
+                eggPlacement = false;
             //deselect any game object
             objectSelected = false;
         }
