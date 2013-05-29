@@ -101,7 +101,7 @@ public class _Enemy : MonoBehaviour {
                 hasGold = true;
                 attacking = false;
             }
-            if (_Overlord.gold <= 0 && !attacking)
+            if (_Overlord.gold <= 0 && !attacking && !hasGold)
             {
                 //gold is the "damage" the enemy does
                 attacking = true;
@@ -147,6 +147,8 @@ public class _Enemy : MonoBehaviour {
             //enemy is attacking
             if (!beginAttack)
             {
+                attackTimer += Time.deltaTime;
+
                 Vector3 target = nextTarget - transform.position;
                 Quaternion targetRotation = Quaternion.LookRotation(target);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
@@ -159,9 +161,10 @@ public class _Enemy : MonoBehaviour {
                 distanceCheckDisplay1 = distanceCheckX;
                 distanceCheckDisplay2 = distanceCheckZ;
 
-                if (distanceCheckX < 0.1 && distanceCheckZ < 0.1)
+                if ((distanceCheckX < 0.1 && distanceCheckZ < 0.1) || attackTimer > 2)
                 {
                     beginAttack = true;
+                    attackTimer = 0;
                 }
                 else
                 {
