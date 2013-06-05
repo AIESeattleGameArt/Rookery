@@ -1,0 +1,6 @@
+Select build_for_expo to launch
+
+set resolution to 1280x 720
+graphics = good
+play
+Sword and shield launches game
