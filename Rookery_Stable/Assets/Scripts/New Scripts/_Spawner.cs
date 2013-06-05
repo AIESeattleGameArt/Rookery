@@ -30,6 +30,7 @@ public class _Spawner : MonoBehaviour {
         countdownToBigerWave = 5;
         maxEnemies = 6;
         canSpawnNextWave = true;
+        survivalMode = true;
         //attackBox.leftX = -1;
         //attackBox.rightX = 3;
         //attackBox.topZ = 1;
