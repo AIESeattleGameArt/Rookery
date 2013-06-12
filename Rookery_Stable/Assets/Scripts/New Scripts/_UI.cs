@@ -21,6 +21,7 @@ public class _UI : MonoBehaviour
     private GameObject selected;
     //GUIText screen positioning and object selection screen positioning
     public GameObject OptionsPopUp;
+	public Font GRENDEL;
 
     private Vector3 selectedScreenPosition, goldDisplayPosition, healthDisplayPosition, waveDisplayPosition, fireballDisplayPosition;
     //Placable objects will be hard coded in final polish
@@ -92,10 +93,10 @@ public class _UI : MonoBehaviour
         waveDisplay.guiText.alignment = TextAlignment.Left;
         waveDisplay.guiText.lineSpacing = 1;
         waveDisplay.guiText.tabSize = 4;
-        //waveDisplay.guiText.font = 
+        waveDisplay.guiText.font = GRENDEL;
         waveDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
-        waveDisplay.guiText.fontStyle = FontStyle.Normal;
-        //waveDisplay.guiText.material = 
+        //waveDisplay.guiText.fontStyle = FontStyle.Normal;
+        waveDisplay.guiText.material.color = Color.yellow;
         waveDisplayPosition.x = 0.8f;
         waveDisplayPosition.y = 0.93f;
         waveDisplay.transform.position = waveDisplayPosition;
@@ -104,10 +105,10 @@ public class _UI : MonoBehaviour
         goldDisplay.guiText.alignment = TextAlignment.Left;
         goldDisplay.guiText.lineSpacing = 1;
         goldDisplay.guiText.tabSize = 4;
-        //goldDisplay.guiText.font = 
+        goldDisplay.guiText.font = GRENDEL;
         goldDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
         goldDisplay.guiText.fontStyle = FontStyle.Normal;
-        //goldDisplay.guiText.material = 
+        goldDisplay.guiText.material.color = Color.yellow;
         goldDisplayPosition.x = 0.01f;
         goldDisplayPosition.y = 0.93f;
         goldDisplay.transform.position = goldDisplayPosition;
@@ -116,10 +117,10 @@ public class _UI : MonoBehaviour
         healthDisplay.guiText.alignment = TextAlignment.Left;
         healthDisplay.guiText.lineSpacing = 1;
         healthDisplay.guiText.tabSize = 4;
-        //healthDisplay.guiText.font = 
+        healthDisplay.guiText.font = GRENDEL;
         healthDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
         healthDisplay.guiText.fontStyle = FontStyle.Normal;
-        //healthDisplay.guiText.material = 
+        healthDisplay.guiText.material.color = Color.yellow;
         healthDisplayPosition.x = 0.01f;
         healthDisplayPosition.y = 0.88f;
         healthDisplay.transform.position = healthDisplayPosition;
@@ -128,10 +129,10 @@ public class _UI : MonoBehaviour
         fireballDisplay.guiText.alignment = TextAlignment.Left;
         fireballDisplay.guiText.lineSpacing = 1;
         fireballDisplay.guiText.tabSize = 4;
-        //fireballDisplay.guiText.font = 
+        fireballDisplay.guiText.font = GRENDEL;
         fireballDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
         fireballDisplay.guiText.fontStyle = FontStyle.Normal;
-        //fireballDisplay.guiText.material = 
+        fireballDisplay.guiText.material.color = Color.yellow;
         fireballDisplayPosition.x = 0.01f;
         fireballDisplayPosition.y = 0.83f;
         fireballDisplay.transform.position = fireballDisplayPosition;
