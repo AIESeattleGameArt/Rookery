@@ -21,10 +21,10 @@ public class _Overlord : MonoBehaviour {
                         egg_cost, fire_cost, ice_cost, lightening_cost,
                         egg_sale, fire_sale, ice_sale, lightening_sale,
                         fireball_base_cost, fireball_current_cost,
-                        fireball_cooldown, fireball_timer, level2_upgrade,
+                        level2_upgrade,
                         fire2_cost, ice2_cost, lightning2_cost, fire2_sell,
                         ice2_sell, lightning2_sell;
-	public static double fireball_increase;
+	public static double fireball_increase, fireball_cooldown, fireball_timer;
 
 	// Initialization
 	void Start ()
@@ -54,7 +54,7 @@ public class _Overlord : MonoBehaviour {
 		// Fireball values
 		fireball_base_cost = 0;
 		fireball_current_cost = fireball_base_cost;
-		fireball_cooldown = 400;
+		fireball_cooldown = 10;
 		fireball_timer = 0;
 		fireball_increase = 1.1;
 	}
@@ -64,7 +64,9 @@ public class _Overlord : MonoBehaviour {
 	{
 		// Decrement the fireball cooldown timer if not ready yet
 		if (fireball_timer > 0)
-			fireball_timer--;
+			fireball_timer -= Time.deltaTime;
+		if (fireball_timer < 0)
+			fireball_timer = 0;
 		
 		// Check to see if game over condition is met and exit if so
 		if (gold <= 0 && wyrmHealth <= 0)

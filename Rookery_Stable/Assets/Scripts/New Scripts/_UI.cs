@@ -232,7 +232,10 @@ public class _UI : MonoBehaviour
         waveDisplay.guiText.text = "Wave: " + waveNumberString;
         waveDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
 		//display fireball cooldown on GUIText
-		fireballDisplay.guiText.text = "Fireball Cooldown: " + _Overlord.fireball_timer.ToString();
+		if (_Overlord.fireball_timer == 0)
+			fireballDisplay.guiText.text = "Fireball Ready!";
+		else
+			fireballDisplay.guiText.text = "Fireball Cooldown: " + ((int)_Overlord.fireball_timer).ToString();
 		fireballDisplay.guiText.fontSize = (int)((screenHeight / 10) / 2);
 	}
 
