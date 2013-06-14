@@ -10,7 +10,7 @@ public class _HealthBar : MonoBehaviour
 
     void Start()
     {
-        healthbarHeight = 5.0f;
+        healthbarHeight = 4.0f;
         healthbarWidth = 35.0f;
     }
 
@@ -25,13 +25,13 @@ public class _HealthBar : MonoBehaviour
 
         //left cap position and size
         float leftCapTop = healthbarPosition.yMin - 5;
-        float leftCapLeft = healthbarPosition.xMin  - 19;
-        leftCapPosition.Set(leftCapLeft, leftCapTop, 30f, 16f);
+        float leftCapLeft = healthbarPosition.xMin  - 15;
+        leftCapPosition.Set(leftCapLeft, leftCapTop, 30f, 12f);
 
         //right cap position and size
         float rightCapTop = healthbarPosition.yMin - 5;
-        float rightCapLeft = healthbarPosition.xMax - 10.5f;
-        rightCapPosition.Set(rightCapLeft, rightCapTop, 30f, 16f);
+        float rightCapLeft = healthbarPosition.xMax - 14.5f;
+        rightCapPosition.Set(rightCapLeft, rightCapTop, 30f, 12f);
     }
 
     void OnGUI()
