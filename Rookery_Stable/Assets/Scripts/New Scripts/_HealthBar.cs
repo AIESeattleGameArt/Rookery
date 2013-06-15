@@ -24,12 +24,12 @@ public class _HealthBar : MonoBehaviour
         healthbarPosition.Set(healthBarLeft, healthBarTop, ((hp / maxHp) * healthbarWidth), healthbarHeight);
 
         //left cap position and size
-        float leftCapTop = healthbarPosition.yMin - 5;
+        float leftCapTop = healthbarPosition.yMin - 4;
         float leftCapLeft = healthbarPosition.xMin  - 15;
         leftCapPosition.Set(leftCapLeft, leftCapTop, 30f, 12f);
 
         //right cap position and size
-        float rightCapTop = healthbarPosition.yMin - 5;
+        float rightCapTop = healthbarPosition.yMin - 4;
         float rightCapLeft = healthbarPosition.xMax - 14.5f;
         rightCapPosition.Set(rightCapLeft, rightCapTop, 30f, 12f);
     }
